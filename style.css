@@ -36,3 +36,16 @@ body[theme="white"] {
 body[theme="white"] .section{
     color: var(--black);
 }
+
+@keyframes grid-animation {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-60px); /* Move one grid unit to the left */
+    }
+}
+
+.animate-grid {
+    animation: grid-animation 5s linear infinite; /* Adjust duration for desired speed */
+}
