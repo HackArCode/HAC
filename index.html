@@ -6,6 +6,14 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
 </head>
 <body theme="black">
     <div class="main w-full">
@@ -14,9 +22,58 @@
                 <h1>We inspire big ideas.<br>Empowering hackers. Fostering innovation. <br>For real people. Real lives.</h1>
             </div>
             <div class="landing w-full h-screen absolute z-40 top-0 left-0 bg-black overflow-hidden">
-                <video autoplay loop muted class="absolute w-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" src="/assets/chill-mario-pixel-moewalls-com.mp4"></video>
-                <div class="heading section top-1/2 left-1/2 translate-x-1/2 translate-y-1/2 z-50">
-                    <h1 class="text-6xl font-semibold">HackArCode</h1>
+                <video autoplay loop muted class="absolute w-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-50" src="/assets/video-bg.mp4" id="video"></video>
+                <nav class="fixed z-50">
+                    <div class="logo">
+                        <img src="./assets/logo-removebg-preview.png" alt="">
+                    </div>
+                    <ul class="navbar section">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Tracks</a></li>
+                        <li><a href="">Partners</a></li>
+                        <li><a href="">Schedule</a></li>
+                        <li><a href="">Humans</a></li>
+                        <li><a href="">FAQ</a></li>
+                    </ul>
+                </nav>
+                <!-- <div class="heading section top-1/2 left-1/2 translate-x-1/2 translate-y-1/2 z-50 container"> -->
+                <div class="amoeba">
+                    <div class="container max-w-2xl section">
+                        <div class="text-new">
+                            <h1 class="font-semibold heading "><span class="">Delve into</span> 
+                                <div class="gaming">
+                                    <span class="text-color">Ga</span>ming <span class="Genesis">Genesis!</span>
+                                </div>
+                            </h1>
+                        </div>
+                        <div class="blob">
+                            <div class="glob">
+                                <div class="dino">
+                                    <img src="./assets/trex-unscreen.gif" alt="">
+                                </div>            
+                            </div>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                            <defs>
+                                <filter id="goo">
+                                    <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur" />
+                                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                                    <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+                                </filter>
+                            </defs>
+                        </svg>
+                        <svg class="svg" viewBox="0 0 400 400">
+                            <defs>
+                                <filter id="duotone-filter-post-one">
+                                    <feColorMatrix type="matrix" values="0.14453125 0 0 0 0.33203125 0.71875 0 0 0 0.27734375 -0.34765625 0 0 0 0.73046875 0 0 0 1 0"></feColorMatrix>
+                                </filter>
+                            </defs>
+                        </svg>                            
+                    </div>
+                    <div class="Register-btn">
+                        <button><span class="down">Register</span></button>
+                    </div>
                 </div>
             </div>
             
@@ -346,5 +403,6 @@
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
