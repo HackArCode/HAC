@@ -1,3 +1,4 @@
+
 function homePageAnimation(){
     gsap.set(".slidesm",{scale: 5})
 var tl = gsap.timeline({
@@ -44,3 +45,20 @@ tl
 // })
 
 homePageAnimation();
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach((entry)=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }else{
+            entry.target.classList.remove('show');
+        }
+    });
+});
+
+const hiddenElements = document.querySelectorAll('.hidden');
+
+hiddenElements.forEach((el)=>observer.observe(el));
+
+const VideoID=document.getElementById('video');
+VideoID.playbackRate=0.5;
+
