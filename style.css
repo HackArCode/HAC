@@ -37,6 +37,11 @@ body[theme="white"] .section{
     color: var(--black);
 }
 
+
+.vdio{
+    clip-path: circle(var(--golu) at 50% 50%);
+}
+=======
 @keyframes grid-animation {
     0% {
         transform: translateX(0);
