@@ -13,22 +13,45 @@
     <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+    <style>
+        #progressBar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 8px;
+            background: linear-gradient(to right top, #9a5bec,#9747FF,#58249c,#280655);
+            z-index: 9999;
+    }
+    </style>
 
 </head>
 <body theme="black">
+
     <div class="main w-full">
-        <nav class="fixed z-50">
+        <nav class="z-50">
+        </script>
+
+        <div id="progressBar"></div>
+        <script>
+          window.onscroll = function () {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+          };
+        </script>        
             <div class="logo">
                 <img src="./assets/logo-removebg-preview.png" alt="">
             </div>
             <ul class="navbar section">
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Tracks</a></li>
-                <li><a href="">Partners</a></li>
-                <li><a href="">Schedule</a></li>
-                <li><a href="">Humans</a></li>
-                <li><a href="">FAQ</a></li>
+                <li class="name"><a href="" data-value="Home" class="active-text">Home</a></li>
+                <li class="name"><a href="./Pages/about/about.html" data-value="About" >About</a></li>
+                <li class="name"><a href="./Pages/tracks/track.html" data-value="Tracks" >Tracks</a></li>
+                <li class="name"><a href="./Pages/partner/partner.html" data-value="Parnters">Partners</a></li>
+                <li class="name"><a href="./Pages/schedule/schedule.html" data-value="Schedule">Schedule</a></li>
+                <li class="name"><a href="./Pages/Human/human.html" data-value="Humans">Humans</a></li>
+                <li class="name"><a href="./Pages/faq/faq.html" data-value="FAQs">FAQs</a></li>
             </ul>
         </nav>
         <div class="home section w-full h-full relative">
@@ -73,7 +96,9 @@
                             </svg>                            
                         </div>
                         <div class="Register-btn">
-                            <button><a class="down" href="https://www.hackquest.io/en/hackathon/explore/HackArCode">Register</a></button>
+                            <button>
+                                <a class="down" href="https://www.hackquest.io/en/hackathon/explore/HackArCode">Register</a>
+                            </button>
                         </div>
                     </div>    
                 </div>

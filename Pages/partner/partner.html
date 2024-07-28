@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partners</title>
+    <link rel="stylesheet" href="partner.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <nav class="z-50">
+        <div class="logo">
+            <img src="../../assets/logo-removebg-preview.png" alt="">
+        </div>
+        <ul class="navbar section">
+            <li class="name"><a href="../../index.html" data-value="Home" class="active-text">Home</a></li>
+            <li class="name"><a href="" data-value="About">About</a></li>
+            <li class="name"><a href="../tracks/track.html" data-value="Tracks">Tracks</a></li>
+            <li class="name"><a href="../partner/partner.html" data-value="Partners">Partners</a></li>
+            <li class="name"><a href="../schedule/schedule.html" data-value="Schedule">Schedule</a></li>
+            <li class="name"><a href="../Human/human.html" data-value="Humans">Humans</a></li>
+            <li class="name"><a href="../faq/faq.html" data-value="FAQs">FAQs</a></li>
+        </ul>
+    </nav>
+
+    <div class="head">
+        <h1 id='title' class="txt-2xl font-semibold text-black">Partners</h1>
+    </div>
+    <center>
+    <div class="navigation">
+        <ul>
+            <li class="list1 active-bar">
+                <a href="#">
+                    <!-- <img src="../../assets/2601512.png" alt="" class="icon"> -->
+                    <span class="text1">Sponsors</span>
+                </a>
+            </li>
+            <li class="list1">
+                <a href="#" >
+                    <!-- <img src="../../assets/5663230.png" alt="" class="icon"> -->
+                    <span class="text1">Featured Partners</span>
+                </a>
+            </li>
+            <li class="list1">
+                <a href="#">
+                    <!-- <img src="../../assets/837993.png" alt="" class="icon"> -->
+                    <span class="text1">In-kind Partners</span>
+                </a>
+            </li>
+            <div class="indicator1"></div>
+        </ul>
+    </div>
+    </center>
+    <div class="partner-content content_box">
+        <div class="Sponsors content text-white active-box">
+            <div class="sponsor-box">
+                <div class="sponsor-logo">
+                    <h2>Title Sponsor</h2>
+                    <img src="../../assets/hacquest-logo.png" alt="">
+                </div>
+                <div class="sponsor-content">
+                    <p>
+                        HackQuest is a one-stop, self-guided developer education platform. HackQuest offers expert-curated learning paths with on-chain certificates co-issued by leading Web3 ecosystems including Solana, Mantle Network, and Arbitrum. Community builders are supported beyond through co-learning camps, meet-ups, hackathons, and launchpad services.
+                    </p>
+                    <div class="Sponsor-button">
+                        <button type="button"class="Sponsi-btn"><a href="https://hackquest.io/.">Learn More</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Featured content text-white">
+            <h2>Featured Partners</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro exercitationem eveniet accusantium, at recusandae suscipit eaque quae quam vitae eum.</p>
+        </div>
+        <div class="In-kind content">
+            <div class="wrapper">
+                <!-- <i id="left" class="fa-solid fa-angle-left"></i> -->
+                <ul class="carousel">
+                    <li class="card">
+                        <div class="sp-image">
+                            <img src="../../assets/Wolfram-removebg-preview.png" alt="" draggable="false">
+                            <!-- <h2>HackQuest</h2> -->
+                            <span>Wolfram Research is one of the world's most respected computer, web and cloud software companies—as well as a powerhouse of scientific and technical innovation.</span>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="sp-image">
+                            <img src="../../assets/xyz_logo.png" alt="" draggable="false">
+                            <!-- <h2>HackQuest</h2> -->
+                            <span>.xyz is a bold, fresh choice for users who crave creativity and versatility in a domain name. It's short and memorable without the limitations of a label or language barrier.</span>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="sp-image">
+                            <img src="../../assets/Wolfram-removebg-preview.png" alt="" draggable="false">
+                            <!-- <h2>HackQuest</h2> -->
+                            <span>Wolfram Research is one of the world's most respected computer, web and cloud software companies—as well as a powerhouse of scientific and technical innovation.</span>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="sp-image">
+                            <img src="../../assets/xyz_logo.png" alt="" draggable="false">
+                            <!-- <h2>HackQuest</h2> -->
+                            <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, dolore!</span>
+                        </div>
+                    </li>
+                </ul>
+                <!-- <i id="right" class="fa-solid fa-angle-right"></i> -->
+            </div> 
+        </div>    
+    </div>
+    <div class="last">
+
+    </div>
+    <script>
+        const link=document.querySelectorAll('.list1');
+        const all_content=document.querySelectorAll(".content");
+        link.forEach((item,index)=>
+        item.addEventListener('click',()=>{
+            link.forEach(item=>{item.classList.remove('active-bar')});
+            item.classList.add('active-bar');
+
+            all_content.forEach(content=>{content.classList.remove('active-box')});
+            all_content[index].classList.add('active-box');
+        }));
+
+    </script>
+    <!-- <script>
+        const carousel=document.querySelector(".carousel");
+        const arrowBtns=document.querySelectorAll(".wrapper i");
+        const firstcardWidth=carousel.querySelector(".card").offsetWidth;
+        
+        let isDragging=false,startX,startScrollLeft;
+        arrowBtns.forEach(btns=>{
+            btns.addEventListener("click",()=>{
+                carousel.scrollLeft += btns.id ==="left"? - firstcardWidth : firstcardWidth;
+            });
+        });
+        
+        const dragStart=(e)=>{
+            isDragging=true;
+            carousel.classList.add("dragging");
+            startX=e.pageX;
+            startScrollLeft=carousel.scrollLeft;
+        }
+        
+        const dragging=(e)=>{
+            if(!isDragging) return;
+            carousel.scrollLeft=startScrollLeft - (e.pageX - startX);
+        }
+        
+        const dragStop=()=>{
+            isDragging=false;
+            carousel.classList.remove("dragging");
+        }
+        
+        carousel.addEventListener("mousedown",dragStart);
+        carousel.addEventListener("mousemove",dragging);
+        document.addEventListener("mouseup",dragStop);
+    </script> -->
+</body>
+</html>
