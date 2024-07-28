@@ -37,6 +37,25 @@ body[theme="white"] .section{
     color: var(--black);
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+  
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  
+  }
+  ::-webkit-scrollbar:hover {
+    width:10px;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--ppl);
+    
+    border-radius: 80px; 
+  }
 
 .vdio{
     clip-path: circle(var(--golu) at 50% 50%);
@@ -101,6 +120,19 @@ body .container .blob {
     100%{
         transform: translateY(-10px,20px);
     }
+}
+
+.name{
+    overflow: hidden;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.navbar li a{
+    color: rgb(32, 255, 244);
+    font-weight: 500;
+    font-size: 1.5rem;
 }
 
 body .container .blob .glob {
@@ -174,13 +206,14 @@ nav{
     right: 0px;
     position: absolute;
     display: flex;
-    background: rgb(46, 47, 68);
+    /* background: rgb(46, 47, 68); */
+    background: transparent;
     width: 100%;
 }
 
 .logo{
-    /* background: black; */
-    background: rgb(46, 47, 68);
+    /* background: rgb(46, 47, 68); */
+    background: transparent;
 }
 
 .logo img{

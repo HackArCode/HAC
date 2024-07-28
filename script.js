@@ -45,20 +45,38 @@ tl
 // })
 
 homePageAnimation();
-const observer = new IntersectionObserver((entries)=>{
-    entries.forEach((entry)=>{
-        if(entry.isIntersecting){
-            entry.target.classList.add('show');
-        }else{
-            entry.target.classList.remove('show');
-        }
-    });
-});
-
-const hiddenElements = document.querySelectorAll('.hidden');
-
-hiddenElements.forEach((el)=>observer.observe(el));
 
 const VideoID=document.getElementById('video');
 VideoID.playbackRate=0.5;
 
+const letters="abcdefghijklmnoqprstuvwxyz";
+let interval=null;
+
+const name=document.querySelectorAll(".name a");
+const hack=document.querySelector(".active-text");
+
+name.forEach((item,index)=>{
+    item.onmouseover=()=>{
+        name.forEach(item=>{item.classList.remove('active-text')});
+        item.classList.add('active-text');
+        let iteration=0;
+        clearInterval(interval);
+        interval=setInterval(()=>{
+            item.innerText=item.innerText
+            .split("")
+            .map((letter,index)=>{
+                if(index<iteration){
+                    return item.dataset.value[index];
+                }
+                return letters[Math.floor(Math.random()*26)]
+            })
+            .join("");
+            if(iteration>=item.dataset.value.length){
+                clearInterval(interval);
+            }
+            iteration+=1 / 3;
+    
+        },30
+    );
+    }
+})
