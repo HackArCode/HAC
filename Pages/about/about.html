@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - HackArcode</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+
+        /* about section start */
+        .neon-text {
+            color: #fff; 
+        }
+        .badge {
+            width: 240px; 
+            height: 200px; 
+            background: linear-gradient(145deg, #222, #444); 
+            box-shadow: 5px 5px 15px #000, -5px -5px 15px #555; 
+            border: 2px solid #fff; 
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .badge:hover {
+            transform: translateY(-10px);
+            box-shadow: 10px 10px 20px #555, -10px -10px 20px #000;
+        }
+        /* about section end */
+
+        /* NAvbar section start */
+        nav {
+            right: 0px;
+            position: absolute;
+            display: flex;
+            background: rgb(46, 47, 68);
+            width: 100%;
+        }
+        *:root {
+            --ppl: #9747FF;
+            --cyan: #aedee0;
+            --dsalmaon: #4e3330;
+            --black: #fff; 
+            --white: #000; 
+            --salmon: #EF9D71;
+            --dcyan: #24403d;
+        }
+        *::selection {
+            background-color: var(--ppl);
+        }
+        body[theme="black"] {
+            background-color: var(--white); 
+        }
+        body[theme="black"] .section {
+            color: var(--black); 
+        }
+        body[theme="cyan"] {
+            background-color: var(--cyan);
+        }
+        body[theme="cyan"] .section {
+            color: var(--dcyan);
+        }
+        body[theme="salmon"] {
+            background-color: var(--salmon);
+        }
+        body[theme="salmon"] .section {
+            color: var(--dsalmaon);
+        }
+        body[theme="white"] {
+            background-color: var(--black); 
+        }
+        body[theme="white"] .section {
+            color: var(--white); 
+        }
+        .logo {
+            background: rgb(46, 47, 68);
+        }
+        .logo img {
+            width: 12vw;
+            height: 10vh;
+            margin-top: 5%;
+            margin-right: -5vw;
+            background: rgb(46, 47, 68);
+            margin-left: 5vw;
+            transform: rotate(-5deg);
+        }
+        .navbar {
+            display: flex;
+            margin-top: 1vh;
+            width: 75vw;
+            height: 10vh;
+            font-size: 20px;
+            align-items: center;
+            margin-right: -10vw;
+            margin-left: 10vw;
+            justify-content: space-evenly;
+        }
+        /* Navbar section end  */
+    </style>
+</head>
+<body>
+    <!-- Navbar  -->
+    <nav class="z-50">
+        <div class="logo">
+            <img src="../../assets/logo-removebg-preview.png" alt="">
+        </div>
+        <ul class="navbar section">
+            <li class="name text-white"><a href="../../index.html" data-value="Home" class="active-text">Home</a></li>
+            <li class="name text-white"><a href="../about/about.html" data-value="About">About</a></li>
+            <li class="name text-white"><a href="../tracks/track.html" data-value="Tracks">Tracks</a></li>
+            <li class="name text-white"><a href="../partner/partner.html" data-value="Partners">Partners</a></li>
+            <li class="name text-white"><a href="../schedule/schedule.html" data-value="Schedule">Schedule</a></li>
+            <li class="name text-white"><a href="../Human/human.html" data-value="Humans">Humans</a></li>
+            <li class="name text-white"><a href="../faq/faq.html" data-value="FAQs">FAQs</a></li>
+        </ul>
+    </nav>
+    
+<!-- About  -->
+    <div class="text-white container-fluid pt-10" style="background-color: #000">
+        <section class="py-12">
+            <div class="container mx-auto px-6 flex flex-col lg:flex-row items-center" style="overflow-x: hidden;">
+                <div class="lg:w-1/2 mb-8 lg:mb-0" style="padding-left: 5%;">
+                    <h2 class="text-7xl font-bold neon-text mb-8">Meet Our Community</h2>
+                    <p class="text-2xl text-gray-300">Empowering Innovators, Building the Future.</p>
+                </div>
+                <div class="lg:w-1/2 text-lg text-gray-300 leading-relaxed">
+                    <p class="mb-4">We are a group of community leaders who have cultivated a network of aspiring developers within our community. With a shared passion for innovation and technology, we have come together to organize this hackathon. Our goal is to create a platform that fosters collaboration, creativity, and skill development among participants.</p>
+                    <p class="mb-4">By hosting this event, we aim to provide opportunities for aspiring developers to showcase their talents, connect with industry professionals, and gain valuable experience in a supportive and inclusive environment. Through workshops, mentorship programs, and networking sessions, we are committed to empowering the next generation of innovators and problem solvers.</p>
+                    <p>Join us in shaping the future of technology and making a positive impact on our community.</p>
+                </div>
+            </div>
+        </section>
+    
+        <section class="py-12 w-100">
+            <div style="padding-left: 5%;" class="container px-5 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-5 gap-5">
+                
+                <div class="badge p-6 text-center rounded-lg " data-target="500">
+                    <h3 style="height: 70px;" class="text-2xl flex items-center justify-center font-bold mb-4 text-gray-300 ">Registrations</h3>
+                    <p class="text-4xl font-bold neon-text count">0</p>
+                </div>
+               
+                <div class="badge p-6 text-center rounded-lg" data-target="0">
+                    <h3 style="height: 70px;" class="text-2xl flex items-center justify-center font-bold mb-4 text-gray-300">Community Partners</h3>
+                    <p class="text-4xl font-bold neon-text count">0</p>
+                </div>
+
+                <div class="badge p-6 text-center rounded-lg" data-target="500000">
+                    <h3 style="height: 70px;" class="text-2xl flex items-center justify-center font-bold mb-4 text-gray-300">Prize Pool</h3>
+                    <div class="flex flex-row"></div>
+                    <p class="text-4xl font-bold neon-text count">₹0</p>
+                </div>
+               
+                <div class="badge p-6 text-center rounded-lg" data-target="300">
+                    <h3 style="height: 70px;" class="text-2xl flex items-center justify-center font-bold mb-4 text-gray-300">Hackers</h3>
+                    <p class="text-4xl font-bold neon-text count">0</p>
+                </div>
+                
+                <div class="badge p-6 text-center rounded-lg" data-target="0">
+                    <h3 style="height: 70px;" class="text-2xl flex items-center justify-center font-bold mb-4 text-gray-300">Speakers</h3>
+                    <p class="text-4xl font-bold neon-text count">0</p>
+                </div>
+                
+            </div>
+        </section>
+    
+        <section class="py-12 mt-4">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-6xl font-bold neon-text mb-8">What Sets Us Apart?</h2>
+                <div class="flex flex-col lg:flex-row justify-center items-center">
+                    <div class="lg:w-1/3 p-4">
+                        <img src="../../assets/arcade_1.png" alt="Arcade Theme" class="mx-auto mb-4" style="height: 120px; width: 120px;">
+                        <h3 class="text-3xl font-bold mb-2 text-gray-300">Arcade Theme</h3>
+                        <p class="text-lg text-gray-300">The whole hackathon will be based on an Arcade theme. Base your ideas around this fun retro-esque theme.</p>
+                    </div>
+                    <div class="lg:w-1/3 p-4">
+                        <img src="../../assets/gaming_1.png" alt="Gaming Sessions" class="mx-auto mb-4" style="height: 120px; width: 120px;">
+                        <h3 class="text-3xl font-bold mb-2 text-gray-300">Gaming Sessions</h3>
+                        <p class="text-lg text-gray-300">Coding non-stop can be counter-productive. To tackle that we will be having gaming sessions on PC or console. Feel free to take a break!</p>
+                    </div>
+                    <div class="lg:w-1/3 p-4">
+                        <img src="../../assets/newbie_1.png" alt="30% Beginners" class="mx-auto mb-4" style="height: 100px; width: 100px;">
+                        <h3 class="text-3xl font-bold mb-2 text-gray-300">30% Beginners</h3>
+                        <p class="text-lg text-gray-300">Freshers and beginners have no reason to worry about entering the hackathon as 30% of the participants are beginners.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const counters = document.querySelectorAll('.count');
+            const duration = 5000;
+
+            const formatNumber = (number) => {
+                let [integerPart, decimalPart] = number.toString().split(".");
+                let lastThreeDigits = integerPart.slice(-3);
+                let otherDigits = integerPart.slice(0, -3);
+                if (otherDigits) {
+                    lastThreeDigits = ',' + lastThreeDigits;
+                }
+                let formattedNumber = otherDigits.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThreeDigits;
+                if (decimalPart) {
+                    formattedNumber += "." + decimalPart;
+                }
+                return formattedNumber;
+            };
+
+            const countUp = (counter, target, symbol = '') => {
+                const start = 0;
+                const increment = target / (duration / 50);
+                let current = start;
+
+                const updateCount = () => {
+                    current += increment;
+                    if (current < target) {
+                        counter.innerText = symbol + formatNumber(Math.ceil(current)) + '+';
+                        setTimeout(updateCount, 40);
+                    } else {
+                        counter.innerText = symbol + formatNumber(target) + '+';
+                    }
+                };
+
+                updateCount();
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target.querySelector('.count');
+                        const target = +entry.target.getAttribute('data-target');
+                        const symbol = entry.target.getAttribute('data-target') === '500000' ? '₹' : '';
+                        counter.innerText = symbol + '0';
+                        countUp(counter, target, symbol);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            counters.forEach(counter => {
+                observer.observe(counter.parentElement);
+            });
+        });
+    </script>
+</body>
+</html>
