@@ -23,6 +23,7 @@
             <li class="name"><a href="../Human/human.html" data-value="Humans">Humans</a></li>
             <li class="name"><a href="../faq/faq.html" data-value="FAQs">FAQs</a></li>
         </ul>
+        <i class="fa-solid fa-bars" id="navIcon"></i>
     </nav>
 
     <div class="head">
@@ -159,5 +160,20 @@
         carousel.addEventListener("mousemove",dragging);
         document.addEventListener("mouseup",dragStop);
     </script> -->
+    <script>
+        const navIcon=document.getElementById("navIcon");
+        const navbar=document.querySelector(".navbar");
+        var display=0;
+        navIcon.addEventListener("click",()=>{
+            if (display==0){
+                navbar.style.display='grid';
+                display++;
+            }
+            else{
+                navbar.style.display='none';
+                display--;
+            }
+        })
+    </script>
 </body>
 </html>

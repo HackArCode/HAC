@@ -84,6 +84,27 @@ nav{
     justify-content: space-evenly;
 }
 
+/* nav i.fa-bars{
+    display: none;
+}
+
+@media(max-width:1024px){
+    .navbar{
+        display: none;
+    }
+    nav i.fa-bars{
+        display: block;
+        color: white;
+        position: absolute;
+        font-size: 2rem;
+        right: 5vh;
+        top: 3vh;
+        cursor: pointer;
+    }
+} */
+
+/* Partner Content */
+
 .partner {
     width: 100%;
     display: flex;
