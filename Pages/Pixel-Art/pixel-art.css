@@ -51,7 +51,7 @@
   header {
     color: var(--text-color);
     font-family: "Lobster Two", sans-serif;
-    font-size: 40px;
+    font-size: 3rem;
     text-align: center;
     word-spacing: 8px;
     text-align: center;
@@ -70,7 +70,10 @@
     height: 76vh;
     width: 50vw;
   }
-  
+
+  .cell{
+    width: 80%;
+  }
   .settings {
     display: flex;
     flex-direction: column;
@@ -256,4 +259,10 @@
 
 .Post:active a{
     color: white;
+}
+
+@media (max-width:1024px){
+  header{
+    font-size: 2rem;
+  }
 }
