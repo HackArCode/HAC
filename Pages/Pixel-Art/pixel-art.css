@@ -25,6 +25,28 @@
   body {
     background-color: var(--background-color);
   }
+
+  .logo{
+    height: 8rem;
+    width: 20rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* border: 2px solid salmon; */
+  }
+
+  .logo img{
+    height: 6rem;
+    width: 20rem;
+  }
+
+  .home{
+    position: absolute;
+    color: black;
+    top: 35%;
+    right: 10%;
+    font-size: 3rem;
+  }
   
   header {
     color: var(--text-color);
