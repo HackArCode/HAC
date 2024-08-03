@@ -189,3 +189,42 @@ nav{
 .ques.active-ques .question i{
     transform: rotate(180deg);
 }
+
+@media(max-width:1024px){
+    .ques.active-ques .answer{
+        max-height:max-content;
+        margin-top: 3vh;
+    }
+}
+
+@media(max-width:768px){
+    .faq{
+        display: grid;
+        place-items: center;
+    }
+    .ques1{
+        max-width: 100%;
+    }
+    .ques2{
+        max-width: 100%;
+    }
+    .question h3{
+        width: 90vw;
+    }
+    .navbar{
+        display: none;
+    }
+    .logo img{
+        width: 25vw;
+        height: 15vh;
+    }
+}
+
+@media(max-width:425px){
+    .faq{
+        max-width: 100%;
+    }
+    .logo img{
+        width: 33vw;
+    }
+}
