@@ -34,7 +34,12 @@ body {
     align-items: center;
     border-radius: 5px;
     cursor: pointer;
+    /* border: 2px solid salmon; */
     /* box-shadow: 0 5px 10px rgba(0, 0, 0, .2); */
+}
+
+.dropdown i{
+    margin-left: 80%;
 }
 
 .dropdown .left-icon,
