@@ -20,9 +20,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
         #progressBar {
             position: fixed;
@@ -64,6 +66,27 @@
                 <li class="name"><a href="./Pages/faq/faq.html" data-value="FAQs">FAQs</a></li>
             </ul>
         </nav>
+        <div class="box z-50">
+            <div class="dropdown"><i class="fa-solid fa-bars" ></i>
+                <!-- <span class="left-icon"></span> -->
+                <!-- <span class="right-icon"></span> -->
+                <div class="items">
+                    <a href="index.html" style="--i:7;"><span></span>Home</a>
+                    <a href="./Pages/about/about.html" style="--i:6;"><span></span>About</a>
+                    <a href="./Pages/tracks/track.html" style="--i:5;"><span></span>Tracks</a>
+                    <a href="./Pages/partner/partner.html" style="--i:4;"><span></span>Partners</a>
+                    <a href="./Pages/schedule/schedule.html" style="--i:3;"><span></span>Schedule</a>
+                    <a href="./Pages/Human/human.html" style="--i:2;"><span></span>Humans</a>
+                    <a href="./Pages/faq/faq.html" style="--i:1;"><span></span>FAQs</a>
+                </div>
+            </div>
+        </div>
+        <script>
+            const dropdown = document.querySelector('.dropdown');
+            dropdown.addEventListener('click', () => {
+                dropdown.classList.toggle('active');
+            });
+        </script>    
         <div class="home section w-full h-full relative">
             <div class="btmtext absolute z-50 bottom-[7%] w-51 left-[3%]">
                 <h1>We inspire big ideas.<br>Empowering hackers. Fostering innovation. <br>For real people. Real lives.</h1>

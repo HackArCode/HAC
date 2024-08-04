@@ -450,3 +450,9 @@ nav{
         font-size: 28px;
     }
 }
+
+@media(max-width:1000px){
+    .navbar{
+        display: none;
+    }
+}

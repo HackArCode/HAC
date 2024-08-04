@@ -100,7 +100,7 @@ body .container .blob {
     height: 100%;
     top: 30%;
     left: 70%;
-    z-index: 50;
+    /* z-index: 50; */
     height: 60vh;
     width: 40vw;
 
@@ -361,4 +361,19 @@ nav{
     height: 2rem;
     width: 2rem;
     margin-top:0.5rem;
+}
+
+@media(max-width:1000px){
+    .navbar{
+        display: none;
+    }
+    .logo img{
+        width: 20vw;
+    }
+}
+
+@media(max-width:650px){
+    .logo img{
+        width: 30vw;
+    }
 }
