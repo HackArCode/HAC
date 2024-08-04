@@ -197,6 +197,16 @@ nav{
     }
 }
 
+@media(max-width:1000px){
+    .navbar{
+        display: none;
+    }
+    .logo img{
+        width: 25vw;
+        height: 10vh;
+    }
+}
+
 @media(max-width:768px){
     .faq{
         display: grid;
@@ -215,8 +225,8 @@ nav{
         display: none;
     }
     .logo img{
-        width: 25vw;
-        height: 15vh;
+        width: 28vw;
+        height: 10vh;
     }
 }
 
@@ -225,6 +235,6 @@ nav{
         max-width: 100%;
     }
     .logo img{
-        width: 33vw;
+        width: 30vw;
     }
 }
