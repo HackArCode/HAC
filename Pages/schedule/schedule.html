@@ -5,11 +5,11 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L1MWCGB3ZJ"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'G-L1MWCGB3ZJ');
+        gtag('config', 'G-L1MWCGB3ZJ');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,63 +17,84 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../navbar_page.css">
+    <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
         @media (max-width: 1090px) {
-        .column2 {
-            display: none; /* Hide column 2 */
+            .column2 {
+                display: none;
+                /* Hide column 2 */
+            }
+
+            table {
+                width: 100%;
+                position: relative;
+            }
+
+            .column1,
+            .column3 {
+                width: 50%;
+                text-align: center;
+            }
+
+            .column1 {
+                position: relative;
+            }
+
+            .column3 {
+                position: absolute;
+                left: 0px;
+            }
+
+            .circle {
+                display: none;
+                /* Hide circles */
+            }
+
+            .card {
+                margin: 10px auto;
+                /* Adjust card margin */
+                width: 90%;
+                /* Make cards take up full width */
+                box-shadow: none;
+                /* Remove box shadow for better appearance */
+            }
+
+            .tab-content {
+                width: 100%;
+                /* Ensure content takes full width */
+                margin: 0;
+                /* Remove margin for better alignment */
+            }
         }
 
-        table {
-            width: 100%;
-            position: relative;
-        }
-
-        .column1, .column3 {
-            width: 50%;
-            text-align: center;
-        }
-        .column1{
-            position: relative;
-        }
-        .column3{
-            position: absolute;
-            left: 0px;
-        }
-
-        .circle {
-            display: none; /* Hide circles */
-        }
-
-        .card {
-            margin: 10px auto; /* Adjust card margin */
-            width: 90%; /* Make cards take up full width */
-            box-shadow: none; /* Remove box shadow for better appearance */
-        }
-
-        .tab-content {
-            width: 100%; /* Ensure content takes full width */
-            margin: 0; /* Remove margin for better alignment */
-        }
-    }
         table {
             width: 80%;
             border-collapse: collapse;
             margin: auto;
-            border: none; /* Remove table border */
+            border: none;
+            /* Remove table border */
         }
-        th, td {
-            border: none; /* Remove cell borders */
+
+        th,
+        td {
+            border: none;
+            /* Remove cell borders */
             text-align: left;
             padding: 8px;
         }
-        
-        .column1, .column3 {
+
+        .column1,
+        .column3 {
             width: 49%;
             height: 130px;
         }
+
         .column1 {
             text-align: center;
         }
+
         .column2 {
             width: 2px;
             white-space: nowrap;
@@ -81,6 +102,7 @@
             padding: 0;
             position: relative;
         }
+
         .circle {
             height: 50px;
             width: 50px;
@@ -91,10 +113,13 @@
             border-radius: 50%;
             cursor: pointer;
         }
+
         .card {
             transition: all 0.3s ease;
         }
-        .card:hover, .circle:hover {
+
+        .card:hover,
+        .circle:hover {
             background-color: rgb(255, 255, 255) !important;
             color: black;
             border: 1px solid black;
@@ -109,81 +134,101 @@
         }
 
         .tab.active {
-            background-color: #000; /* Active tab background color */
-            color: #fff; /* Active tab text color */
+            background-color: #000;
+            /* Active tab background color */
+            color: #fff;
+            /* Active tab text color */
         }
 
         .tab:not(.active) {
-            background-color: #ffffff; /* Non-active tab background color */
-            color: #000000; /* Non-active tab text color */
+            background-color: #ffffff;
+            /* Non-active tab background color */
+            color: #000000;
+            /* Non-active tab text color */
         }
 
         .tab:hover {
-            background-color: #97949e; /* Hover background color */
-            color: #fff; /* Hover text color */
+            background-color: #97949e;
+            /* Hover background color */
+            color: #fff;
+            /* Hover text color */
         }
 
         .tab:focus {
-            outline: none; /* Remove default outline */
-            box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1); /* Optional focus outline */
+            outline: none;
+            /* Remove default outline */
+            box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+            /* Optional focus outline */
         }
 
         /* nav */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+        }
+
+
+        ::-webkit-scrollbar {
+            width: 10px;
+
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: transparent;
+
+        }
+
+        ::-webkit-scrollbar:hover {
+            width: 10px;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: rgb(238, 238, 238);
+
+            border-radius: 80px;
+        }
+
         nav {
             right: 0px;
             position: absolute;
             display: flex;
-            background: rgb(46, 47, 68);
+            /* background: rgb(46, 47, 68); */
+            /* border: 2px solid saddlebrown; */
+            background: black;
             width: 100%;
         }
-        *:root {
-            --ppl: #9747FF;
-            --cyan: #aedee0;
-            --dsalmaon: #4e3330;
-            --black: #fff; 
-            --white: #000; 
-            --salmon: #EF9D71;
-            --dcyan: #24403d;
+
+        .navbar li a {
+            color: rgb(255, 255, 255);
+            font-weight: 400;
+            font-size: 1.5rem;
         }
-        *::selection {
-            background-color: var(--ppl);
+
+        .navbar li a:hover {
+            color: rgb(190, 190, 190);
         }
-        body[theme="black"] {
-            background-color: var(--white); 
-        }
-        body[theme="black"] .section {
-            color: var(--black); 
-        }
-        body[theme="cyan"] {
-            background-color: var(--cyan);
-        }
-        body[theme="cyan"] .section {
-            color: var(--dcyan);
-        }
-        body[theme="salmon"] {
-            background-color: var(--salmon);
-        }
-        body[theme="salmon"] .section {
-            color: var(--dsalmaon);
-        }
-        body[theme="white"] {
-            background-color: var(--black); 
-        }
-        body[theme="white"] .section {
-            color: var(--white); 
-        }
+
         .logo {
-            background: rgb(46, 47, 68);
+            /* background: rgb(46, 47, 68); */
+            background: transparent;
         }
+
         .logo img {
             width: 12vw;
             height: 10vh;
             margin-top: 5%;
             margin-right: -5vw;
-            background: rgb(46, 47, 68);
+            /* background: black; */
+            /* background: rgb(46, 47, 68); */
             margin-left: 5vw;
-            transform: rotate(-5deg);
+            /* transform: rotate(-5deg); */
+            /* border: 2px solid salmon; */
         }
+
         .navbar {
             display: flex;
             margin-top: 1vh;
@@ -191,39 +236,71 @@
             height: 10vh;
             font-size: 20px;
             align-items: center;
+            /* border: 2px solid salmon; */
             margin-right: -10vw;
             margin-left: 10vw;
             justify-content: space-evenly;
+        }
+
+        @media(max-width:1000px) {
+            .navbar {
+                display: none;
+            }
+
+            .logo img {
+                width: 25vw;
+                height: 10vh;
+            }
         }
     </style>
 </head>
 
 <body class="bg-white text-white font-sans">
+
     <nav class="z-50">
         <div class="logo">
             <img src="../../assets/logo-removebg-preview.png" alt="">
         </div>
         <ul class="navbar section">
-            <li class="name text-white"><a href="../../index.html" data-value="Home" class="active-text">Home</a></li>
-            <li class="name text-white"><a href="../about/about.html" data-value="About">About</a></li>
-            <li class="name text-white"><a href="../tracks/track.html" data-value="Tracks">Tracks</a></li>
-            <li class="name text-white"><a href="../partner/partner.html" data-value="Partners">Partners</a></li>
-            <li class="name text-white"><a href="../schedule/schedule.html" data-value="Schedule">Schedule</a></li>
-            <li class="name text-white"><a href="../Human/human.html" data-value="Humans">Humans</a></li>
-            <li class="name text-white"><a href="../faq/faq.html" data-value="FAQs">FAQs</a></li>
+            <li class="name"><a href="../../index.html" data-value="Home" class="active-text">Home</a></li>
+            <li class="name"><a href="../about/about.html" data-value="About">About</a></li>
+            <li class="name"><a href="../tracks/track.html" data-value="Tracks">Tracks</a></li>
+            <li class="name"><a href="../partner/partner.html" data-value="Partners">Partners</a></li>
+            <li class="name"><a href="../schedule/schedule.html" data-value="Schedule">Schedule</a></li>
+            <li class="name"><a href="../Human/human.html" data-value="Humans">Humans</a></li>
+            <li class="name"><a href="../faq/faq.html" data-value="FAQs">FAQs</a></li>
         </ul>
     </nav>
+    <div class="box z-50">
+        <div class="dropdown"><i class="fa-solid fa-bars"></i>
+            <!-- <span class="left-icon"></span> -->
+            <!-- <span class="right-icon"></span> -->
+            <div class="items">
+                <a href="../../index.html" style="--i:7;"><span></span>Home</a>
+                <a href="../about/about.html" style="--i:6;"><span></span>About</a>
+                <a href="../tracks/track.html" style="--i:5;"><span></span>Tracks</a>
+                <a href="../partner/partner.html" style="--i:4;"><span></span>Partners</a>
+                <a href="../schedule/schedule.html" style="--i:3;"><span></span>Schedule</a>
+                <a href="../Human/human.html" style="--i:2;"><span></span>Humans</a>
+                <a href="../faq/faq.html" style="--i:1;"><span></span>FAQs</a>
+            </div>
+        </div>
+    </div>
+    <!-- <br><br><br> -->
+
     <div class="container mx-auto pt-20">
         <h1 class="text-5xl font-bold text-black text-center mt-8 mb-10">In-Person Hackathon Agenda</h1>
         <div class="flex justify-center gap-20 mb-4">
             <button id="tab1" onclick="showTab('content1')"
-                class="tab border-2 border-black text-lg active py-5 px-[80px] font-bold bg-blue-500 rounded-xl focus:outline-none">7th Sep
+                class="tab border-2 border-black text-lg active py-5 px-[80px] font-bold bg-blue-500 rounded-xl focus:outline-none">7th
+                Sep
                 2024</button>
             <button id="tab2" onclick="showTab('content2')"
-                class="tab border-2 border-black text-lg py-5 px-[80px] font-bold bg-blue-400 rounded-xl focus:outline-none">8th Sep
+                class="tab border-2 border-black text-lg py-5 px-[80px] font-bold bg-blue-400 rounded-xl focus:outline-none">8th
+                Sep
                 2024</button>
         </div>
-        <div class=" border-4 p-6 text-center rounded-lg mx-auto mt-10" 
+        <div class=" border-4 p-6 text-center rounded-lg mx-auto mt-10"
             style="width: 80vw; background-color: rgb(238, 237, 243);">
             <div id="content1" class="tab-content con11 flex flex-col">
                 <h2 class="text-4xl text-black font-bold mt-4 mb-4 tex-black">7th Sep 2024</h2>
@@ -234,7 +311,8 @@
                             <div class="circle text-center py-2"></div>
                         </td>
                         <td class="column3">
-                            <div class="card mx-auto px-10 rounded-lg py-2 bg-gray-500" id="hell" style="width: max-content;">
+                            <div class="card mx-auto px-10 rounded-lg py-2 bg-gray-500" id="hell"
+                                style="width: max-content;">
                                 <h4>9:00 am - 10:50 am</h4>
                                 <p>Registration Starts</p>
                             </div>
@@ -446,13 +524,13 @@
         function showTab(tabId) {
             // Hide all tab contents
             var contents = document.querySelectorAll('.tab-content');
-            contents.forEach(function(content) {
+            contents.forEach(function (content) {
                 content.classList.add('hidden');
             });
 
             // Remove active class from all tabs
             var tabs = document.querySelectorAll('.tab');
-            tabs.forEach(function(tab) {
+            tabs.forEach(function (tab) {
                 tab.classList.remove('active');
                 tab.classList.remove('bg-black');
                 tab.classList.add('bg-blue-400');
@@ -475,9 +553,9 @@
             var circles = document.querySelectorAll('.circle');
             var cards = document.querySelectorAll('.card');
 
-            circles.forEach(function(circle) {
+            circles.forEach(function (circle) {
                 // When hovering over a circle, affect the associated card
-                circle.addEventListener('mouseenter', function() {
+                circle.addEventListener('mouseenter', function () {
                     var card = circle.closest('td').nextElementSibling.querySelector('.card');
                     var card1 = circle.closest('td').previousElementSibling.querySelector('.card');
                     if (card) {
@@ -495,7 +573,7 @@
                     circle.style.backgroundColor = 'white';
                 });
 
-                circle.addEventListener('mouseleave', function() {
+                circle.addEventListener('mouseleave', function () {
                     var card = circle.closest('td').nextElementSibling.querySelector('.card');
                     var card1 = circle.closest('td').previousElementSibling.querySelector('.card');
                     if (card) {
@@ -510,25 +588,25 @@
                         card1.style.boxShadow = 'none';
                         card1.style.color = 'white';
                     }
-                    circle.style.backgroundColor = 'black'; 
+                    circle.style.backgroundColor = 'black';
                 });
             });
 
-            cards.forEach(function(card) {
+            cards.forEach(function (card) {
                 // When hovering over a circle, affect the associated card
-                card.addEventListener('mouseenter', function() {
+                card.addEventListener('mouseenter', function () {
                     card.style.backgroundColor = 'white';
-                        card.style.transform = 'scale(1.02)';
-                        card.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
-                        card.style.color = 'black';
+                    card.style.transform = 'scale(1.02)';
+                    card.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+                    card.style.color = 'black';
                 });
 
-                card.addEventListener('mouseleave', function() {
-                    
-                        card.style.backgroundColor = 'rgba(107, 114, 128, 1)';
-                        card.style.transform = 'scale(1)';
-                        card.style.boxShadow = 'none';
-                        card.style.color = 'white';
+                card.addEventListener('mouseleave', function () {
+
+                    card.style.backgroundColor = 'rgba(107, 114, 128, 1)';
+                    card.style.transform = 'scale(1)';
+                    card.style.boxShadow = 'none';
+                    card.style.color = 'white';
                 });
             });
         }
@@ -536,6 +614,10 @@
         // Initialize first tab as active
         showTab('content1');
         addHoverEffects();
+        const dropdown = document.querySelector('.dropdown');
+        dropdown.addEventListener('click', () => {
+            dropdown.classList.toggle('active');
+        });
     </script>
 </body>
 
