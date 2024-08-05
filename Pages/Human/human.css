@@ -3,3 +3,83 @@
     padding: 0;
     list-style: none;
 }
+
+body{
+    background: black;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  
+}
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+  
+}
+::-webkit-scrollbar:hover {
+    width:10px;
+}
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(238, 238, 238);
+    
+    border-radius: 80px; 
+}
+
+nav{
+    right: 0px;
+    position: absolute;
+    display: flex;
+    /* background: rgb(46, 47, 68); */
+    /* border: 2px solid saddlebrown; */
+    background: transparent;
+    width: 100%;
+}
+
+.navbar li a{
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.navbar li a:hover{
+    color: rgb(190, 190, 190);
+}
+
+.logo{
+    /* background: rgb(46, 47, 68); */
+    background: transparent;
+}
+
+.logo img{
+    width: 12vw;
+    height: 10vh;
+    margin-top: 5%;
+    margin-right: -5vw;
+    /* background: black; */
+    /* background: rgb(46, 47, 68); */
+    margin-left: 5vw;
+    /* transform: rotate(-5deg); */
+    /* border: 2px solid salmon; */
+}
+
+.navbar{
+    display: flex;
+    margin-top: 1vh;
+    width: 75vw;
+    height: 10vh;
+    font-size: 20px;
+    align-items: center;
+    /* border: 2px solid salmon; */
+    margin-right: -10vw;
+    margin-left: 10vw;
+    justify-content: space-evenly;
+}
+
+@media(max-width:1000px){
+    .navbar{
+        display: none;
+    }
+}
