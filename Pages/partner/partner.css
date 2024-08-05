@@ -424,7 +424,7 @@ nav{
     flex-direction: column;
     cursor: pointer;
     /* border: 2px solid salmon; */
-    margin-left: 10vw;
+    margin-left: 1vw;
 }
 
 .wrapper{
@@ -463,14 +463,13 @@ nav{
 
 .wrapper .carousel{
     display: grid;
-    margin-left: 2.5vw;
     grid-auto-flow: column;
     /* border: 2px solid saddlebrown; */
     gap: 1vw;
     grid-auto-columns: calc((100%/3));
     overflow: hidden;
     scroll-behavior: smooth;
-    gap:2vw;
+    gap:1vw;
 }
 
 .Partner{
