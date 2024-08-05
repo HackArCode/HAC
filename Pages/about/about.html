@@ -1,96 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L1MWCGB3ZJ"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'G-L1MWCGB3ZJ');
+        gtag('config', 'G-L1MWCGB3ZJ');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - HackArcode</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../navbar_page.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
-
         /* about section start */
         .neon-text {
-            color: #fff; 
+            color: #fff;
         }
+
         .badge {
-            width: 240px; 
-            height: 200px; 
-            background: linear-gradient(145deg, #222, #444); 
-            box-shadow: 5px 5px 15px #000, -5px -5px 15px #555; 
-            border: 2px solid #fff; 
+            width: 240px;
+            height: 200px;
+            background: linear-gradient(145deg, #222, #444);
+            box-shadow: 5px 5px 15px #000, -5px -5px 15px #555;
+            border: 2px solid #fff;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
         .badge:hover {
             transform: translateY(-10px);
             box-shadow: 10px 10px 20px #555, -10px -10px 20px #000;
         }
+
         /* about section end */
 
         /* NAvbar section start */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: transparent;
+
+        }
+
+        ::-webkit-scrollbar:hover {
+            width: 10px;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: rgb(238, 238, 238);
+
+            border-radius: 80px;
+        }
+
         nav {
             right: 0px;
             position: absolute;
             display: flex;
-            background: rgb(46, 47, 68);
+            /* background: rgb(46, 47, 68); */
+            /* border: 2px solid saddlebrown; */
+            background: transparent;
             width: 100%;
         }
-        *:root {
-            --ppl: #9747FF;
-            --cyan: #aedee0;
-            --dsalmaon: #4e3330;
-            --black: #fff; 
-            --white: #000; 
-            --salmon: #EF9D71;
-            --dcyan: #24403d;
+
+        .navbar li a {
+            color: rgb(255, 255, 255);
+            font-weight: 400;
+            font-size: 1.5rem;
         }
-        *::selection {
-            background-color: var(--ppl);
+
+        .navbar li a:hover {
+            color: rgb(190, 190, 190);
         }
-        body[theme="black"] {
-            background-color: var(--white); 
-        }
-        body[theme="black"] .section {
-            color: var(--black); 
-        }
-        body[theme="cyan"] {
-            background-color: var(--cyan);
-        }
-        body[theme="cyan"] .section {
-            color: var(--dcyan);
-        }
-        body[theme="salmon"] {
-            background-color: var(--salmon);
-        }
-        body[theme="salmon"] .section {
-            color: var(--dsalmaon);
-        }
-        body[theme="white"] {
-            background-color: var(--black); 
-        }
-        body[theme="white"] .section {
-            color: var(--white); 
-        }
+
         .logo {
-            background: rgb(46, 47, 68);
+            /* background: rgb(46, 47, 68); */
+            background: transparent;
         }
+
         .logo img {
             width: 12vw;
             height: 10vh;
             margin-top: 5%;
             margin-right: -5vw;
-            background: rgb(46, 47, 68);
+            /* background: black; */
+            /* background: rgb(46, 47, 68); */
             margin-left: 5vw;
-            transform: rotate(-5deg);
+            /* transform: rotate(-5deg); */
+            /* border: 2px solid salmon; */
         }
+
         .navbar {
             display: flex;
             margin-top: 1vh;
@@ -98,13 +116,24 @@
             height: 10vh;
             font-size: 20px;
             align-items: center;
+            /* border: 2px solid salmon; */
             margin-right: -10vw;
             margin-left: 10vw;
             justify-content: space-evenly;
         }
+        @media(max-width:1000px){
+            .navbar{
+                display: none;
+            }
+            .logo img{
+                width: 25vw;
+                height: 10vh;
+            }
+}
         /* Navbar section end  */
     </style>
 </head>
+
 <body>
     <!-- Navbar  -->
     <nav class="z-50">
@@ -112,17 +141,34 @@
             <img src="../../assets/logo-removebg-preview.png" alt="">
         </div>
         <ul class="navbar section">
-            <li class="name text-white"><a href="../../index.html" data-value="Home" class="active-text">Home</a></li>
-            <li class="name text-white"><a href="../about/about.html" data-value="About">About</a></li>
-            <li class="name text-white"><a href="../tracks/track.html" data-value="Tracks">Tracks</a></li>
-            <li class="name text-white"><a href="../partner/partner.html" data-value="Partners">Partners</a></li>
-            <li class="name text-white"><a href="../schedule/schedule.html" data-value="Schedule">Schedule</a></li>
-            <li class="name text-white"><a href="../Human/human.html" data-value="Humans">Humans</a></li>
-            <li class="name text-white"><a href="../faq/faq.html" data-value="FAQs">FAQs</a></li>
+            <li class="name"><a href="../../index.html" data-value="Home" class="active-text">Home</a></li>
+            <li class="name"><a href="../about/about.html" data-value="About">About</a></li>
+            <li class="name"><a href="../tracks/track.html" data-value="Tracks">Tracks</a></li>
+            <li class="name"><a href="../partner/partner.html" data-value="Partners">Partners</a></li>
+            <li class="name"><a href="../schedule/schedule.html" data-value="Schedule">Schedule</a></li>
+            <li class="name"><a href="../Human/human.html" data-value="Humans">Humans</a></li>
+            <li class="name"><a href="../faq/faq.html" data-value="FAQs">FAQs</a></li>
         </ul>
+        <i class="fa-solid fa-bars" id="navIcon"></i>
     </nav>
-    
-<!-- About  -->
+
+    <div class="box z-50">
+        <div class="dropdown"><i class="fa-solid fa-bars" ></i>
+            <!-- <span class="left-icon"></span> -->
+            <!-- <span class="right-icon"></span> -->
+            <div class="items">
+                <a href="../../index.html" style="--i:7;"><span></span>Home</a>
+                <a href="../about/about.html" style="--i:6;"><span></span>About</a>
+                <a href="../tracks/track.html" style="--i:5;"><span></span>Tracks</a>
+                <a href="../partner/partner.html" style="--i:4;"><span></span>Partners</a>
+                <a href="../schedule/schedule.html" style="--i:3;"><span></span>Schedule</a>
+                <a href="../Human/human.html" style="--i:2;"><span></span>Humans</a>
+                <a href="../faq/faq.html" style="--i:1;"><span></span>FAQs</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- About  -->
     <div class="text-white container-fluid pt-10" style="background-color: #000">
         <section class="py-12">
             <div class="container mx-auto px-6 flex flex-col lg:flex-row items-center" style="overflow-x: hidden;">
@@ -131,63 +177,84 @@
                     <p class="text-2xl text-gray-300">Empowering Innovators, Building the Future.</p>
                 </div>
                 <div class="lg:w-1/2 text-lg text-gray-300 leading-relaxed">
-                    <p class="mb-4">We are a group of community leaders who have cultivated a network of aspiring developers within our community. With a shared passion for innovation and technology, we have come together to organize this hackathon. Our goal is to create a platform that fosters collaboration, creativity, and skill development among participants.</p>
-                    <p class="mb-4">By hosting this event, we aim to provide opportunities for aspiring developers to showcase their talents, connect with industry professionals, and gain valuable experience in a supportive and inclusive environment. Through workshops, mentorship programs, and networking sessions, we are committed to empowering the next generation of innovators and problem solvers.</p>
+                    <p class="mb-4">We are a group of community leaders who have cultivated a network of aspiring
+                        developers within our community. With a shared passion for innovation and technology, we have
+                        come together to organize this hackathon. Our goal is to create a platform that fosters
+                        collaboration, creativity, and skill development among participants.</p>
+                    <p class="mb-4">By hosting this event, we aim to provide opportunities for aspiring developers to
+                        showcase their talents, connect with industry professionals, and gain valuable experience in a
+                        supportive and inclusive environment. Through workshops, mentorship programs, and networking
+                        sessions, we are committed to empowering the next generation of innovators and problem solvers.
+                    </p>
                     <p>Join us in shaping the future of technology and making a positive impact on our community.</p>
                 </div>
             </div>
         </section>
-    
+
         <section class="py-12 w-100">
-            <div style="padding-left: 5%;" class="container px-5 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
-                
+            <div style="padding-left: 5%;"
+                class="container px-5 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
+
                 <div class="badge p-6 text-center rounded-lg " data-target="500">
-                    <h3 style="height: 70px;" class="text-2xl flex items-center justify-center font-bold mb-4 text-gray-300 ">Registrations</h3>
+                    <h3 style="height: 70px;"
+                        class="text-2xl flex items-center justify-center font-bold mb-4 text-gray-300 ">Registrations
+                    </h3>
                     <p class="text-4xl font-bold neon-text count">0</p>
                 </div>
-               
+
                 <div class="badge p-6 text-center rounded-lg" data-target="25">
-                    <h3 style="height: 70px;" class="text-2xl flex items-center justify-center font-bold mb-4 text-gray-300">Community Partners</h3>
+                    <h3 style="height: 70px;"
+                        class="text-2xl flex items-center justify-center font-bold mb-4 text-gray-300">Community
+                        Partners</h3>
                     <p class="text-4xl font-bold neon-text count">0</p>
                 </div>
 
                 <div class="badge p-6 text-center rounded-lg" data-target="500000">
-                    <h3 style="height: 70px;" class="text-2xl flex items-center justify-center font-bold mb-4 text-gray-300">Prize Pool</h3>
+                    <h3 style="height: 70px;"
+                        class="text-2xl flex items-center justify-center font-bold mb-4 text-gray-300">Prize Pool</h3>
                     <div class="flex flex-row"></div>
                     <p class="text-4xl font-bold neon-text count">₹0</p>
                 </div>
-               
+
                 <div class="badge p-6 text-center rounded-lg" data-target="300">
-                    <h3 style="height: 70px;" class="text-2xl flex items-center justify-center font-bold mb-4 text-gray-300">Hackers</h3>
+                    <h3 style="height: 70px;"
+                        class="text-2xl flex items-center justify-center font-bold mb-4 text-gray-300">Hackers</h3>
                     <p class="text-4xl font-bold neon-text count">0</p>
                 </div>
-                
+
                 <div class="badge p-6 text-center rounded-lg" data-target="20">
-                    <h3 style="height: 70px;" class="text-2xl flex items-center justify-center font-bold mb-4 text-gray-300">Speakers</h3>
+                    <h3 style="height: 70px;"
+                        class="text-2xl flex items-center justify-center font-bold mb-4 text-gray-300">Speakers</h3>
                     <p class="text-4xl font-bold neon-text count">0</p>
                 </div>
-                
+
             </div>
         </section>
-    
+
         <section class="py-12 mt-4">
             <div class="container mx-auto px-4 text-center">
                 <h2 class="text-6xl font-bold neon-text mb-8">What Sets Us Apart?</h2>
                 <div class="flex flex-col lg:flex-row justify-center items-center">
                     <div class="lg:w-1/3 p-4">
-                        <img src="../../assets/arcade_1.png" alt="Arcade Theme" class="mx-auto mb-4" style="height: 120px; width: 120px;">
+                        <img src="../../assets/arcade_1.png" alt="Arcade Theme" class="mx-auto mb-4"
+                            style="height: 120px; width: 120px;">
                         <h3 class="text-3xl font-bold mb-2 text-gray-300">Arcade Theme</h3>
-                        <p class="text-lg text-gray-300">The whole hackathon will be based on an Arcade theme. Base your ideas around this fun retro-esque theme.</p>
+                        <p class="text-lg text-gray-300">The whole hackathon will be based on an Arcade theme. Base your
+                            ideas around this fun retro-esque theme.</p>
                     </div>
                     <div class="lg:w-1/3 p-4">
-                        <img src="../../assets/gaming_1.png" alt="Gaming Sessions" class="mx-auto mb-4" style="height: 120px; width: 120px;">
+                        <img src="../../assets/gaming_1.png" alt="Gaming Sessions" class="mx-auto mb-4"
+                            style="height: 120px; width: 120px;">
                         <h3 class="text-3xl font-bold mb-2 text-gray-300">Gaming Sessions</h3>
-                        <p class="text-lg text-gray-300">Coding non-stop can be counter-productive. To tackle that we will be having gaming sessions on PC or console. Feel free to take a break!</p>
+                        <p class="text-lg text-gray-300">Coding non-stop can be counter-productive. To tackle that we
+                            will be having gaming sessions on PC or console. Feel free to take a break!</p>
                     </div>
                     <div class="lg:w-1/3 p-4">
-                        <img src="../../assets/newbie_1.png" alt="30% Beginners" class="mx-auto mb-4" style="height: 100px; width: 100px;">
+                        <img src="../../assets/newbie_1.png" alt="30% Beginners" class="mx-auto mb-4"
+                            style="height: 100px; width: 100px;">
                         <h3 class="text-3xl font-bold mb-2 text-gray-300">30% Beginners</h3>
-                        <p class="text-lg text-gray-300">Freshers and beginners have no reason to worry about entering the hackathon as 30% of the participants are beginners.</p>
+                        <p class="text-lg text-gray-300">Freshers and beginners have no reason to worry about entering
+                            the hackathon as 30% of the participants are beginners.</p>
                     </div>
                 </div>
             </div>
@@ -248,6 +315,26 @@
                 observer.observe(counter.parentElement);
             });
         });
+
+        const navIcon=document.getElementById("navIcon");
+        const navbar=document.querySelector(".navbar");
+        var display=0;
+        navIcon.addEventListener("click",()=>{
+            if (display==0){
+                navbar.style.display='grid';
+                display++;
+            }
+            else{
+                navbar.style.display='none';
+                display--;
+            }
+        })
+
+        const dropdown = document.querySelector('.dropdown');
+        dropdown.addEventListener('click', () => {
+            dropdown.classList.toggle('active');
+        });
     </script>
 </body>
+
 </html>
