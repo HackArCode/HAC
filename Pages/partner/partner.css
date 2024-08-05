@@ -216,6 +216,98 @@ nav{
     transform: translateX(calc(20vw*2));
 }
 
+.dropdown1{
+    position: relative;
+    min-width: 15em;
+    margin-top: 15%;
+    font-size: 1.4rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown1 *{
+    box-sizing: border-box;
+}
+
+.select{
+    background: gainsboro;
+    height: 10vh;
+    width: 40vw;
+    display: flex;
+    padding: 1em;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    border-radius: 1.5em;
+    cursor: pointer;
+    transition: background .3s;
+}
+
+.select-clicked{
+    border: 2px #26489a;
+    box-shadow: 0 0 0.8em #26489a;
+}
+
+.select:hover{
+    background: #323741;
+    color: #fff;
+}
+
+.caret{
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #131313;
+    transition: .3s;
+}
+
+.caret-rotate{
+    transform: rotate(180deg);
+}
+
+.selected{
+    text-align: center;
+    width: 90%;
+}
+
+.menu1{
+    padding: 0.2em 0.5em;
+    background: #323741;
+    color: #9fa5b5;
+    border-radius: 0.5em;
+    opacity: 0;
+    width: 40vw;
+    position: absolute;
+    display: none;
+    transform: translateX(74%);
+    transition: 0.2s;
+    z-index: 1;
+}
+
+.menu1 li{
+    padding: 0.7em 0.5em;
+    margin: 0.3em 0;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+.menu li:hover{
+    background: #2a2d35;
+}
+
+.active{
+    background:#23242a ;
+}
+
+.menu-open{
+    display: block;
+    opacity: 1;
+}
+
+
+
 /* Sponsor Section */
 .sponsor-box{
     height: 50vh;
@@ -454,5 +546,34 @@ nav{
 @media(max-width:1000px){
     .navbar{
         display: none;
+    }
+}
+
+@media(max-width:900px){
+
+    .navigation{
+        display: none;
+    }
+
+    .dropdown1{
+        display: block;
+    }
+}
+
+@media(max-width:430px){
+    .select{
+        width: 50vw;
+        height: 14vh;
+    }
+
+    .menu1{
+        width: 50vw;
+        transform: translateX(48.5%);
+    }
+}
+
+@media(max-width:320px){
+    .menu1{
+        transform: translateX(54%);
     }
 }

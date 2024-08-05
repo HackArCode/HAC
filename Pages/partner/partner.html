@@ -33,9 +33,7 @@
             <li class="name"><a href="../Human/human.html" data-value="Humans">Humans</a></li>
             <li class="name"><a href="../faq/faq.html" data-value="FAQs">FAQs</a></li>
         </ul>
-        <i class="fa-solid fa-bars" id="navIcon"></i>
     </nav>
-
     <div class="box z-50">
         <div class="dropdown"><i class="fa-solid fa-bars" ></i>
             <!-- <span class="left-icon"></span> -->
@@ -61,22 +59,35 @@
             <li class="list1 active-bar">
                 <a href="#">
                     <!-- <img src="../../assets/2601512.png" alt="" class="icon"> -->
-                    <span class="text1">Sponsors</span>
+                    <span class="text1 active-partner" style="--i:1;">Sponsors</span>
                 </a>
             </li>
             <li class="list1">
                 <a href="#" >
                     <!-- <img src="../../assets/5663230.png" alt="" class="icon"> -->
-                    <span class="text1">Featured Partners</span>
+                    <span class="text1" style="--i:2;">Featured Partners</span>
                 </a>
             </li>
             <li class="list1">
                 <a href="#">
                     <!-- <img src="../../assets/837993.png" alt="" class="icon"> -->
-                    <span class="text1">In-kind Partners</span>
+                    <span class="text1" style="--i:3;">In-kind Partners</span>
                 </a>
             </li>
             <div class="indicator1"></div>
+        </ul>
+    </div>
+    <div class="dropdown1">
+        <div class="select">
+            <span class="selected text-center">
+                Sponsors 
+            </span>
+            <div class="caret"></div>
+        </div>
+        <ul class="menu1">
+            <li class="active active-bar">Sponsors</li>
+            <li>Featured Partners</li>
+            <li>In-kind Partners</li>
         </ul>
     </div>
     </center>
@@ -206,6 +217,64 @@
         dropdown.addEventListener('click', () => {
             dropdown.classList.toggle('active');
         });
+    </script>
+    <script>
+        const angle=document.querySelector(".angle-d i");
+        const navigation=document.querySelectorAll(".navigation ul li");
+        angle.addEventListener("click",()=>{
+            navigation.forEach(item=>{
+                navigation.forEach(item=>{item.classList.remove('active-partner')});
+                item.classList.add('active-partner');
+            })
+        })
+    </script>
+    <script>
+        const dropdowns=document.querySelectorAll(".dropdown1");
+        dropdowns.forEach(dropdown=>{
+            const select=dropdown.querySelector(".select");
+            const caret=document.querySelector(".caret");
+            const menu=document.querySelector(".menu1");
+            const options =document.querySelectorAll(".menu1 li");
+            const selected=document.querySelector(".selected");
+            select.addEventListener("click",()=>{
+                select.classList.toggle('select-clicked');
+                caret.classList.toggle("caret-rotate");
+                menu.classList.toggle("menu-open");
+            });
+            options.forEach(option=>{
+                option.addEventListener("click",()=>{
+                    selected.innerText=option.innerText;
+
+                    select.classList.remove("select-clicked");
+
+                    caret.classList.remove("caret-rotate");
+                    menu.classList.remove("menu-open");
+
+                    options.forEach(option=>{
+                        option.classList.remove('active');
+                    })
+                    option.classList.add('active');
+
+                })
+            })
+        })
+
+    </script>
+    <script>
+        const links=document.querySelectorAll('.menu1 li');
+        const all_contents=document.querySelectorAll(".content");
+
+        links.forEach((item,index)=>
+        item.addEventListener('click',()=>{
+            links.forEach(item=>{item.classList.remove('active-bar')});
+            item.classList.add('active-bar');
+
+            all_contents.forEach(content=>{content.classList.remove('active-box')});
+            all_contents[index].classList.add('active-box');
+
+
+        }));
+
     </script>
 </body>
 </html>
