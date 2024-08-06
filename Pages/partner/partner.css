@@ -348,6 +348,7 @@ nav{
     margin-top: 5vh;
     font-size: 2.5rem;
     margin-left: 3vw;
+    font-family: 'Poppins',sans-serif;
 }
 
 .Sponsi-btn{
@@ -659,8 +660,15 @@ nav{
         border-bottom-left-radius: 10vh;
 
     }
+    .sponsor-content{
+        margin-top: -35vh;
+    }
+    .sponsor-logo{
+        height:45vh;
+    }
     .sponsor-content p{
         text-align: justify;
+        margin-top: 6vh;
     }
     .logo img{
         width: 50vw;
@@ -673,5 +681,9 @@ nav{
     }
     .Sponsi-btn{
         margin-top:-2vh ;
+    }
+    .sponsor-logo img{
+        width: 95%;
+        margin-left: 1.5vw;
     }
 }
