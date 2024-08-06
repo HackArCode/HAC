@@ -124,6 +124,7 @@ nav{
     padding: 25px 10px;
     text-align: center;
     font-size: 55px;
+    font-family: 'Goldman',sans-serif;
 }
 
 .navigation{
@@ -641,6 +642,12 @@ nav{
         text-align: justify;
     }
     .Sponsor-button{
-        margin-top: 25vh;
+        margin-top: 15vh;
+    }
+    .logo img{
+        width: 50vw;
+    }
+    .head{
+        font-size: 30px;
     }
 }
