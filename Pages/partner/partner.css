@@ -114,7 +114,7 @@ nav{
 }
 
 #title{
-    font-size: 6rem;
+    font-size: 5rem;
     text-align: center;
     position: relative;
     top: 5vh;
@@ -123,7 +123,6 @@ nav{
 .head {
     padding: 25px 10px;
     text-align: center;
-    font-size: 55px;
     font-family: 'Goldman',sans-serif;
 }
 
@@ -626,11 +625,20 @@ nav{
         place-items: center;
         margin-top: 3vh;
     }
+    .logo img{
+        width: 40vw;
+    }
+    #title{
+        font-size: 4rem;
+    }
 }
 
 @media(max-width:375px){
     .Sponsor-button{
         margin-top: 9vh;
+    }
+    #title{
+        font-size: 3.5rem;
     }
 }
 
@@ -642,12 +650,15 @@ nav{
         text-align: justify;
     }
     .Sponsor-button{
-        margin-top: 15vh;
+        margin-top: 5vh;
     }
     .logo img{
         width: 50vw;
     }
     .head{
-        font-size: 30px;
+        font-size: 1rem;
+    }
+    #title{
+        font-size: 3rem;
     }
 }
