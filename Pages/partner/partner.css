@@ -592,12 +592,19 @@ nav{
     .sponsor-content p{
         height: 50vh;
     }
+    .logo img{
+        width: 20vw;
+    }
 }
 
 @media(max-width:425px){
     .sponsor-box{
         height: 120vh;
         display: grid;
+        border-top-left-radius: 3vh;
+        border-top-right-radius: 12vh;
+        border-bottom-right-radius: 3vh;
+        border-bottom-left-radius: 12vh;
     }
     .sponsor-logo{
         width: 100%;
@@ -630,6 +637,7 @@ nav{
     }
     #title{
         font-size: 4rem;
+        margin-top: 2rem;
     }
 }
 
@@ -645,12 +653,14 @@ nav{
 @media(max-width:320px){
     .sponsor-box{
         height: 130vh;
+        border-top-left-radius: 2.5vh;
+        border-top-right-radius: 10vh;
+        border-bottom-right-radius: 2.5vh;
+        border-bottom-left-radius: 10vh;
+
     }
     .sponsor-content p{
         text-align: justify;
-    }
-    .Sponsor-button{
-        margin-top: 5vh;
     }
     .logo img{
         width: 50vw;
@@ -660,5 +670,8 @@ nav{
     }
     #title{
         font-size: 3rem;
+    }
+    .Sponsi-btn{
+        margin-top:-2vh ;
     }
 }
