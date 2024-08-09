@@ -205,7 +205,7 @@ nav{
     }
 }
 
-@media(max-width:320px){
+@media(max-width:375px){
     .container{
         display: grid;
         grid-template-columns: auto;
@@ -214,6 +214,59 @@ nav{
         width: 50vw;
     }
     .card .image img{
+        min-width: 32vw;
+    }
+    .logo img{
         width: 30vw;
+    }
+}
+
+@media(max-width:320px){
+    .card{
+        width: 60vw;
+    }
+    .card .image img{
+        min-width: 40vw;
+    }
+    .logo img{
+        width: 35vw;
+    }
+}
+
+@media(max-width:425px){
+    .logo img{
+        width: 30vw;
+    }
+    .container{
+        display: grid;
+        place-items: center;
+    }
+    .card{
+        width: 50vw;
+    }
+    .card .image img{
+        min-width: 30vw;
+    }
+}
+
+@media(max-width:768px){
+    .container{
+        display: grid;
+        place-items: center;
+        gap: 2rem;
+    }
+    .card{
+        min-width: 28vw;
+    }
+}
+
+@media(max-width:1024px){
+    .container{
+        gap: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .card .image img{
+        min-width: 13vw;
     }
 }
