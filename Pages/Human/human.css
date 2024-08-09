@@ -214,7 +214,7 @@ nav{
         width: 50vw;
     }
     .card .image img{
-        min-width: 32vw;
+        width: 32vw;
     }
     .logo img{
         width: 30vw;
@@ -226,7 +226,7 @@ nav{
         width: 60vw;
     }
     .card .image img{
-        min-width: 40vw;
+        width: 40vw;
     }
     .logo img{
         width: 35vw;
@@ -245,7 +245,7 @@ nav{
         width: 50vw;
     }
     .card .image img{
-        min-width: 30vw;
+        width: 30vw;
     }
 }
 
