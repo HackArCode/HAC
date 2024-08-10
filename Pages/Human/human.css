@@ -126,9 +126,24 @@ nav{
 .card .image img{
     height: 27vh;
     width: 18vw;
-    border-radius:35% 65% 50% 50% / 56% 39% 61% 44%  ;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     transition: all 0.5s ease;
+    border-radius: 2rem;
+    animation: image-animation 1s ease-in-out;
+    border-radius:35% 65% 50% 50% / 56% 39% 61% 44%  ;
+}
+
+@keyframes image-animation{
+    0%{
+        border-radius: 1rem;
+    }
+    100%{
+        border-radius:35% 65% 50% 50% / 56% 39% 61% 44%  ;
+    }
+}
+
+.card .image img::after{
+    border-radius: 35% 65% 50% 50% / 56% 39% 61% 44% ;
 }
 
 .card-content h3{

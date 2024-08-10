@@ -98,7 +98,8 @@
                     <div class="amoeba">
                         <div class="container max-w-2xl section">
                             <div class="text-new">
-                                <h1 class="font-semibold heading "><span class="">Delve into</span> 
+                                <h1 class="font-semibold heading ">
+                                    <span class="">Delve into</span> 
                                     <div class="gaming">
                                         <span class="text-color">Ga</span>ming <span class="Genesis">Genesis!</span>
                                     </div>
@@ -477,5 +478,32 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script>
+        const t_bg=gsap.timeline({ease: Power1.easeInOut})
+        .to(".container",{
+            duration:2,
+            left:0
+        })
+        .from(".popup",{
+            opacity:0,
+            delay:2,
+            duration:0.5,
+            scale:0.1
+        })
+        ;
+
+        const t_nav=gsap.timeline({ease: Power1.easeInOut})
+        .from(".logo img",{
+            delay:1,
+            duration:1,
+            y:-80
+        })
+        .from(".navbar li",{
+            duration:1,
+            y:-80,
+            stagger:.1
+        },"-=.4")
+    </script>
 </body>
 </html>
