@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L1MWCGB3ZJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-L1MWCGB3ZJ');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracks - HackArcode</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../navbar_page.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        @media (max-width: 500px) {
+            .container{
+                display: flex;
+                flex-direction: column;
+            }
+            #rt,#bt{
+                width: 100%;
+                padding-top: 10px;
+            }
+            .card:hover {
+            transform: scale(1.01);
+            background-color: #b5b1b1; /* Change to a different color on hover */
+            color: #000;
+        }
+        #display-board{
+            width: 100%;
+            margin-top: 20px;
+        }
+        }
+        .card {
+            transition: transform 0.4s, background-color 0.2s;
+        }
+        .card:hover {
+            transform: scale(1.1);
+            background-color: #ffffff; /* Change to a different color on hover */
+            color: #000;
+            border: .5px solid black;
+        }
+        .fade-enter, .fade-leave-active {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.1s, transform 0.3s;
+        }
+        .fade-enter-active, .fade-leave {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* NAvbar section start */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: transparent;
+
+        }
+
+        ::-webkit-scrollbar:hover {
+            width: 10px;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: rgb(238, 238, 238);
+
+            border-radius: 80px;
+        }
+
+        nav {
+            right: 0px;
+            position: absolute;
+            display: flex;
+            /* background: rgb(46, 47, 68); */
+            /* border: 2px solid saddlebrown; */
+            background: black;
+            width: 100%;
+        }
+
+        .navbar li a {
+            color: rgb(255, 255, 255);
+            font-weight: 400;
+            font-size: 1.5rem;
+        }
+
+        .navbar li a:hover {
+            color: rgb(190, 190, 190);
+        }
+
+        .logo {
+            /* background: rgb(46, 47, 68); */
+            background: transparent;
+        }
+
+        .logo img {
+            width: 12vw;
+            height: 10vh;
+            margin-top: 5%;
+            margin-right: -5vw;
+            /* background: black; */
+            /* background: rgb(46, 47, 68); */
+            margin-left: 5vw;
+            /* transform: rotate(-5deg); */
+            /* border: 2px solid salmon; */
+        }
+
+        .navbar {
+            display: flex;
+            margin-top: 1vh;
+            width: 75vw;
+            height: 10vh;
+            font-size: 20px;
+            align-items: center;
+            /* border: 2px solid salmon; */
+            margin-right: -10vw;
+            margin-left: 10vw;
+            justify-content: space-evenly;
+        }
+        @media(max-width:1000px){
+            .navbar{
+                display: none;
+            }
+            .logo img{
+                width: 25vw;
+                height: 10vh;
+            }
+}
+        /* Navbar section end  */
+    </style>
+</head>
+<body class=" text-white">
+    <nav class="z-50">
+        <div class="logo">
+            <img src="../../assets/logo-removebg-preview.png" alt="">
+        </div>
+        <ul class="navbar section">
+            <li class="name"><a href="../../index.html" data-value="Home" class="active-text">Home</a></li>
+            <li class="name"><a href="../about/about.html" data-value="About">About</a></li>
+            <li class="name"><a href="../tracks/track.html" data-value="Tracks">Tracks</a></li>
+            <li class="name"><a href="../partner/partner.html" data-value="Partners">Partners</a></li>
+            <li class="name"><a href="../schedule/schedule.html" data-value="Schedule">Schedule</a></li>
+            <li class="name"><a href="../Prizes/Prizes.html" data-value="FAQs">Prizes</a></li>
+            <li class="name"><a href="../Human/human.html" data-value="Humans">Humans</a></li>
+            <li class="name"><a href="../faq/faq.html" data-value="FAQs">FAQs</a></li>
+        </ul>
+        <i class="fa-solid fa-bars" hidden id="navIcon"></i>
+    </nav>
+
+    <div class="box z-50">
+        <div class="dropdown"><i class="fa-solid fa-bars" ></i>
+            <!-- <span class="left-icon"></span> -->
+            <!-- <span class="right-icon"></span> -->
+            <div class="items">
+                <a href="../../index.html" style="--i:7;"><span></span>Home</a>
+                <a href="../about/about.html" style="--i:6;"><span></span>About</a>
+                <a href="../tracks/track.html" style="--i:5;"><span></span>Tracks</a>
+                <a href="../partner/partner.html" style="--i:4;"><span></span>Partners</a>
+                <a href="../schedule/schedule.html" style="--i:3;"><span></span>Schedule</a>
+                <a href="../Prizes/Prizes.html" style="--i:3;"><span></span>Prizes</a>
+                <a href="../Human/human.html" style="--i:2;"><span></span>Humans</a>
+                <a href="../faq/faq.html" style="--i:1;"><span></span>FAQs</a>
+            </div>
+        </div>
+    </div>
+    
+
+    <h1 class="text-center text-5xl font-bold text-black" style="padding-top: 110px;">Tracks</h1>
+    <div class="container mx-auto flex p-6 pt-2" >
+        <!-- Left Section: Grid of Cards -->
+        <div class="w-2/5 grid lg:grid-cols-2 md:grid-cols-1 gap-4" id="rt">
+            <div class="card bg-black text-white p-8 rounded-lg shadow-md cursor-pointer" onclick="showInfo('game')">
+                <h3 class="text-xl font-bold">Game Development</h3>
+                <p>Push the boundaries of interactive entertainment.</p>
+            </div>
+            <div class="card bg-black text-white p-8 rounded-lg shadow-md cursor-pointer" onclick="showInfo('edtech')">
+                <h3 class="text-xl font-bold">Ed-Tech</h3>
+                <p>Innovative solutions for personalized learning.</p>
+            </div>
+            <div class="card bg-black text-white p-8 rounded-lg shadow-md cursor-pointer" onclick="showInfo('health')">
+                <h3 class="text-xl font-bold">Health & Science</h3>
+                <p>Apps for mental wellness and healthcare access.</p>
+            </div>
+            <div class="card bg-black text-white p-8 rounded-lg shadow-md cursor-pointer" onclick="showInfo('blockchain')">
+                <h3 class="text-xl font-bold">Blockchain</h3>
+                <p>Novel applications leveraging blockchain technology.</p>
+            </div>
+            <div class="card bg-black text-white p-8 rounded-lg shadow-md cursor-pointer" onclick="showInfo('open')">
+                <h3 class="text-xl font-bold">Open Innovation</h3>
+                <p>Shape the future through open innovation.</p>
+            </div>
+            <div class="card bg-black text-white p-8 rounded-lg shadow-md cursor-pointer" onclick="showInfo('iot')">
+                <h3 class="text-xl font-bold">Hardware & IoT</h3>
+                <p>Transform your inventive ideas into real prototypes.</p>
+            </div>
+        </div>
+
+        <!-- Right Section: Display Board -->
+        <div class="w-3/5 p-8 ml-4" id="bt">
+            <div id="display-board" class="bg-gray-700 text-white p-8 shadow-md rounded h-full flex flex-col gap-4 items-center justify-center">
+                <p class="text-center text-lg">Select a category from the left to see more information.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const info = {
+            game: `<h2 class="text-4xl font-bold mb-4">Game Development</h2>
+                   <p>Create a cutting-edge game that pushes the boundaries of interactive entertainment. Focus on advanced graphics, immersive storytelling, innovative gameplay mechanics, or seamless multiplayer experiences. Emphasize creativity and technical prowess in game design and development.</p>
+                   <p>Modern games often include sophisticated AI for non-player characters (NPCs), realistic physics simulations, and expansive open worlds. To stand out, consider unique gameplay mechanics, compelling narratives, and high-quality visuals.</p>`,
+            edtech: `<h2 class="text-4xl font-bold mb-4">Ed-Tech</h2>
+                     <p>Empower learners through innovative edtech solutions, fostering personalized learning experiences and virtual classrooms. Bridge knowledge gaps and enhance accessibility to education for all.</p>
+                     <p>Explore the potential of gamified learning, AI-driven personalized content, and virtual reality classrooms. These tools can make education more engaging, inclusive, and effective.</p>`,
+            health: `<h2 class="text-4xl font-bold mb-4">Health & Science</h2>
+                     <p>Develop apps supporting mental wellness, improving healthcare access, and promoting healthier lifestyles. Empower individuals to prioritize their well-being and lead fulfilling lives.</p>
+                     <p>Technologies like telemedicine, AI diagnostics, and health tracking wearables can revolutionize healthcare delivery and personal health management.</p>`,
+            blockchain: `<h2 class="text-4xl font-bold mb-4">Blockchain</h2>
+                         <p>Develop a novel application or platform leveraging blockchain technology. Explore areas such as decentralized finance (DeFi), supply chain transparency, digital identity, or social impact solutions. Showcase innovative uses of blockchain that address real-world challenges or create new opportunities.</p>
+                         <p>Blockchain offers the potential for secure, transparent, and decentralized solutions across various industries, from finance to healthcare to supply chains.</p>`,
+            open: `<h2 class="text-4xl font-bold mb-4">Open Innovation</h2>
+                   <p>AR-VR, AIML, Cloud Computing or Pong? Create what you want and challenge yourself to shape the future of technology through open innovation and idea exchange.</p>
+                   <p>Open innovation encourages collaboration and idea sharing beyond traditional boundaries. This approach can accelerate technological advancements and foster creativity.</p>`,
+            iot: `<h2 class="text-4xl font-bold mb-4">Hardware & IoT</h2>
+                  <p>Get hands-on and bring your concepts to life! Dive into the Hardware Track and transform your inventive ideas into real, functional prototypes.</p>
+                  <p>The Internet of Things (IoT) connects devices, enabling smarter environments and more efficient systems. Explore IoT's potential in smart homes, cities, and industries.</p>`
+        };
+
+        function showInfo(key) {
+            const displayBoard = document.getElementById('display-board');
+            displayBoard.classList.remove('fade-enter-active');
+            displayBoard.classList.add('fade-leave');
+
+            setTimeout(() => {
+                displayBoard.innerHTML = info[key];
+                displayBoard.classList.remove('hidden', 'fade-leave');
+                displayBoard.classList.add('fade-enter');
+                setTimeout(() => {
+                    displayBoard.classList.add('fade-enter-active');
+                }, 10);
+            }, 300);
+        }
+
+        const navIcon=document.getElementById("navIcon");
+        const navbar=document.querySelector(".navbar");
+        var display=0;
+        navIcon.addEventListener("click",()=>{
+            if (display==0){
+                navbar.style.display='grid';
+                display++;
+            }
+            else{
+                navbar.style.display='none';
+                display--;
+            }
+        })
+
+        const dropdown = document.querySelector('.dropdown');
+        dropdown.addEventListener('click', () => {
+            dropdown.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
