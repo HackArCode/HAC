@@ -378,3 +378,153 @@ nav{
         width: 30vw;
     }
 }
+
+.wrapper-new{
+    width: 300%;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.blocks{
+    min-height: 100vh;
+    font-size: 1.5rem;
+    line-height: 1.3;
+    font-family: 'Poppins',sans-serif;
+    overflow: hidden;
+}
+
+.logo-Hackarcode{
+    font-size: 8rem;
+    position: sticky;
+    z-index: 10;
+    top: 15%;
+    left: 4rem;
+    line-height: 0.9;
+    color: #ffdcff;
+}
+
+.line{
+    background-color: purple;
+    height: 1rem;
+    position: absolute;
+    top:50%;
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+section{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+section.image-new::before{
+    content: '';
+    width: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.block{
+    width: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    transform: translateX(-100%);
+}
+
+.prizes::before, .prizes .block {
+    background-color: #a42ec2;
+}
+
+.Hackers::before,.Hackers .block{
+    background-color: rgb(226, 19, 216);
+}
+
+.caption{
+    position: absolute;
+    bottom: 4rem;
+    left: 4rem;
+    width: 30%;
+    font-weight: 400;
+    color: #d80d0d;
+}
+
+.image-new img{
+    position: relative;
+    z-index: 10;
+    height: 90vh;
+    width: auto;
+    transform: translateY(-100%);
+}
+
+.huge-text{
+    font-size: 20rem;
+    width: 100%;
+    text-align: center;
+    color: yellow;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    transform: translateY(100%);
+}
+
+.nickname{
+    position: absolute;
+    top: 4rem;
+    right: 4rem;
+    font-size: 3rem;
+    text-align: right;
+    transform: translateY(-100%);
+    color: yellow;
+}
+
+.nickname span{
+    display: block;
+    font-size: 70%;
+    color: var(--white);
+}
+
+.quote{
+    position: absolute;
+    bottom: 4rem;
+    right: 4rem;
+    font-size: 2.5rem;
+    width: 30%;
+    text-align: right;
+    transform: translateY(60%);
+}
+
+.quote::before, .quote::after{
+    content: '';
+    color: #fff;
+}
+
+.cap{
+    margin-top: -120vh;
+}
+
+.code{
+    border-bottom: 1px solid white;
+}
+
+.discord{
+    margin-top: -110vh;
+    gap: 1.5rem;
+}
+
+footer{
+    display: grid;
+    height: 5vh;
+    place-items:center;
+    width: 100%;
+}
