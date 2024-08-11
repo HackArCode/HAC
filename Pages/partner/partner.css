@@ -348,7 +348,7 @@ nav{
     margin-top: 5vh;
     font-size: 2.5rem;
     margin-left: 3vw;
-    font-family: 'Poppins',sans-serif;
+    font-family: myfont;
 }
 
 .Sponsi-btn{
@@ -364,6 +364,98 @@ nav{
 .Sponsi-btn:hover{
     color: #fff;
     background: black;
+}
+
+.sponsor-box1{
+    height: 50vh;
+    width: 90vw;
+    background: rgb(243, 243, 243);
+    border-bottom-left-radius: 5vh;
+    border-bottom-right-radius: 15vh;
+    border-top-right-radius: 5vh;
+    border-top-left-radius: 15vh;
+    display: flex;
+    margin-top: 1rem;
+}
+
+@font-face {
+    font-family: myfont;
+    src: url(../../fonts/Nohemi-Font/Nohemi-Light-BF6438cc5899919.ttf);
+}
+
+.sponsor-logo1 h2{
+    color:#6a6d78;
+    font-weight: 500;
+    width: 150%;
+    text-align: center;
+    /* border: 2px solid salmon */
+    margin-bottom: 1rem;
+    color: #6a6d78;
+    margin-top: 2vh;
+    font-size: 2.5rem;
+    font-family: myfont;
+}
+
+.sponsor-logo1{
+    width: 60vw;
+}
+
+.sponsor-logo1 img{
+    height: 50vh;
+    margin-top: -10vh;
+    margin-left: -3vw;
+}
+
+.sponsor-content1{
+    width: 30vw;
+    margin-left: -3vw;
+}
+
+.sponsor-content1 p{
+    color: black;
+    font-size: 1.2rem;
+    margin-top: 9vh;
+}
+
+/* Featured Partner */
+
+.Featured{
+    width: 100%;
+    height: auto;
+}
+
+.feature-box{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-box1{
+    height: 45vh;
+    width: 30vw;
+    background: rgb(255, 255, 255);
+    border-bottom-left-radius: 5vh;
+    border-bottom-right-radius: 15vh;
+    border-top-right-radius: 5vh;
+    border-top-left-radius: 15vh;
+    margin-top: 1rem;
+    color: #838486;
+    font-size: 2rem;
+    font-weight: 500;
+    display: grid;
+    place-items: center;
+    font-family: myfont;
+}
+
+.feature-box1 img{
+    height: 30vh;
+}
+
+.feature-box1 h2{
+    margin-top: 3vh;
+    text-align: center;
 }
 
 /* In-kind Sponsors */
@@ -425,7 +517,7 @@ nav{
     flex-direction: column;
     cursor: pointer;
     /* border: 2px solid salmon; */
-    margin-left: 1vw;
+    margin-left: 2vw;
 }
 
 .wrapper{
@@ -466,11 +558,11 @@ nav{
     display: grid;
     grid-auto-flow: column;
     /* border: 2px solid saddlebrown; */
-    gap: 1vw;
-    grid-auto-columns: calc((100%/3));
+    grid-auto-columns: calc((100%/2));
     overflow: hidden;
     scroll-behavior: smooth;
-    gap:1vw;
+    gap:2rem;
+    width: 60%;
 }
 
 .Partner{
