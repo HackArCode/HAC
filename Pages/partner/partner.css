@@ -370,10 +370,10 @@ nav{
     height: 50vh;
     width: 90vw;
     background: rgb(243, 243, 243);
-    border-bottom-left-radius: 5vh;
-    border-bottom-right-radius: 15vh;
-    border-top-right-radius: 5vh;
-    border-top-left-radius: 15vh;
+    border-top-left-radius: 5vh;
+    border-top-right-radius: 15vh;
+    border-bottom-right-radius: 5vh;
+    border-bottom-left-radius: 15vh;
     display: flex;
     margin-top: 1rem;
 }
@@ -386,29 +386,29 @@ nav{
 .sponsor-logo1 h2{
     color:#6a6d78;
     font-weight: 500;
-    width: 150%;
-    text-align: center;
-    /* border: 2px solid salmon */
+    width: 100%;
+    /* text-align: center; */
     margin-bottom: 1rem;
     color: #6a6d78;
     margin-top: 2vh;
     font-size: 2.5rem;
     font-family: myfont;
+    margin-left: 3vw;
 }
 
 .sponsor-logo1{
-    width: 60vw;
+    width: 40vw;
 }
 
 .sponsor-logo1 img{
-    height: 50vh;
-    margin-top: -10vh;
-    margin-left: -3vw;
+    height: 30vh;
+    margin-top: 0;
+    margin-left: 3vw;
 }
 
 .sponsor-content1{
-    width: 30vw;
-    margin-left: -3vw;
+    width: 50vw;
+    margin-left: -2vw;
 }
 
 .sponsor-content1 p{
@@ -433,8 +433,8 @@ nav{
 }
 
 .feature-box1{
-    height: 45vh;
-    width: 30vw;
+    height: 40vh;
+    width: 28vw;
     background: rgb(255, 255, 255);
     border-bottom-left-radius: 5vh;
     border-bottom-right-radius: 15vh;
@@ -447,6 +447,21 @@ nav{
     display: grid;
     place-items: center;
     font-family: myfont;
+}
+
+.image-fit1{
+    max-height: 20vh;
+    width: 15vw;
+}
+
+.image-fit2{
+    max-height: 25vh;
+    width: 13vw;
+}
+
+.image-fit3{
+    width: 10vw;
+    max-height: 25vh;
 }
 
 .feature-box1 img{
@@ -671,18 +686,18 @@ nav{
 }
 
 @media(max-width:1024px){
-    .sponsor-box{
+    .sponsor-box,.sponsor-box1{
         /* border: 2px solid salmon; */
         height: 70vh;
     }
-    .sponsor-content p{
+    .sponsor-content p,.sponsor-content1 p{
         /* border: 2px solid saddlebrown; */
         height: 45vh;
     }
 }
 
 @media(max-width:768px){
-    .sponsor-content p{
+    .sponsor-content p,.sponsor-content1 p{
         height: 50vh;
     }
     .logo img{
@@ -691,7 +706,7 @@ nav{
 }
 
 @media(max-width:425px){
-    .sponsor-box{
+    .sponsor-box,.sponsor-box1{
         height: 120vh;
         display: grid;
         border-top-left-radius: 3vh;
@@ -699,23 +714,23 @@ nav{
         border-bottom-right-radius: 3vh;
         border-bottom-left-radius: 12vh;
     }
-    .sponsor-logo{
+    .sponsor-logo,.sponsor-logo1{
         width: 100%;
         /* border: 2px solid saddlebrown; */
         justify-content: center;
         align-items: center;
     }
-    .sponsor-logo img{
+    .sponsor-logo img,.sponsor-logo1 img{
         margin-left: 10vw;
         width: 70%;
     }
-    .sponsor-logo h2{
+    .sponsor-logo h2,.sponsor-logo1 h2{
         text-align: center;
     }
-    .sponsor-content p{
+    .sponsor-content p,.sponsor-content1 p{
         margin-top: -3vh;
     }
-    .sponsor-content{
+    .sponsor-content,.sponsor-content1{
         margin-top: -15vh;
         width: 100%;
         margin-left: 0.5vw;
@@ -744,7 +759,7 @@ nav{
 }
 
 @media(max-width:320px){
-    .sponsor-box{
+    .sponsor-box,.sponsor-box1{
         height: 130vh;
         border-top-left-radius: 2.5vh;
         border-top-right-radius: 10vh;
@@ -752,13 +767,13 @@ nav{
         border-bottom-left-radius: 10vh;
 
     }
-    .sponsor-content{
+    .sponsor-content,.sponsor-content1{
         margin-top: -35vh;
     }
-    .sponsor-logo{
+    .sponsor-logo,.sponsor-logo1{
         height:45vh;
     }
-    .sponsor-content p{
+    .sponsor-content p,.sponsor-content1 p{
         text-align: justify;
         margin-top: 6vh;
     }
@@ -774,7 +789,7 @@ nav{
     .Sponsi-btn{
         margin-top:-2vh ;
     }
-    .sponsor-logo img{
+    .sponsor-logo img,.sponsor-logo1 img{
         width: 95%;
         margin-left: 1.5vw;
     }
