@@ -512,6 +512,7 @@ nav{
     font-size: 1rem;
     text-align: justify;
     margin-top: 3vh;
+    margin-bottom: 4vh;
 }
 
 .carousel :where(.card,.sp-image){
@@ -573,11 +574,20 @@ nav{
     display: grid;
     grid-auto-flow: column;
     /* border: 2px solid saddlebrown; */
-    grid-auto-columns: calc((100%/2));
+    grid-auto-columns: calc((100%/3));
     overflow: hidden;
     scroll-behavior: smooth;
-    gap:2rem;
-    width: 60%;
+    gap:0rem;
+    width: 90%;
+}
+
+.xyz{
+    margin-top: 2vh;
+}
+
+.boat{
+    margin-top: 5vh;
+    margin-bottom: 4vh;
 }
 
 .Partner{
@@ -694,7 +704,10 @@ nav{
         /* border: 2px solid saddlebrown; */
         height: 45vh;
     }
-
+    .card .sp-image{
+        height: 30vh;
+        width: 20vw;
+    }
 }
 
 @media(max-width:768px){
@@ -776,12 +789,27 @@ nav{
     .image-fit3{
         max-width: 25vw;
     }
+    .wrapper .carousel{
+        display: flex;
+        flex-direction: column;
+        height:300vh;
+        width: 90%;
+        gap: 1rem;
+    }
+    .carousel .card{
+        width: 85vw;
+        min-height:80vh;
+    }
+    .card .sp-image{
+        height: 50vh;
+        width: 80vw;
+    }
+    .card .sp-image img.xyz{
+        width: 40vw;
+    }
 }
 
 @media(max-width:375px){
-    .Sponsor-button{
-        margin-top: 9vh;
-    }
     #title{
         font-size: 3.5rem;
     }
@@ -819,7 +847,7 @@ nav{
         font-size: 3rem;
     }
     .Sponsi-btn{
-        margin-top:-2vh ;
+        margin-top:0 ;
     }
     .sponsor-logo img,.sponsor-logo1 img{
         width: 95%;
