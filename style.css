@@ -580,21 +580,67 @@ footer{
     left: 0;
 }
 
-.social-account{
+.Links-coll{
     display: flex;
-    gap: .5rem;
-    font-size: 1.5rem;
+    gap: 3rem;
 }
 
-.quick-links{
+.social-account{
+    display: grid;
+    gap: 0rem;
+    font-size: 1.4rem;
+}
+
+.lines{
+    height: 55vh;
+    width: 0.1vw;
+    background: grey;
+}
+
+.line-2{
+    width: 90%;
+    height: 0.1vh;
+    background:grey;
+}
+
+.terms-and-policy{
+    display: flex;
+    gap: 1rem;
+    width: 90%;
+}
+
+.made{
+    margin-left: 70%;
+}
+
+.made i{
+    color: red;
+}
+
+.line-3{
+    background: gray;
+    height: 4vh;
+    width: 0.1vw;
+}
+
+.social-account h2{
     font-size: 1.2rem;
 }
 
-.quick-links li a,.social-account li a{
+.quick-links{
+    display: grid;
+    font-size: 1.2rem;
+}
+
+.Imp-links{
+    display: grid;
+}
+
+.quick-links li a,.social-account li a,.Imp-links li a{
     color: rgb(145, 145, 145);
 }
 
-.quick-links li a:hover,.social-account li a:hover{
+.quick-links li a:hover,.social-account li a:hover,.Imp-links li a:hover{
     color: rgb(207, 207, 207);
 }
 
