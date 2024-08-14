@@ -16,10 +16,12 @@
     <title>Prizes</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../navbar_page.css">
     <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
     <style>
         .bg-dark {
             background: #000;
@@ -180,6 +182,10 @@
             transition: transform 0.5s, background-color 0.5s;
         }
 
+        .cards{
+            height: 100vh;
+        }
+
         .custom-card:hover {
             transform: scale(1.05);
             background-color: #1f2937;
@@ -199,10 +205,6 @@
             /* Inner card background */
             border-top-right-radius: 20px;
             border-bottom-left-radius: 20px;
-        }
-
-        .scale-up:hover {
-            transform: scale(1.10) rotate(2deg);
         }
 
         /* NAvbar section start */
@@ -270,6 +272,26 @@
             margin-left: 5vw;
             /* transform: rotate(-5deg); */
             /* border: 2px solid salmon; */
+        }
+
+        @font-face {
+            font-family: myfont;
+            src: url(../../fonts/Nohemi-Font/Nohemi-ExtraLight-BF6438cc581502c.woff);
+        }
+
+        .Nohemi{
+            font-family: myfont;
+        }
+
+        .more-info{
+            opacity: 0;
+            display: none;
+            transition: all 1s ease-in-out;
+        }
+
+        .expand{
+            opacity: 1;
+            display: block;
         }
 
         .navbar {
@@ -356,10 +378,10 @@
                 <div class="flip-card gradient-border">
                     <div class="flip-card-inner">
                         <div class="flip-card-front p-8 shadow-lg">
-                            <h3 class="text-3xl font-bold mb-3">All Girls Team</h3>
+                            <h3 class="text-3xl mb-3 Nohemi">All Girls Team</h3>
                         </div>
                         <div class="flip-card-back p-8 shadow-lg">
-                            <p class="text-lg mb-4">Hack-Ar-Code presents its All Girls Team prize based on the total
+                            <p class="text-lg mb-4" style="font-family: 'Poppins',sans-serif;">Hack-Ar-Code presents its All Girls Team prize based on the total
                                 judging outcome
                                 of the all-girls team.</p>
                             <p class="text-4xl my-5 font-bold">₹5,000</p>
@@ -369,10 +391,10 @@
                 <div class="flip-card gradient-border">
                     <div class="flip-card-inner">
                         <div class="flip-card-front p-8 shadow-lg">
-                            <h3 class="text-3xl font-bold mb-3">Best Beginner Team</h3>
+                            <h3 class="text-3xl mb-3 Nohemi">Best Beginner Team</h3>
                         </div>
                         <div class="flip-card-back p-8 shadow-lg">
-                            <p class="text-lg mb-4">Hack-Ar-Code presents its Best Beginner Team prize based on the
+                            <p class="text-lg mb-4" style="font-family: 'Poppins',sans-serif;">Hack-Ar-Code presents its Best Beginner Team prize based on the
                                 total judging
                                 outcome of all beginner teams.</p>
                             <p class="text-4xl my-5 font-bold">₹5,000</p>
@@ -382,10 +404,10 @@
                 <div class="flip-card gradient-border">
                     <div class="flip-card-inner">
                         <div class="flip-card-front p-8 shadow-lg">
-                            <h3 class="text-3xl font-bold mb-3">Game Development</h3>
+                            <h3 class="text-3xl mb-3 Nohemi">Game Development</h3>
                         </div>
                         <div class="flip-card-back p-8 shadow-lg">
-                            <p class="text-lg mb-4">Hack-Ar-Code presents a special track for game development based on
+                            <p class="text-lg mb-4" style="font-family: 'Poppins',sans-serif;">Hack-Ar-Code presents a special track for game development based on
                                 the total
                                 judging outcome from all the games developed.</p>
                             <p class="text-4xl my-5 font-bold">₹5,000</p>
@@ -395,26 +417,31 @@
             </div>
         </div>
     </div>
-    <h2 class="text-5xl font-bold text-center my-8 mt-24">Partner Prizes</h2>
-    <div class="cards mx-20">
+    <h2 class="text-5xl font-bold text-center my-8 mt-24" style="font-family: 'Goldman',sans-serif">Partner Prizes</h2>
+    <div class="cards mx-20 ">
         <div class="grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 gap-12 mt-12">
             <div class="gradient-border custom-card scale-up">
                 <div class="content p-6 text-center bg-gray-800 shadow-lg">
-                    <div class="img-con p-4 bg-white rounded-lg mx-auto mb-6" style="width: 80%; height: 120px;">
-                        <img src="../../assets/github.png" alt="GitHub Prize" style="width: 100%; height: 100%;">
+                    <div class="img-con p-4 bg-black rounded-lg mx-auto mb-6" style="width: 80%; height: 120px;">
+                        <img src="../../assets/White Text Horizontal.png.png" alt="GitHub Prize" style="width: 100%; height: 100%;">
                     </div>
-                    <div class="text-3xl font-bold my-4">Best use of GitHub</div>
-                    <p class="text-center  my-4">Stand a chance to win GitHub Mona figurine or plushy in two simple
-                        steps. First
-                        by signing up for GitHub Global Campus and second by using a GitHub repository to host your
-                        hackathon
-                        project’s code!</p>
-                    <a href="#" style="text-decoration: none; color: white;">
-                        <button
-                            class="bg-gradient-to-r from-purple-500 to-indigo-600 hover:bg-gradient-to-l text-white py-2 px-8 mt-8 rounded-full">
-                            More Info
-                        </button>
-                    </a>
+                    <div class="text-3xl my-4 Nohemi">Tezos Track Prize Money:</div>
+                    <p class="text-center  my-4 " style="font-family: 'Poppins',sans-serif;">
+                        <span>$500 USD</span> <br>($300 USD-Main, $200 USD-Pool Prize)<br>
+                        100% payment must be paid to the Winners within 30 days after the Hackathon Winners Announcement.
+                    </p>
+                    <p class="more-info" style="font-family: 'Poppins',sans-serif;">
+                        - The payment of Prize money will be sent to the winners after deducting 30% TDS.
+                       
+                       - Prize will be sent only to valid and relevant project submission after confirmation by the
+                       Tezos team on the basis of idea, implementation and development.
+                       
+                       - Prize pool money : max prize one team will be allotted from the pool will be $40 for valid
+                       projects who can't make it to top 3 tezos projects.
+                    </p>
+                    <span style="text-decoration: none; color: white;">
+                        <button class="btn-info bg-gradient-to-r from-purple-500 to-indigo-600 hover:bg-gradient-to-l text-white py-2 px-8 mt-8 rounded-full">More Info</button>
+                    </span>
                 </div>
             </div>
             <!-- <div class="gradient-border custom-card scale-up">
@@ -460,7 +487,20 @@
             dropdown.classList.toggle('active');
         });
     </script>
-
+    <script>
+        const btninfo =document.querySelector(".btn-info");
+        const moreInfo=document.querySelector(".more-info");
+        btninfo.addEventListener("click",()=>{
+            if(btninfo.innerHTML=="Less Info"){
+                    moreInfo.classList.remove("expand");
+                    btninfo.innerHTML="More Info";
+            }
+            else{
+                moreInfo.classList.add("expand");
+                btninfo.innerHTML="Less Info";
+            }
+        })
+    </script>
 </body>
 
 </html>
