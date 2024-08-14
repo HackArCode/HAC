@@ -477,6 +477,7 @@ nav{
 
 .In-kind{
     width: 99vw;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -525,7 +526,7 @@ nav{
 .carousel .card{
     background: rgb(241, 241, 241);
     border-radius: 10px;
-    height: 60vh;
+    height: 65vh;
     width: 25vw;
     display: flex;
     align-items: center;
