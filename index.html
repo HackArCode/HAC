@@ -89,8 +89,8 @@
                 dropdown.classList.toggle('active');
             });
         </script>    
-        <div class="home section w-full h-full relative">
-            <div class="btmtext absolute z-50 bottom-[7%] w-51 left-[3%]">
+        <div class="home section">
+            <div class="btmtext">
                 <h1 class="font-medium">We inspire big ideas.<br>Empowering hackers. Fostering innovation. <br>For real people. Real lives.</h1>
             </div>
             <!-- <div class="heading section top-1/2 left-1/2 translate-x-1/2 translate-y-1/2 z-50"> -->
@@ -98,7 +98,7 @@
                 <div style="--golu: 100%" class="vdio w-full h-screen absolute z-40 top-0 left-0 bg-black overflow-hidden">
                     <video autoplay loop muted class="absolute w-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-50" src="./assets/video-bg.mp4" id="video"></video>
                     <div class="amoeba">
-                        <div class="container max-w-2xl section">
+                        <div class="container1">
                             <div class="text-new">
                                 <h1 class="font-semibold heading ">
                                     <span class="">Delve into</span> 
@@ -506,8 +506,33 @@
             </div>
         </div>
         <footer class="absolute text-white text-center font-semibold">
-            <h3>HackArCode 2024. All rights reserved.</h3>
-            <h2><a href="https://glaze-softball-bb1.notion.site/Hackarcode-Hackathon-Guidelines-a7046e9e88594a199dcfa530ee7dfe34?pvs=74" class="code">Code of Conduct!</a></h2>
+            <div class="main-footer">
+                <div class="hackarcode-logo">
+                    <img src="/assets/logo-removebg-preview.png" alt="">
+                </div>
+                <ul class="social-account">
+                    <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-discord"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-whatsapp"></i></a></li>
+                </ul>
+                <ul class="quick-links">
+                    <h2>Organisation</h2>
+                    <li><a href="https://hackarcode.live/">Home</a></li>
+                    <li><a href="./Pages/about/about.html">About</a></li>
+                    <li><a href="./Pages/tracks/track.html">Tracks</a></li>
+                    <li><a href="./Pages/partner/partner.html">Partners</a></li>
+                    <li><a href="./Pages/schedule/schedule.html">Schedule</a></li>
+                    <li><a href="./Pages/Prizes/Prizes.html">Prizes</a></li>
+                    <li><a href="./Pages/Human/human.html">Humans</a></li>
+                    <li><a href="./Pages/faq/faq.html">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <h3>HackArCode 2024. All rights reserved.</h3>
+                <h2><a href="https://glaze-softball-bb1.notion.site/Hackarcode-Hackathon-Guidelines-a7046e9e88594a199dcfa530ee7dfe34?pvs=74" class="code">Code of Conduct!</a></h2>    
+            </div>
         </footer>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -517,7 +542,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script>
         const t_bg=gsap.timeline({ease: Power1.easeInOut})
-        .to(".container",{
+        .to(".container1",{
             duration:2,
             left:0
         })
