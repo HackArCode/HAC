@@ -248,6 +248,10 @@ nav{
     height: auto;
 }
 
+.slider-text h1{
+    font-size: 4.1rem;
+}
+
 .btmtext{
     position:absolute;
     z-index: 50;
@@ -690,8 +694,28 @@ footer{
         width: 100%;
         font-size: 1.5rem;
     }
+    .slider-text h1{
+        font-size: 3rem;
+    }
     .capsules{
         display: grid;
+    }
+    .prizes img{
+        height: 80vh;
+    }
+    .Hackers img{
+        height: 80vh;
+    }
+    .huge-text{
+        font-size: 12rem;
+    }
+    .caption{
+        font-size: 1.2rem;
+    }
+    .quote{
+        font-size: 1.5rem;
+        bottom: 5rem;
+        right: 1rem;
     }
 }
 
