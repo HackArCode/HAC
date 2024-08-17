@@ -717,28 +717,6 @@ footer{
         bottom: 5rem;
         right: 1rem;
     }
-    .contain-capsule{
-        overflow: hidden;
-    }
-    .capsules{
-        width: 20%;
-    }
-    .discord{
-        margin-left: -25%;
-        margin-bottom: 30%;
-    }
-    .capsules{
-        margin-left: 33%;
-    }
-    .logo-Hackarcode{
-        font-size: 6.5rem;
-    }
-    .Links-coll{
-        gap: 1rem;
-    }
-    .made{
-        margin-left: 60%;
-    }
 }
 
 @media(max-width:425px){
