@@ -535,6 +535,52 @@ section.image-new::before{
 .cap{
     margin-top: -120vh;
 }
+@media screen and (max-width: 1024px) { 
+    .cap {
+      margin-top: 0;
+      margin-left: 30vw ;
+    }
+    .console{
+        position: relative;
+    }
+    .caption{
+        position: absolute;
+        bottom: 4rem;
+        left: 4rem;
+        width: 24%;
+        font-weight: 600;
+        color: #fb1414;
+        z-index: 17;
+    }
+    
+    .image-new img{
+        position: relative;
+        z-index: 10;
+        height: 70vh;
+        width: 50vw;
+        transform: translateY(-100%);
+    }
+    
+    .bgrf{
+        font-size: 12rem;
+        width: 100%;
+    }
+    .quote{
+        position: absolute ;
+        bottom: 120px;
+        font-size: 1.8rem;
+        width: 30%;
+        text-align: right;
+        transform: translateY(70%);
+    }
+    .Links-coll {
+        display: grid; 
+        grid-template-columns: 1fr; /* Two rows */
+        gap: 3rem;
+        margin-left: 15%;
+        min-width: 70vw;
+    }
+  }
 
 .code{
     border-bottom: 1px solid white;
@@ -544,6 +590,7 @@ section.image-new::before{
     margin-top: -110vh;
     gap: 1.5rem;
 }
+
 
 .console{
     position: absolute;
@@ -686,8 +733,12 @@ footer{
     .cap{
         margin-top: -50vh;
     }
+    .right{
+        margin-top: 50px;
+    }
     .capsule{
-        max-width: 40%;
+        
+        max-width: 50%;
     }
     .discord{
         margin-top: -60vh;
@@ -715,7 +766,7 @@ footer{
     .quote{
         font-size: 1.5rem;
         bottom: 5rem;
-        right: 1rem;
+        right: 2rem;
     }
 }
 
