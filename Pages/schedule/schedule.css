@@ -296,3 +296,27 @@ nav{
         height: 10vh;
     }
 }
+
+@media(max-width:425px){
+    .heading{
+        margin-top: 10%;
+    }
+    .block-box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .blocks h2{
+        min-width: max-content;
+    }
+    .block1,.block3{
+        min-width: fit-content;
+    }
+    .blocks h2{
+        padding: .5rem 1rem;
+    }
+    .blocks span{
+        padding: 1rem 2rem;
+    }
+}
