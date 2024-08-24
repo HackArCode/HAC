@@ -779,9 +779,13 @@ footer {
     }
     .Register-btn{
         bottom: 10%;
+    }.slider-text h1{
+        font-size: 3.5rem;
     }
-  }
-
+    .huge-text{
+        font-size: 15rem;
+    }
+}
 
 @media(max-width:768px){
     footer {
