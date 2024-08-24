@@ -1,262 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L1MWCGB3ZJ"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-L1MWCGB3ZJ');
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Schedule </title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <title>Schedule</title>
+    <link rel="stylesheet" href="schedule.css">
+    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="../navbar_page.css">
     <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <style>
-        @media (max-width: 1090px) {
-            .column2 {
-                display: none;
-                /* Hide column 2 */
-            }
-
-            table {
-                width: 100%;
-                position: relative;
-            }
-
-            .column1,
-            .column3 {
-                width: 50%;
-                text-align: center;
-            }
-
-            .column1 {
-                position: relative;
-            }
-
-            .column3 {
-                position: absolute;
-                left: 0px;
-            }
-
-            .circle {
-                display: none;
-                /* Hide circles */
-            }
-
-            .card {
-                margin: 10px auto;
-                /* Adjust card margin */
-                width: 90%;
-                /* Make cards take up full width */
-                box-shadow: none;
-                /* Remove box shadow for better appearance */
-            }
-
-            .tab-content {
-                width: 100%;
-                /* Ensure content takes full width */
-                margin: 0;
-                /* Remove margin for better alignment */
-            }
-        }
-
-        table {
-            width: 80%;
-            border-collapse: collapse;
-            margin: auto;
-            border: none;
-            /* Remove table border */
-        }
-
-        th,
-        td {
-            border: none;
-            /* Remove cell borders */
-            text-align: left;
-            padding: 8px;
-        }
-
-        .column1,
-        .column3 {
-            width: 49.5%;
-            height: 130px;
-        }
-
-        .column1 {
-            text-align: center;
-        }
-
-        .column2 {
-            width: 1px;
-            white-space: nowrap;
-            background-color: black;
-            padding: 0;
-            position: relative;
-        }
-
-        .circle {
-            height: 30px;
-            width: 30px;
-            position: absolute;
-            background: #000;
-            top: 50px;
-            left: -10px;
-            border-radius: 50%;
-            cursor: pointer;
-        }
-
-        .card {
-            transition: all 0.3s ease;
-        }
-
-        .card:hover,
-        .circle:hover {
-            background-color: rgb(255, 255, 255) !important;
-            color: black;
-            border: 1px solid black;
-        }
-
-        .tab {
-            transition: background-color 0.3s ease, color 0.3s ease;
-            padding: 0.5rem 2rem;
-            border-radius: 0.5rem;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .tab.active {
-            background-color: #000;
-            /* Active tab background color */
-            color: #fff;
-            /* Active tab text color */
-        }
-
-        .tab:not(.active) {
-            background-color: #ffffff;
-            /* Non-active tab background color */
-            color: #000000;
-            /* Non-active tab text color */
-        }
-
-        .tab:hover {
-            background-color: #97949e;
-            /* Hover background color */
-            color: #fff;
-            /* Hover text color */
-        }
-
-        .tab:focus {
-            outline: none;
-            /* Remove default outline */
-            box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
-            /* Optional focus outline */
-        }
-
-        /* nav */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            list-style: none;
-        }
-
-
-        ::-webkit-scrollbar {
-            width: 10px;
-
-        }
-
-        /* Track */
-        ::-webkit-scrollbar-track {
-            background: transparent;
-
-        }
-
-        ::-webkit-scrollbar:hover {
-            width: 10px;
-        }
-
-        /* Handle */
-        ::-webkit-scrollbar-thumb {
-            background: rgb(238, 238, 238);
-
-            border-radius: 80px;
-        }
-
-        nav {
-            right: 0px;
-            position: absolute;
-            display: flex;
-            /* background: rgb(46, 47, 68); */
-            /* border: 2px solid saddlebrown; */
-            background: black;
-            width: 100%;
-        }
-
-        .navbar li a {
-            color: rgb(255, 255, 255);
-            font-weight: 400;
-            font-size: 1.5rem;
-        }
-
-        .navbar li a:hover {
-            color: rgb(190, 190, 190);
-        }
-
-        .logo {
-            /* background: rgb(46, 47, 68); */
-            background: transparent;
-        }
-
-        .logo img {
-            width: 12vw;
-            height: 10vh;
-            margin-top: 5%;
-            margin-right: -5vw;
-            /* background: black; */
-            /* background: rgb(46, 47, 68); */
-            margin-left: 5vw;
-            /* transform: rotate(-5deg); */
-            /* border: 2px solid salmon; */
-        }
-
-        .navbar {
-            display: flex;
-            margin-top: 1vh;
-            width: 75vw;
-            height: 10vh;
-            font-size: 20px;
-            align-items: center;
-            /* border: 2px solid salmon; */
-            margin-right: -10vw;
-            margin-left: 10vw;
-            justify-content: space-evenly;
-        }
-
-        @media(max-width:1000px) {
-            .navbar {
-                display: none;
-            }
-
-            .logo img {
-                width: 25vw;
-                height: 10vh;
-            }
-        }
-    </style>
 </head>
-
-<body class="bg-white text-white font-sans">
-
+<body>
     <nav class="z-50">
         <div class="logo">
             <img src="../../assets/logo-removebg-preview.png" alt="">
@@ -288,339 +44,337 @@
             </div>
         </div>
     </div>
-    <!-- <br><br><br> -->
-
-    <div class="container mx-auto pt-20">
-        <h1 class="text-5xl font-bold text-black text-center mt-8 mb-10" style="font-family: 'Goldman',sans-serif; ">In-Person Hackathon Agenda</h1>
-        <div class="flex justify-center gap-20 mb-4">
-            <button id="tab1" onclick="showTab('content1')"
-                class="tab border-2 border-black text-lg active py-5 px-[80px] font-bold bg-blue-500 rounded-xl focus:outline-none">7th
-                Sep
-                2024</button>
-            <button id="tab2" onclick="showTab('content2')"
-                class="tab border-2 border-black text-lg py-5 px-[80px] font-bold bg-blue-400 rounded-xl focus:outline-none">8th
-                Sep
-                2024</button>
-        </div>
-        <div class=" border-4 p-6 text-center rounded-lg mx-auto mt-10"
-            style="width: 80vw; background-color: rgb(238, 237, 243);">
-            <div id="content1" class="tab-content con11 flex flex-col">
-                <h2 class="text-4xl text-black font-bold mt-4 mb-4 tex-black">7th Sep 2024</h2>
-                <table class="mt-10">
-                    <tr>
-                        <td class="column1"></td>
-                        <td class="column2">
-                            <div class="circle text-center py-2"></div>
-                        </td>
-                        <td class="column3">
-                            <div class="card mx-auto px-10 rounded-lg py-2 bg-gray-500" id="hell"
-                                style="width: max-content;">
-                                <h4>9:00 am - 10:50 am</h4>
-                                <p>Registration Starts</p>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="column1">
-                            <div class="card mx-auto px-10 rounded-lg py-2 bg-gray-500" style="width: 80%;">
-                                <h4>11:00 pm - 11:30 pm</h4>
-                                <p>Setting up environment and seating</p>
-                            </div>
-                        </td>
-                        <td class="column2">
-                            <div class="circle text-center py-2"></div>
-                        </td>
-                        <td class="column3"></td>
-                    </tr>
-                    <tr>
-                        <td class="column1"></td>
-                        <td class="column2">
-                            <div class="circle text-center py-2"></div>
-                        </td>
-                        <td class="column3">
-                            <div class="card mx-auto px-10 rounded-lg py-2 bg-gray-500" style="width: max-content;">
-                                <h4>11:30 pm - 12:00 pm</h4>
-                                <p>Opening Ceremony</p>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="column1">
-                            <div class="card mx-auto px-10 rounded-lg py-2 bg-gray-500" style="width: max-content;">
-                                <h4>9:00 am - 10:50 am</h4>
-                                <p>Registration Starts</p>
-                            </div>
-                        </td>
-                        <td class="column2">
-                            <div class="circle text-center py-2"></div>
-                        </td>
-                        <td class="column3"></td>
-                    </tr>
-                    <tr>
-                        <td class="column1"></td>
-                        <td class="column2">
-                            <div class="circle text-center py-2"></div>
-                        </td>
-                        <td class="column3">
-                            <div class="card mx-auto px-10 rounded-lg py-2 bg-gray-500" style="width: max-content;">
-                                <h4>12:00 pm</h4>
-                                <p>Hackathon Start</p>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="column1">
-                            <div class="card mx-auto px-10 rounded-lg py-2 bg-gray-500" style="width: max-content;">
-                                <h4>3:00 pm - 4:00 pm</h4>
-                                <p>Lunch</p>
-                            </div>
-                        </td>
-                        <td class="column2">
-                            <div class="circle text-center py-2"></div>
-                        </td>
-                        <td class="column3"></td>
-                    </tr>
-                    <tr>
-                        <td class="column1"></td>
-                        <td class="column2">
-                            <div class="circle text-center py-2"></div>
-                        </td>
-                        <td class="column3">
-                            <div class="card mx-auto px-10 rounded-lg py-2 bg-gray-500" style="width: max-content;">
-                                <h4>4:00 pm - 4:30 pm</h4>
-                                <p>Session-1</p>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="column1">
-                            <div class="card mx-auto px-10 rounded-lg py-2 bg-gray-500" style="width: max-content;">
-                                <h4>6:30 - 6:45 pm</h4>
-                                <p>Evening Snacks</p>
-                            </div>
-                        </td>
-                        <td class="column2">
-                            <div class="circle text-center py-2"></div>
-                        </td>
-                        <td class="column3"></td>
-                    </tr>
-                    <tr>
-                        <td class="column1"></td>
-                        <td class="column2">
-                            <div class="circle text-center py-2"></div>
-                        </td>
-                        <td class="column3">
-                            <div class="card mx-auto px-10 rounded-lg py-2 bg-gray-500" style="width: max-content;">
-                                <h4>9:00 pm - 10:00 pm</h4>
-                                <p>Dinner</p>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="column1">
-                            <div class="card mx-auto px-10 rounded-lg py-2 bg-gray-500" style="width: max-content;">
-                                <h4>10:00 pm - 10:30 pm</h4>
-                                <p>Session-2</p>
-                            </div>
-                        </td>
-                        <td class="column2">
-                            <div class="circle text-center py-2"></div>
-                        </td>
-                        <td class="column3"></td>
-                    </tr>
-                    <tr>
-                        <td class="column1"></td>
-                        <td class="column2">
-                            <div class="circle text-center py-2"></div>
-                        </td>
-                        <td class="column3">
-                            <div class="card mx-auto px-10 rounded-lg py-2 bg-gray-500" style="width: 80%;">
-                                <h4>12:00 pm - 12:15 pm</h4>
-                                <p>Mid-night Snacks and Games</p>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
+    <div class="container">
+        <h1 class="heading">Schedule</h1>
+        <div class="content">
+            <div class="Hack">
+                <h2>HackArCode Hackathon Starts in : </h2>
             </div>
-            <div id="content2" class="tab-content hidden con11 flex flex-col">
-                <h2 class="text-4xl text-black font-bold mt-4 mb-4">8th Sep 2024</h2>
-                <table class="mt-10">
-                    <tr>
-                        <td class="column1">
-                            <div class="card mx-auto px-10 rounded-lg py-2 bg-gray-500" style="width: max-content;">
-                                <h4>8:00 am - 9:00 am</h4>
-                                <p>Breakfast</p>
+            <div class="launch-time">
+                <div>
+                    <p id="days">00</p>
+                    <span>Days</span>
+                </div>
+                <div>
+                    <p id="hours">00</p>
+                    <span>Hours</span>
+                </div>
+                <div>
+                    <p id="minutes">00</p>
+                    <span>Minutes</span>
+                </div>
+                <div>
+                    <p id="seconds">00</p>
+                    <span>Seconds</span>
+                </div>
+            </div>
+            <div>
+                <div class="container mx-auto pt-20">
+                    <div class="flex justify-center gap-20 mb-4">
+                        <button id="tab1" class="tab1" onclick="showTab('content1')" class="tab border-2 border-black text-lg active py-5 px-[80px] font-bold rounded-xl focus:outline-none">
+                            <div class="left-text">
+                                <span>7</span>
+                                <span class="day">Saturday</span>
                             </div>
-                        </td>
-                        <td class="column2">
-                            <div class="circle text-center py-2"></div>
-                        </td>
-                        <td class="column3"></td>
-                    </tr>
-                    <tr>
-                        <td class="column1"></td>
-                        <td class="column2">
-                            <div class="circle text-center py-2"></div>
-                        </td>
-                        <td class="column3">
-                            <div class="card mx-auto px-10 rounded-lg py-2 bg-gray-500" style="width: max-content;">
-                                <h4>9:00 am - 11:30 am</h4>
-                                <p>Judging</p>
+                            <div class="right-text">
+                                <span>Sep</span>
+                                <span>2024</span>
                             </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="column1">
-                            <div class="card mx-auto px-10 rounded-lg py-2 bg-gray-500" style="width: max-content;">
-                                <h4>11:30 am - 12:00 am</h4>
-                                <p>Session-3</p>
+                        </button>
+                        <button id="tab2" class="tab1" onclick="showTab('content2')"
+                            class="tab border-2 border-black text-lg py-5 px-[80px] font-bold bg-blue-400 rounded-xl focus:outline-none">
+                            <div class="left-text">
+                                <span>8</span>
+                                <span class="day">Sunday</span>
                             </div>
-                        </td>
-                        <td class="column2">
-                            <div class="circle text-center py-2"></div>
-                        </td>
-                        <td class="column3"></td>
-                    </tr>
-                    <tr>
-                        <td class="column1"></td>
-                        <td class="column2">
-                            <div class="circle text-center py-2"></div>
-                        </td>
-                        <td class="column3">
-                            <div class="card mx-auto px-10 rounded-lg py-2 bg-gray-500" style="width: max-content;">
-                                <h4>1:00 am - 2:00 pm</h4>
-                                <p>Submission</p>
+                            <div class="right-text">
+                                <span>Sep</span>
+                                <span>2024</span>
                             </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="column1">
-                            <div class="card mx-auto px-10 rounded-lg py-2 bg-gray-500" style="width: max-content;">
-                                <h4>2:30 pm- 3:00 pm</h4>
-                                <p>Lunch</p>
+                        </button>
+                    </div>
+                    <div class=" p-6 text-center rounded-lg mx-auto mt-0" style="width: 80vw; background-color: rgb(252, 252, 252);">
+                        <div id="content1" class="tab-content con11 flex flex-col">
+                            <h2 class="text-4xl text-yellow-300 font-bold mt-4 mb-4">7th Sep 2024</h2>
+                            <div class="view">
+                            <!-- <div class="line"></div> -->
+                                <div class="block-box">
+                                    <div class="blocks block1">
+                                        <h2>9:00 am - 10:50 am</h2>
+                                    </div>
+                                    <div class="blocks block2">
+                                        <span>Registration Starts</span>
+                                    </div>    
+                                </div>
+                                <div class="block-box">
+                                    <div class="blocks block3">
+                                        <h2>11:00 am - 11:30 am</h2>
+                                    </div>
+                                    <div class="blocks block4">
+                                        <span>Setting up Environment and Seating</span>
+                                    </div>    
+                                </div>
+                                <div class="block-box">
+                                    <div class="blocks block1">
+                                        <h2>11:30 am - 12:00 pm</h2>
+                                    </div>
+                                    <div class="blocks block2">
+                                        <span>Opening Ceremony</span>
+                                    </div>   
+                                </div>
+                                <div class="block-box">
+                                    <div class="blocks block3">
+                                        <h2>12:00 pm</h2>
+                                    </div>
+                                    <div class="blocks block4">
+                                        <span>Hackathon Start</span>
+                                    </div>    
+                                </div>
+                                <div class="block-box">
+                                    <div class="blocks block1">
+                                        <h2>3:00 pm - 4:00 pm</h2>
+                                    </div>
+                                    <div class="blocks block2">
+                                        <span>Lunch</span>
+                                    </div>    
+                                </div>
+                                <div class="block-box">
+                                    <div class="blocks block3">
+                                        <h2>4:00 pm - 4:30 pm</h2>
+                                    </div>
+                                    <div class="blocks block4">
+                                        <span>Session-1</span>
+                                    </div>    
+                                </div>
+                                <div class="block-box">
+                                    <div class="blocks block1">
+                                        <h2>6:30 pm - 6:45 pm</h2>
+                                    </div>
+                                    <div class="blocks block2">
+                                        <span>Evening Snacks</span>
+                                    </div>    
+                                </div>
+                                <div class="block-box">
+                                    <div class="blocks block3">
+                                        <h2>9:00 pm - 10:00 pm</h2>
+                                    </div>
+                                    <div class="blocks block4">
+                                        <span>Dinner</span>
+                                    </div>    
+                                </div>
+                                <div class="block-box">
+                                    <div class="blocks block1">
+                                        <h2>10:00 pm - 10:30 pm</h2>
+                                    </div>
+                                    <div class="blocks block2">
+                                        <span>Session-2</span>
+                                    </div>    
+                                </div>
+                                <div class="block-box">
+                                    <div class="blocks block3">
+                                        <h2>12:00 am - 12:15 am</h2>
+                                    </div>
+                                    <div class="blocks block4">
+                                        <span>Mid-night Snacks and Games</span>
+                                    </div>    
+                                </div>
                             </div>
-                        </td>
-                        <td class="column2">
-                            <div class="circle text-center py-2"></div>
-                        </td>
-                        <td class="column3"></td>
-                    </tr>
-                    <tr>
-                        <td class="column1"></td>
-                        <td class="column2">
-                            <div class="circle text-center py-2"></div>
-                        </td>
-                        <td class="column3">
-                            <div class="card mx-auto px-10 rounded-lg py-2 bg-gray-500" style="width: 80%;">
-                                <h4>5:00 pm - 5:30 pm</h4>
-                                <p>Prize distribution and closing ceremony</p>
+                        </div>
+                        <div id="content2" class="tab-content hidden con11 flex flex-col">
+                            <h2 class="text-4xl text-yellow-300 font-bold mt-4 mb-4">8th Sep 2024</h2>
+                            <div class="view">
+                                <div class="block-box">
+                                    <div class="blocks block1">
+                                        <h2>8:00 am - 9:00 am</h2>
+                                    </div>
+                                    <div class="blocks block2">
+                                        <span>Breakfast</span>
+                                    </div>    
+                                </div>
+                                <div class="block-box">
+                                    <div class="blocks block3">
+                                        <h2>9:00 am - 11:30 am</h2>
+                                    </div>
+                                    <div class="blocks block4">
+                                        <span>Judging</span>
+                                    </div>    
+                                </div>
+                                <div class="block-box">
+                                    <div class="blocks block1">
+                                        <h2>11:30 am - 12:00 am</h2>
+                                    </div>
+                                    <div class="blocks block2">
+                                        <span>Session-3</span>
+                                    </div>   
+                                </div>
+                                <div class="block-box">
+                                    <div class="blocks block3">
+                                        <h2>1:00 am - 2:00 pm</h2>
+                                    </div>
+                                    <div class="blocks block4">
+                                        <span>Submission</span>
+                                    </div>    
+                                </div>
+                                <div class="block-box">
+                                    <div class="blocks block1">
+                                        <h2>2:30 pm- 3:00 pm</h2>
+                                    </div>
+                                    <div class="blocks block2">
+                                        <span>Lunch</span>
+                                    </div>    
+                                </div>
+                                <div class="block-box">
+                                    <div class="blocks block3">
+                                        <h2>5:00 pm - 5:30 pm</h2>
+                                    </div>
+                                    <div class="blocks block4">
+                                        <span>Prize distribution and closing ceremony</span>
+                                    </div>    
+                                </div>
                             </div>
-                        </td>
-                    </tr>
-                </table>
+                        </div>
+                    </div>
+                </div>            
             </div>
         </div>
     </div>
+    <script>
+        var countDownDate=new Date("Sep 7,2024 12:00:00").getTime();
+        var x=setInterval(function(){
+            var now=new Date().getTime();
+            var TimeLeft=countDownDate-now;
 
+            var days=Math.floor(TimeLeft/(1000*60*60*24));
+            var hours=Math.floor((TimeLeft%(1000*60*60*24))/(1000*60*60));
+            var minutes=Math.floor((TimeLeft%(1000*60*60))/(1000*60));
+            var seconds = Math.floor((TimeLeft%(1000*60))/1000);
+
+            document.getElementById("days").innerHTML=days;
+            document.getElementById("hours").innerHTML=hours;
+            document.getElementById("minutes").innerHTML=minutes;
+            document.getElementById("seconds").innerHTML=seconds;
+
+            if(TimeLeft<0){
+                clearInterval(x);
+                document.getElementById("days").innerHTML="00";
+                document.getElementById("hours").innerHTML="00";
+                document.getElementById("minutes").innerHTML="00";
+                document.getElementById("seconds").innerHTML="00";
+
+            }
+
+        },1000)
+    </script>
     <script>
         function showTab(tabId) {
-            // Hide all tab contents
-            var contents = document.querySelectorAll('.tab-content');
-            contents.forEach(function (content) {
-                content.classList.add('hidden');
-            });
-
-            // Remove active class from all tabs
-            var tabs = document.querySelectorAll('.tab');
-            tabs.forEach(function (tab) {
-                tab.classList.remove('active');
-                tab.classList.remove('bg-black');
-                tab.classList.add('bg-blue-400');
-                tab.classList.add('text-white');
-            });
-
-            // Show the selected tab content
-            document.getElementById(tabId).classList.remove('hidden');
-
-            // Add active class to the selected tab
-            var activeTab = document.querySelector('#' + tabId.replace('content', 'tab'));
-            activeTab.classList.add('active');
-            activeTab.classList.remove('bg-blue-400');
-            activeTab.classList.add('bg-black');
-            activeTab.classList.remove('text-white');
-            activeTab.classList.add('text-white');
-        }
-
-        function addHoverEffects() {
-            var circles = document.querySelectorAll('.circle');
-            var cards = document.querySelectorAll('.card');
-
-            circles.forEach(function (circle) {
-                // When hovering over a circle, affect the associated card
-                circle.addEventListener('mouseenter', function () {
-                    var card = circle.closest('td').nextElementSibling.querySelector('.card');
-                    var card1 = circle.closest('td').previousElementSibling.querySelector('.card');
-                    if (card) {
-                        card.style.backgroundColor = 'white';
-                        card.style.color = 'black';
-                        card.style.transform = 'scale(1.05)';
-                        card.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
-                    }
-                    if (card1) {
-                        card1.style.backgroundColor = 'white';
-                        card1.style.color = 'black';
-                        card1.style.transform = 'scale(1.05)';
-                        card1.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
-                    }
-                    circle.style.backgroundColor = 'white';
+                // Hide all tab contents
+                var contents = document.querySelectorAll('.tab-content');
+                contents.forEach(function (content) {
+                    content.classList.add('hidden');
                 });
 
-                circle.addEventListener('mouseleave', function () {
-                    var card = circle.closest('td').nextElementSibling.querySelector('.card');
-                    var card1 = circle.closest('td').previousElementSibling.querySelector('.card');
-                    if (card) {
+
+                // Remove active class from all tabs
+                var tabs = document.querySelectorAll('.tab');
+                tabs.forEach(function (tab) {
+                    tab.classList.remove('active');
+                });
+    
+                // Show the selected tab content
+                document.getElementById(tabId).classList.remove('hidden');
+    
+                // Add active class to the selected tab
+                var activeTab = document.querySelector('#' + tabId.replace('content', 'tab'));
+                activeTab.classList.add('active');
+
+            }
+    
+            function addHoverEffects() {
+                var circles = document.querySelectorAll('.circle');
+                var cards = document.querySelectorAll('.card');
+    
+                circles.forEach(function (circle) {
+                    // When hovering over a circle, affect the associated card
+                    circle.addEventListener('mouseenter', function () {
+                        var card = circle.closest('td').nextElementSibling.querySelector('.card');
+                        var card1 = circle.closest('td').previousElementSibling.querySelector('.card');
+                        if (card) {
+                            card.style.backgroundColor = 'white';
+                            card.style.color = 'black';
+                            card.style.transform = 'scale(1.05)';
+                            card.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+                        }
+                        if (card1) {
+                            card1.style.backgroundColor = 'white';
+                            card1.style.color = 'black';
+                            card1.style.transform = 'scale(1.05)';
+                            card1.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+                        }
+                        circle.style.backgroundColor = 'white';
+                    });
+    
+                    circle.addEventListener('mouseleave', function () {
+                        var card = circle.closest('td').nextElementSibling.querySelector('.card');
+                        var card1 = circle.closest('td').previousElementSibling.querySelector('.card');
+                        if (card) {
+                            card.style.backgroundColor = 'rgba(107, 114, 128, 1)';
+                            card.style.transform = 'scale(1)';
+                            card.style.boxShadow = 'none';
+                            card.style.color = 'white';
+                        }
+                        if (card1) {
+                            card1.style.backgroundColor = 'rgba(107, 114, 128, 1)';
+                            card1.style.transform = 'scale(1)';
+                            card1.style.boxShadow = 'none';
+                            card1.style.color = 'white';
+                        }
+                        circle.style.backgroundColor = 'black';
+                    });
+                });
+    
+                cards.forEach(function (card) {
+                    // When hovering over a circle, affect the associated card
+                    card.addEventListener('mouseenter', function () {
+                        card.style.backgroundColor = 'white';
+                        card.style.transform = 'scale(1.02)';
+                        card.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+                        card.style.color = 'black';
+                    });
+    
+                    card.addEventListener('mouseleave', function () {
+    
                         card.style.backgroundColor = 'rgba(107, 114, 128, 1)';
                         card.style.transform = 'scale(1)';
                         card.style.boxShadow = 'none';
                         card.style.color = 'white';
-                    }
-                    if (card1) {
-                        card1.style.backgroundColor = 'rgba(107, 114, 128, 1)';
-                        card1.style.transform = 'scale(1)';
-                        card1.style.boxShadow = 'none';
-                        card1.style.color = 'white';
-                    }
-                    circle.style.backgroundColor = 'black';
+                    });
                 });
+            }
+    
+            // Initialize first tab as active
+            showTab('content1');
+            addHoverEffects();
+            const dropdown = document.querySelector('.dropdown');
+            dropdown.addEventListener('click', () => {
+                dropdown.classList.toggle('active');
             });
-
-            cards.forEach(function (card) {
-                // When hovering over a circle, affect the associated card
-                card.addEventListener('mouseenter', function () {
-                    card.style.backgroundColor = 'white';
-                    card.style.transform = 'scale(1.02)';
-                    card.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
-                    card.style.color = 'black';
-                });
-
-                card.addEventListener('mouseleave', function () {
-
-                    card.style.backgroundColor = 'rgba(107, 114, 128, 1)';
-                    card.style.transform = 'scale(1)';
-                    card.style.boxShadow = 'none';
-                    card.style.color = 'white';
-                });
-            });
-        }
-
-        // Initialize first tab as active
-        showTab('content1');
-        addHoverEffects();
-        const dropdown = document.querySelector('.dropdown');
-        dropdown.addEventListener('click', () => {
-            dropdown.classList.toggle('active');
-        });
-    </script>
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"></script>
+        <script>
+            var controller=new ScrollMagic.Controller();
+            $(function(){
+                var scene = new ScrollMagic.Scene({
+                    triggerElement:".block1",
+                    duration:1300,
+                    pushFollowers:false,
+                    offset:300
+                })
+                .setPin(".line")
+                .addTo(controller);
+            })
+        </script>
+    
 </body>
-
 </html>
