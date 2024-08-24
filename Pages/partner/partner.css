@@ -468,6 +468,16 @@ nav{
     max-height: 25vh;
 }
 
+.image-fit4{
+    width: 25vw;
+    max-height: 25vh;
+}
+
+.image-fit5{
+    width: 20vw;
+    max-height: 25vh;
+}
+
 .feature-box1 img{
     height: 30vh;
 }
