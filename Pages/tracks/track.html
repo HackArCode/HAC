@@ -148,6 +148,232 @@
             }
 }
         /* Navbar section end  */
+
+         /* Footer Section */
+
+      footer {
+        display: grid;
+        height: 100vh;
+        place-items: center;
+        width: 100%;
+        background-color: #161616;
+      }
+
+      .main-footer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        font-size: 1.2rem;
+        width: 100%;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 2rem;
+      }
+
+      .hackarcode-logo {
+        width: 15vw;
+        position: absolute;
+        top: 5%;
+        left: 0;
+      }
+
+      .Links-coll {
+        display: flex;
+        gap: 3rem;
+        margin-left: 15%;
+        min-width: 70vw;
+        justify-content: space-around;
+      }
+
+      .social-account {
+        display: grid;
+        gap: 0rem;
+        font-size: 1.4rem;
+      }
+
+      .lines {
+        height: 55vh;
+        width: 0.1vw;
+        background: grey;
+      }
+
+      .line-2 {
+        width: 90%;
+        height: 0.1vh;
+        background: grey;
+      }
+
+      .terms-and-policy {
+        display: flex;
+        gap: 1rem;
+        width: 90%;
+      }
+
+      .made {
+        margin-left: auto;
+      }
+
+      .made i {
+        color: red;
+      }
+
+      .line-3 {
+        background: gray;
+        height: 4vh;
+        width: 0.1vw;
+      }
+
+      .social-account h2 {
+        font-size: 1.2rem;
+      }
+
+      .quick-links {
+        display: grid;
+        font-size: 1.2rem;
+      }
+
+      .Imp-links,
+      .Sponsor-links {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .quick-links li a,
+      .social-account li a,
+      .Imp-links li a,
+      .Sponsor-links li a {
+        color: rgb(145, 145, 145);
+      }
+
+      .quick-links li a:hover,
+      .social-account li a:hover,
+      .Imp-links li a:hover,
+      .Sponsor-links li a:hover {
+        color: rgb(207, 207, 207);
+      }
+
+      /* Responsive Styles */
+
+      @media (max-width: 480px) {
+        .main-footer {
+          padding: 1rem;
+        }
+        .hackarcode-logo {
+          width: 50vw;
+        }
+        .Links-coll {
+          flex-direction: column;
+          align-items: center;
+        }
+        .quick-links,
+        .social-account,
+        .Imp-links,
+        .Sponsor-links {
+          font-size: 1rem;
+          text-align: center;
+        }
+        .terms-and-policy {
+          width: 100%;
+        }
+        .made i {
+          margin-left: 5px;
+        }
+      }
+      @media (max-width: 1024px) {
+        .quick-links {
+          padding-bottom: 25px;
+          border-bottom: 2px solid grey;
+        }
+        .social-account {
+          padding-bottom: 25px;
+          border-bottom: 2px solid grey;
+        }
+        .Imp-links {
+          padding-bottom: 25px;
+          border-bottom: 2px solid grey;
+        }
+
+        .hackarcode-logo {
+          width: 20vw;
+        }
+        .Links-coll {
+          margin-left: 5%;
+          min-width: 80vw;
+          gap: 2rem;
+          flex-wrap: wrap;
+        }
+        .main-footer {
+          flex-direction: column;
+          align-items: center;
+        }
+        footer {
+          height: 100%;
+        }
+        .lines {
+          display: none;
+        }
+        .Links-coll {
+          display: grid;
+          grid-template-columns: 1fr; /* Two rows */
+          gap: 3rem;
+          margin-left: 15%;
+          min-width: 70vw;
+        }
+      }
+
+      @media (max-width: 768px) {
+        footer {
+          height: 100%;
+          padding: 2rem 0;
+        }
+        .hackarcode-logo {
+          width: 30vw;
+          position: relative;
+          margin-bottom: 1rem;
+          left: auto;
+          top: auto;
+        }
+        .quick-links {
+          padding-bottom: 15px;
+          border-bottom: 2px solid grey;
+        }
+        .social-account {
+          padding-bottom: 15px;
+          border-bottom: 2px solid grey;
+        }
+        .Imp-links {
+          padding-bottom: 15px;
+          border-bottom: 2px solid grey;
+        }
+        .Sponsor-links {
+          padding-bottom: 15px;
+          border-bottom: 2px solid grey;
+        }
+        .Links-coll {
+          flex-direction: column;
+          gap: 1.5rem;
+          margin-left: 0;
+          min-width: 90%;
+        }
+        .social-account {
+          font-size: 1.2rem;
+        }
+        .terms-and-policy {
+          flex-direction: row;
+          justify-content: space-between;
+          padding-left: 10px;
+          padding-right: 10px;
+          margin-bottom: 10px;
+          gap: 0.5rem;
+          text-align: center;
+          padding-bottom: 15px;
+        }
+        .line-2,
+        .line-3 {
+          display: none;
+        }
+      }
     </style>
 </head>
 <body class=" text-white">
@@ -222,7 +448,112 @@
                 <p class="text-center text-lg">Select a category from the left to see more information.</p>
             </div>
         </div>
+        
     </div>
+    <footer class="relative text-white text-center font-semibold">
+        <div class="main-footer">
+          <div class="hackarcode-logo">
+            <img src="/assets/logo-removebg-preview.png" alt="" />
+          </div>
+          <div class="Links-coll">
+            <ul class="quick-links">
+              <h2>Quick Links</h2>
+              <li><a href="https://hackarcode.live/">Home</a></li>
+              <li><a href="./Pages/about/about.html">About</a></li>
+              <li><a href="./Pages/tracks/track.html">Tracks</a></li>
+              <li><a href="./Pages/partner/partner.html">Partners</a></li>
+              <li><a href="./Pages/schedule/schedule.html">Schedule</a></li>
+              <li><a href="./Pages/Prizes/Prizes.html">Prizes</a></li>
+              <li><a href="./Pages/Human/human.html">Humans</a></li>
+              <li><a href="./Pages/faq/faq.html">FAQs</a></li>
+            </ul>
+            <div class="lines"></div>
+            <ul class="social-account">
+              <h2>Social Links</h2>
+              <li>
+                <a href="https://www.instagram.com/hackarcode/"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://bit.ly/hackarcode"
+                  ><i class="fa-brands fa-discord"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/company/hackarcode/"
+                  ><i class="fa-brands fa-linkedin"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://x.com/hackarcode"
+                  ><i class="fa-brands fa-x-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://chat.whatsapp.com/GzSGCr6MsSaLXCfX690vi7"
+                  ><i class="fa-brands fa-whatsapp"></i
+                ></a>
+              </li>
+            </ul>
+            <div class="lines"></div>
+            <ul class="Imp-links">
+              <h2>Important Links</h2>
+              <li><a href="" target="_blank">How to reach venue?</a></li>
+              <li>
+                <a
+                  href="https://glaze-softball-bb1.notion.site/Hackarcode-Hackathon-Guidelines-a7046e9e88594a199dcfa530ee7dfe34?pvs=74"
+                  target="_blank"
+                  >Code of Conduct</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.hackquest.io/en/hackathon/explore/HackArCode"
+                  target="_blank"
+                  >Hackathon Registration</a
+                >
+              </li>
+              <li>
+                <a href="https://reskilll.com/event/hackarcode" target="_blank"
+                  >Pre-Hackathon Meetup</a
+                >
+              </li>
+            </ul>
+            <div class="lines"></div>
+            <ul class="Sponsor-links">
+              <h2>Connect with Us</h2>
+              <li>
+                <a
+                  target="_blank"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSd4mR3hQFTCiFuKvhB-1UmbvLRc5mfZrL-hvnrPnutx_ys0Bg/viewform"
+                  >Call for Mentors</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLScrzW8NzOmx7HGXzzgCcajmUSSD_Vg548-crHnp9WMEMsu5aQ/viewform"
+                  >Call for Sponsors</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="line-2"></div>
+        <div class="terms-and-policy">
+          <h2>Terms</h2>
+          <div class="line-3"></div>
+          <h2>Policy</h2>
+          <div class="line-3"></div>
+          <div class="made">Made with <i class="fa-solid fa-heart"></i></div>
+        </div>
+
+        <div class="copyright">
+          <h3>HackArCode 2024 &copy; All rights reserved.</h3>
+        </div>
+        <div class="line-2"></div>
+      </footer>
 
     <script>
         const info = {
