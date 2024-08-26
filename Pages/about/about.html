@@ -1,342 +1,778 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L1MWCGB3ZJ"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-L1MWCGB3ZJ"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        gtag('config', 'G-L1MWCGB3ZJ');
+      gtag("config", "G-L1MWCGB3ZJ");
     </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us </title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../navbar_page.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../navbar_page.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
     <style>
-        /* about section start */
-        .neon-text {
-            color: #fff;
-        }
+      /* about section start */
+      .neon-text {
+        color: #fff;
+      }
 
-        .badge {
-            width: 240px;
-            height: 200px;
-            background: linear-gradient(145deg, #222, #444);
-            box-shadow: 5px 5px 15px #000, -5px -5px 15px #555;
-            border: 2px solid #fff;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+      .badge {
+        width: 240px;
+        height: 200px;
+        background: linear-gradient(145deg, #222, #444);
+        box-shadow: 5px 5px 15px #000, -5px -5px 15px #555;
+        border: 2px solid #fff;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
 
-        .badge:hover {
-            transform: translateY(-10px);
-            box-shadow: 10px 10px 20px #555, -10px -10px 20px #000;
-        }
+      .badge:hover {
+        transform: translateY(-10px);
+        box-shadow: 10px 10px 20px #555, -10px -10px 20px #000;
+      }
 
-        /* about section end */
+      /* about section end */
 
-        /* NAvbar section start */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            list-style: none;
-        }
+      /* NAvbar section start */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        list-style: none;
+      }
 
-        ::-webkit-scrollbar {
-            width: 10px;
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
 
-        }
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
 
-        /* Track */
-        ::-webkit-scrollbar-track {
-            background: transparent;
+      ::-webkit-scrollbar:hover {
+        width: 10px;
+      }
 
-        }
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: rgb(238, 238, 238);
 
-        ::-webkit-scrollbar:hover {
-            width: 10px;
-        }
+        border-radius: 80px;
+      }
 
-        /* Handle */
-        ::-webkit-scrollbar-thumb {
-            background: rgb(238, 238, 238);
+      nav {
+        right: 0px;
+        position: absolute;
+        display: flex;
+        /* background: rgb(46, 47, 68); */
+        /* border: 2px solid saddlebrown; */
+        background: transparent;
+        width: 100%;
+      }
 
-            border-radius: 80px;
-        }
+      .navbar li a {
+        color: rgb(255, 255, 255);
+        font-weight: 400;
+        font-size: 1.5rem;
+      }
 
-        nav {
-            right: 0px;
-            position: absolute;
-            display: flex;
-            /* background: rgb(46, 47, 68); */
-            /* border: 2px solid saddlebrown; */
-            background: transparent;
-            width: 100%;
-        }
+      .navbar li a:hover {
+        color: rgb(190, 190, 190);
+      }
 
-        .navbar li a {
-            color: rgb(255, 255, 255);
-            font-weight: 400;
-            font-size: 1.5rem;
-        }
+      .logo {
+        /* background: rgb(46, 47, 68); */
+        background: transparent;
+      }
 
-        .navbar li a:hover {
-            color: rgb(190, 190, 190);
-        }
+      .logo img {
+        width: 12vw;
+        height: 10vh;
+        margin-top: 5%;
+        margin-right: -5vw;
+        /* background: black; */
+        /* background: rgb(46, 47, 68); */
+        margin-left: 5vw;
+        /* transform: rotate(-5deg); */
+        /* border: 2px solid salmon; */
+      }
 
-        .logo {
-            /* background: rgb(46, 47, 68); */
-            background: transparent;
+      .navbar {
+        display: flex;
+        margin-top: 1vh;
+        width: 75vw;
+        height: 10vh;
+        font-size: 20px;
+        align-items: center;
+        /* border: 2px solid salmon; */
+        margin-right: -10vw;
+        margin-left: 10vw;
+        justify-content: space-evenly;
+      }
+
+      @media (max-width: 1000px) {
+        .navbar {
+          display: none;
         }
 
         .logo img {
-            width: 12vw;
-            height: 10vh;
-            margin-top: 5%;
-            margin-right: -5vw;
-            /* background: black; */
-            /* background: rgb(46, 47, 68); */
-            margin-left: 5vw;
-            /* transform: rotate(-5deg); */
-            /* border: 2px solid salmon; */
+          width: 25vw;
+          height: 10vh;
+        }
+      }
+
+      /* Navbar section end  */
+
+      /* Footer Section */
+
+      footer {
+        display: grid;
+        height: 100vh;
+        place-items: center;
+        width: 100%;
+        background-color: #161616;
+      }
+
+      .main-footer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        font-size: 1.2rem;
+        width: 100%;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 2rem;
+      }
+
+      .hackarcode-logo {
+        width: 15vw;
+        position: absolute;
+        top: 5%;
+        left: 0;
+      }
+
+      .Links-coll {
+        display: flex;
+        gap: 3rem;
+        margin-left: 15%;
+        min-width: 70vw;
+        justify-content: space-around;
+      }
+
+      .social-account {
+        display: grid;
+        gap: 0rem;
+        font-size: 1.4rem;
+      }
+
+      .lines {
+        height: 55vh;
+        width: 0.1vw;
+        background: grey;
+      }
+
+      .line-2 {
+        width: 90%;
+        height: 0.1vh;
+        background: grey;
+      }
+
+      .terms-and-policy {
+        display: flex;
+        gap: 1rem;
+        width: 90%;
+      }
+
+      .made {
+        margin-left: auto;
+      }
+
+      .made i {
+        color: red;
+      }
+
+      .line-3 {
+        background: gray;
+        height: 4vh;
+        width: 0.1vw;
+      }
+
+      .social-account h2 {
+        font-size: 1.2rem;
+      }
+
+      .quick-links {
+        display: grid;
+        font-size: 1.2rem;
+      }
+
+      .Imp-links,
+      .Sponsor-links {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .quick-links li a,
+      .social-account li a,
+      .Imp-links li a,
+      .Sponsor-links li a {
+        color: rgb(145, 145, 145);
+      }
+
+      .quick-links li a:hover,
+      .social-account li a:hover,
+      .Imp-links li a:hover,
+      .Sponsor-links li a:hover {
+        color: rgb(207, 207, 207);
+      }
+
+      /* Responsive Styles */
+
+      @media (max-width: 480px) {
+        .main-footer {
+          padding: 1rem;
+        }
+        .hackarcode-logo {
+          width: 50vw;
+        }
+        .Links-coll {
+          flex-direction: column;
+          align-items: center;
+        }
+        .quick-links,
+        .social-account,
+        .Imp-links,
+        .Sponsor-links {
+          font-size: 1rem;
+          text-align: center;
+        }
+        .terms-and-policy {
+          width: 100%;
+        }
+        .made i {
+          margin-left: 5px;
+        }
+      }
+      @media (max-width: 1024px) {
+        .quick-links {
+          padding-bottom: 25px;
+          border-bottom: 2px solid grey;
+        }
+        .social-account {
+          padding-bottom: 25px;
+          border-bottom: 2px solid grey;
+        }
+        .Imp-links {
+          padding-bottom: 25px;
+          border-bottom: 2px solid grey;
         }
 
-        .navbar {
-            display: flex;
-            margin-top: 1vh;
-            width: 75vw;
-            height: 10vh;
-            font-size: 20px;
-            align-items: center;
-            /* border: 2px solid salmon; */
-            margin-right: -10vw;
-            margin-left: 10vw;
-            justify-content: space-evenly;
+        .hackarcode-logo {
+          width: 20vw;
         }
-        @media(max-width:1000px){
-            .navbar{
-                display: none;
-            }
-            .logo img{
-                width: 25vw;
-                height: 10vh;
-            }
-}
-        /* Navbar section end  */
+        .Links-coll {
+          margin-left: 5%;
+          min-width: 80vw;
+          gap: 2rem;
+          flex-wrap: wrap;
+        }
+        .main-footer {
+          flex-direction: column;
+          align-items: center;
+        }
+        footer {
+          height: 100%;
+        }
+        .lines {
+          display: none;
+        }
+        .Links-coll {
+          display: grid;
+          grid-template-columns: 1fr; /* Two rows */
+          gap: 3rem;
+          margin-left: 15%;
+          min-width: 70vw;
+        }
+      }
+
+      @media (max-width: 768px) {
+        footer {
+          height: 100%;
+          padding: 2rem 0;
+        }
+        .hackarcode-logo {
+          width: 30vw;
+          position: relative;
+          margin-bottom: 1rem;
+          left: auto;
+          top: auto;
+        }
+        .quick-links {
+          padding-bottom: 15px;
+          border-bottom: 2px solid grey;
+        }
+        .social-account {
+          padding-bottom: 15px;
+          border-bottom: 2px solid grey;
+        }
+        .Imp-links {
+          padding-bottom: 15px;
+          border-bottom: 2px solid grey;
+        }
+        .Sponsor-links {
+          padding-bottom: 15px;
+          border-bottom: 2px solid grey;
+        }
+        .Links-coll {
+          flex-direction: column;
+          gap: 1.5rem;
+          margin-left: 0;
+          min-width: 90%;
+        }
+        .social-account {
+          font-size: 1.2rem;
+        }
+        .terms-and-policy {
+          flex-direction: row;
+          justify-content: space-between;
+          padding-left: 10px;
+          padding-right: 10px;
+          margin-bottom: 10px;
+          gap: 0.5rem;
+          text-align: center;
+          padding-bottom: 15px;
+        }
+        .line-2,
+        .line-3 {
+          display: none;
+        }
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Navbar  -->
     <nav class="z-50">
-        <div class="logo">
-            <img src="../../assets/logo-removebg-preview.png" alt="">
-        </div>
-        <ul class="navbar section">
-            <li class="name"><a href="../../index.html" data-value="Home" class="active-text">Home</a></li>
-            <li class="name"><a href="../about/about.html" data-value="About">About</a></li>
-            <li class="name"><a href="../tracks/track.html" data-value="Tracks">Tracks</a></li>
-            <li class="name"><a href="../partner/partner.html" data-value="Partners">Partners</a></li>
-            <li class="name"><a href="../schedule/schedule.html" data-value="Schedule">Schedule</a></li>
-            <li class="name"><a href="../Prizes/Prizes.html" data-value="Prizes">Prizes</a></li>
-            <li class="name"><a href="../Human/human.html" data-value="Humans">Humans</a></li>
-            <li class="name"><a href="../faq/faq.html" data-value="FAQs">FAQs</a></li>
-        </ul>
-        <i class="fa-solid fa-bars" id="navIcon"></i>
+      <div class="logo">
+        <img src="../../assets/logo-removebg-preview.png" alt="" />
+      </div>
+      <ul class="navbar section">
+        <li class="name">
+          <a href="../../index.html" data-value="Home" class="active-text"
+            >Home</a
+          >
+        </li>
+        <li class="name">
+          <a href="../about/about.html" data-value="About">About</a>
+        </li>
+        <li class="name">
+          <a href="../tracks/track.html" data-value="Tracks">Tracks</a>
+        </li>
+        <li class="name">
+          <a href="../partner/partner.html" data-value="Partners">Partners</a>
+        </li>
+        <li class="name">
+          <a href="../schedule/schedule.html" data-value="Schedule">Schedule</a>
+        </li>
+        <li class="name">
+          <a href="../Prizes/Prizes.html" data-value="Prizes">Prizes</a>
+        </li>
+        <li class="name">
+          <a href="../Human/human.html" data-value="Humans">Humans</a>
+        </li>
+        <li class="name">
+          <a href="../faq/faq.html" data-value="FAQs">FAQs</a>
+        </li>
+      </ul>
+      <i class="fa-solid fa-bars" id="navIcon"></i>
     </nav>
 
     <div class="box z-50">
-        <div class="dropdown"><i class="fa-solid fa-bars" ></i>
-            <!-- <span class="left-icon"></span> -->
-            <!-- <span class="right-icon"></span> -->
-            <div class="items">
-                <a href="../../index.html" style="--i:8;"><span></span>Home</a>
-                <a href="../about/about.html" style="--i:7;"><span></span>About</a>
-                <a href="../tracks/track.html" style="--i:6;"><span></span>Tracks</a>
-                <a href="../partner/partner.html" style="--i:5;"><span></span>Partners</a>
-                <a href="../schedule/schedule.html" style="--i:4;"><span></span>Schedule</a>
-                <a href="../Prizes/Prizes.html" style="--i:3;"><span></span>Prizes</a>
-                <a href="../Human/human.html" style="--i:2;"><span></span>Humans</a>
-                <a href="../faq/faq.html" style="--i:1;"><span></span>FAQs</a>
-            </div>
+      <div class="dropdown">
+        <i class="fa-solid fa-bars"></i>
+        <!-- <span class="left-icon"></span> -->
+        <!-- <span class="right-icon"></span> -->
+        <div class="items">
+          <a href="../../index.html" style="--i: 8"><span></span>Home</a>
+          <a href="../about/about.html" style="--i: 7"><span></span>About</a>
+          <a href="../tracks/track.html" style="--i: 6"><span></span>Tracks</a>
+          <a href="../partner/partner.html" style="--i: 5"
+            ><span></span>Partners</a
+          >
+          <a href="../schedule/schedule.html" style="--i: 4"
+            ><span></span>Schedule</a
+          >
+          <a href="../Prizes/Prizes.html" style="--i: 3"><span></span>Prizes</a>
+          <a href="../Human/human.html" style="--i: 2"><span></span>Humans</a>
+          <a href="../faq/faq.html" style="--i: 1"><span></span>FAQs</a>
         </div>
+      </div>
     </div>
 
     <!-- About  -->
-    <div class="text-white container-fluid pt-10" style="background-color: #000">
-        <section class="py-12">
-            <div class="container mx-auto px-6 flex flex-col lg:flex-row items-center" style="overflow-x: hidden;">
-                <div class="lg:w-1/2 mb-8 lg:mb-0" style="padding-left: 5%;">
-                    <h2 class="text-7xl font-bold neon-text mb-8">Meet Our Community</h2>
-                    <p class="text-2xl text-gray-300">Empowering Innovators, Building the Future.</p>
-                </div>
-                <div class="lg:w-1/2 text-lg text-gray-300 leading-relaxed">
-                    <p class="mb-4">We are a group of community leaders who have cultivated a network of aspiring
-                        developers within our community. With a shared passion for innovation and technology, we have
-                        come together to organize this hackathon. Our goal is to create a platform that fosters
-                        collaboration, creativity, and skill development among participants.</p>
-                    <p class="mb-4">By hosting this event, we aim to provide opportunities for aspiring developers to
-                        showcase their talents, connect with industry professionals, and gain valuable experience in a
-                        supportive and inclusive environment. Through workshops, mentorship programs, and networking
-                        sessions, we are committed to empowering the next generation of innovators and problem solvers.
-                    </p>
-                    <p>Join us in shaping the future of technology and making a positive impact on our community.</p>
-                </div>
+    <div
+      class="text-white container-fluid pt-10"
+      style="background-color: #000"
+    >
+      <section class="py-12">
+        <div
+          class="container mx-auto px-6 flex flex-col lg:flex-row items-center"
+          style="overflow-x: hidden"
+        >
+          <div class="lg:w-1/2 mb-8 lg:mb-0" style="padding-left: 5%">
+            <h2 class="text-7xl font-bold neon-text mb-8">
+              Meet Our Community
+            </h2>
+            <p class="text-2xl text-gray-300">
+              Empowering Innovators, Building the Future.
+            </p>
+          </div>
+          <div class="lg:w-1/2 text-lg text-gray-300 leading-relaxed">
+            <p class="mb-4">
+              We are a group of community leaders who have cultivated a network
+              of aspiring developers within our community. With a shared passion
+              for innovation and technology, we have come together to organize
+              this hackathon. Our goal is to create a platform that fosters
+              collaboration, creativity, and skill development among
+              participants.
+            </p>
+            <p class="mb-4">
+              By hosting this event, we aim to provide opportunities for
+              aspiring developers to showcase their talents, connect with
+              industry professionals, and gain valuable experience in a
+              supportive and inclusive environment. Through workshops,
+              mentorship programs, and networking sessions, we are committed to
+              empowering the next generation of innovators and problem solvers.
+            </p>
+            <p>
+              Join us in shaping the future of technology and making a positive
+              impact on our community.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-12 w-100">
+        <div
+          style="padding-left: 5%"
+          class="container px-5 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5"
+        >
+          <div class="badge p-6 text-center rounded-lg" data-target="2000">
+            <h3
+              style="height: 70px"
+              class="text-2xl flex items-center justify-center font-bold mb-4 text-gray-300"
+            >
+              Registrations
+            </h3>
+            <p class="text-4xl font-bold neon-text count">0</p>
+          </div>
+
+          <div class="badge p-6 text-center rounded-lg" data-target="25">
+            <h3
+              style="height: 70px"
+              class="text-2xl flex items-center justify-center font-bold mb-4 text-gray-300"
+            >
+              Community Partners
+            </h3>
+            <p class="text-4xl font-bold neon-text count">0</p>
+          </div>
+
+          <div class="badge p-6 text-center rounded-lg" data-target="500000">
+            <h3
+              style="height: 70px"
+              class="text-2xl flex items-center justify-center font-bold mb-4 text-gray-300"
+            >
+              Prize Pool
+            </h3>
+            <div class="flex flex-row"></div>
+            <p class="text-4xl font-bold neon-text count">₹0</p>
+          </div>
+
+          <div class="badge p-6 text-center rounded-lg" data-target="300">
+            <h3
+              style="height: 70px"
+              class="text-2xl flex items-center justify-center font-bold mb-4 text-gray-300"
+            >
+              Hackers
+            </h3>
+            <p class="text-4xl font-bold neon-text count">0</p>
+          </div>
+
+          <div class="badge p-6 text-center rounded-lg" data-target="20">
+            <h3
+              style="height: 70px"
+              class="text-2xl flex items-center justify-center font-bold mb-4 text-gray-300"
+            >
+              Speakers
+            </h3>
+            <p class="text-4xl font-bold neon-text count">0</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-12 mt-4">
+        <div class="container mx-auto px-4 text-center">
+          <h2 class="text-6xl font-bold neon-text mb-8">What Sets Us Apart?</h2>
+          <div class="flex flex-col lg:flex-row justify-center items-center">
+            <div class="lg:w-1/3 p-4">
+              <img
+                src="../../assets/arcade_1.png"
+                alt="Arcade Theme"
+                class="mx-auto mb-4"
+                style="height: 120px; width: 120px"
+              />
+              <h3 class="text-3xl font-bold mb-2 text-gray-300">
+                Arcade Theme
+              </h3>
+              <p class="text-lg text-gray-300">
+                The whole hackathon will be based on an Arcade theme. Base your
+                ideas around this fun retro-esque theme.
+              </p>
             </div>
-        </section>
-
-        <section class="py-12 w-100">
-            <div style="padding-left: 5%;"
-                class="container px-5 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
-
-                <div class="badge p-6 text-center rounded-lg " data-target="2000">
-                    <h3 style="height: 70px;"
-                        class="text-2xl flex items-center justify-center font-bold mb-4 text-gray-300 ">Registrations
-                    </h3>
-                    <p class="text-4xl font-bold neon-text count">0</p>
-                </div>
-
-                <div class="badge p-6 text-center rounded-lg" data-target="25">
-                    <h3 style="height: 70px;"
-                        class="text-2xl flex items-center justify-center font-bold mb-4 text-gray-300">Community
-                        Partners</h3>
-                    <p class="text-4xl font-bold neon-text count">0</p>
-                </div>
-
-                <div class="badge p-6 text-center rounded-lg" data-target="500000">
-                    <h3 style="height: 70px;"
-                        class="text-2xl flex items-center justify-center font-bold mb-4 text-gray-300">Prize Pool</h3>
-                    <div class="flex flex-row"></div>
-                    <p class="text-4xl font-bold neon-text count">₹0</p>
-                </div>
-
-                <div class="badge p-6 text-center rounded-lg" data-target="300">
-                    <h3 style="height: 70px;"
-                        class="text-2xl flex items-center justify-center font-bold mb-4 text-gray-300">Hackers</h3>
-                    <p class="text-4xl font-bold neon-text count">0</p>
-                </div>
-
-                <div class="badge p-6 text-center rounded-lg" data-target="20">
-                    <h3 style="height: 70px;"
-                        class="text-2xl flex items-center justify-center font-bold mb-4 text-gray-300">Speakers</h3>
-                    <p class="text-4xl font-bold neon-text count">0</p>
-                </div>
-
+            <div class="lg:w-1/3 p-4">
+              <img
+                src="../../assets/gaming_1.png"
+                alt="Gaming Sessions"
+                class="mx-auto mb-4"
+                style="height: 120px; width: 120px"
+              />
+              <h3 class="text-3xl font-bold mb-2 text-gray-300">
+                Gaming Sessions
+              </h3>
+              <p class="text-lg text-gray-300">
+                Coding non-stop can be counter-productive. To tackle that we
+                will be having gaming sessions on PC or console. Feel free to
+                take a break!
+              </p>
             </div>
-        </section>
-
-        <section class="py-12 mt-4">
-            <div class="container mx-auto px-4 text-center">
-                <h2 class="text-6xl font-bold neon-text mb-8">What Sets Us Apart?</h2>
-                <div class="flex flex-col lg:flex-row justify-center items-center">
-                    <div class="lg:w-1/3 p-4">
-                        <img src="../../assets/arcade_1.png" alt="Arcade Theme" class="mx-auto mb-4"
-                            style="height: 120px; width: 120px;">
-                        <h3 class="text-3xl font-bold mb-2 text-gray-300">Arcade Theme</h3>
-                        <p class="text-lg text-gray-300">The whole hackathon will be based on an Arcade theme. Base your
-                            ideas around this fun retro-esque theme.</p>
-                    </div>
-                    <div class="lg:w-1/3 p-4">
-                        <img src="../../assets/gaming_1.png" alt="Gaming Sessions" class="mx-auto mb-4"
-                            style="height: 120px; width: 120px;">
-                        <h3 class="text-3xl font-bold mb-2 text-gray-300">Gaming Sessions</h3>
-                        <p class="text-lg text-gray-300">Coding non-stop can be counter-productive. To tackle that we
-                            will be having gaming sessions on PC or console. Feel free to take a break!</p>
-                    </div>
-                    <div class="lg:w-1/3 p-4">
-                        <img src="../../assets/newbie_1.png" alt="30% Beginners" class="mx-auto mb-4"
-                            style="height: 100px; width: 100px;">
-                        <h3 class="text-3xl font-bold mb-2 text-gray-300">30% Beginners</h3>
-                        <p class="text-lg text-gray-300">Freshers and beginners have no reason to worry about entering
-                            the hackathon as 30% of the participants are beginners.</p>
-                    </div>
-                </div>
+            <div class="lg:w-1/3 p-4">
+              <img
+                src="../../assets/newbie_1.png"
+                alt="30% Beginners"
+                class="mx-auto mb-4"
+                style="height: 100px; width: 100px"
+              />
+              <h3 class="text-3xl font-bold mb-2 text-gray-300">
+                30% Beginners
+              </h3>
+              <p class="text-lg text-gray-300">
+                Freshers and beginners have no reason to worry about entering
+                the hackathon as 30% of the participants are beginners.
+              </p>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
+      <footer class="relative text-white text-center font-semibold">
+        <div class="main-footer">
+          <div class="hackarcode-logo">
+            <img src="/assets/logo-removebg-preview.png" alt="" />
+          </div>
+          <div class="Links-coll">
+            <ul class="quick-links">
+              <h2>Quick Links</h2>
+              <li><a href="https://hackarcode.live/">Home</a></li>
+              <li><a href="./Pages/about/about.html">About</a></li>
+              <li><a href="./Pages/tracks/track.html">Tracks</a></li>
+              <li><a href="./Pages/partner/partner.html">Partners</a></li>
+              <li><a href="./Pages/schedule/schedule.html">Schedule</a></li>
+              <li><a href="./Pages/Prizes/Prizes.html">Prizes</a></li>
+              <li><a href="./Pages/Human/human.html">Humans</a></li>
+              <li><a href="./Pages/faq/faq.html">FAQs</a></li>
+            </ul>
+            <div class="lines"></div>
+            <ul class="social-account">
+              <h2>Social Links</h2>
+              <li>
+                <a href="https://www.instagram.com/hackarcode/"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://bit.ly/hackarcode"
+                  ><i class="fa-brands fa-discord"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/company/hackarcode/"
+                  ><i class="fa-brands fa-linkedin"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://x.com/hackarcode"
+                  ><i class="fa-brands fa-x-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://chat.whatsapp.com/GzSGCr6MsSaLXCfX690vi7"
+                  ><i class="fa-brands fa-whatsapp"></i
+                ></a>
+              </li>
+            </ul>
+            <div class="lines"></div>
+            <ul class="Imp-links">
+              <h2>Important Links</h2>
+              <li><a href="" target="_blank">How to reach venue?</a></li>
+              <li>
+                <a
+                  href="https://glaze-softball-bb1.notion.site/Hackarcode-Hackathon-Guidelines-a7046e9e88594a199dcfa530ee7dfe34?pvs=74"
+                  target="_blank"
+                  >Code of Conduct</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.hackquest.io/en/hackathon/explore/HackArCode"
+                  target="_blank"
+                  >Hackathon Registration</a
+                >
+              </li>
+              <li>
+                <a href="https://reskilll.com/event/hackarcode" target="_blank"
+                  >Pre-Hackathon Meetup</a
+                >
+              </li>
+            </ul>
+            <div class="lines"></div>
+            <ul class="Sponsor-links">
+              <h2>Connect with Us</h2>
+              <li>
+                <a
+                  target="_blank"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSd4mR3hQFTCiFuKvhB-1UmbvLRc5mfZrL-hvnrPnutx_ys0Bg/viewform"
+                  >Call for Mentors</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLScrzW8NzOmx7HGXzzgCcajmUSSD_Vg548-crHnp9WMEMsu5aQ/viewform"
+                  >Call for Sponsors</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="line-2"></div>
+        <div class="terms-and-policy">
+          <h2>Terms</h2>
+          <div class="line-3"></div>
+          <h2>Policy</h2>
+          <div class="line-3"></div>
+          <div class="made">Made with <i class="fa-solid fa-heart"></i></div>
+        </div>
+
+        <div class="copyright">
+          <h3>HackArCode 2024 &copy; All rights reserved.</h3>
+        </div>
+        <div class="line-2"></div>
+      </footer>
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const counters = document.querySelectorAll('.count');
-            const duration = 5000;
+      document.addEventListener("DOMContentLoaded", () => {
+        const counters = document.querySelectorAll(".count");
+        const duration = 5000;
 
-            const formatNumber = (number) => {
-                let [integerPart, decimalPart] = number.toString().split(".");
-                let lastThreeDigits = integerPart.slice(-3);
-                let otherDigits = integerPart.slice(0, -3);
-                if (otherDigits) {
-                    lastThreeDigits = ',' + lastThreeDigits;
-                }
-                let formattedNumber = otherDigits.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThreeDigits;
-                if (decimalPart) {
-                    formattedNumber += "." + decimalPart;
-                }
-                return formattedNumber;
-            };
+        const formatNumber = (number) => {
+          let [integerPart, decimalPart] = number.toString().split(".");
+          let lastThreeDigits = integerPart.slice(-3);
+          let otherDigits = integerPart.slice(0, -3);
+          if (otherDigits) {
+            lastThreeDigits = "," + lastThreeDigits;
+          }
+          let formattedNumber =
+            otherDigits.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThreeDigits;
+          if (decimalPart) {
+            formattedNumber += "." + decimalPart;
+          }
+          return formattedNumber;
+        };
 
-            const countUp = (counter, target, symbol = '') => {
-                const start = 0;
-                const increment = target / (duration / 50);
-                let current = start;
+        const countUp = (counter, target, symbol = "") => {
+          const start = 0;
+          const increment = target / (duration / 50);
+          let current = start;
 
-                const updateCount = () => {
-                    current += increment;
-                    if (current < target) {
-                        counter.innerText = symbol + formatNumber(Math.ceil(current)) + '+';
-                        setTimeout(updateCount, 40);
-                    } else {
-                        counter.innerText = symbol + formatNumber(target) + '+';
-                    }
-                };
+          const updateCount = () => {
+            current += increment;
+            if (current < target) {
+              counter.innerText =
+                symbol + formatNumber(Math.ceil(current)) + "+";
+              setTimeout(updateCount, 40);
+            } else {
+              counter.innerText = symbol + formatNumber(target) + "+";
+            }
+          };
 
-                updateCount();
-            };
+          updateCount();
+        };
 
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const counter = entry.target.querySelector('.count');
-                        const target = +entry.target.getAttribute('data-target');
-                        const symbol = entry.target.getAttribute('data-target') === '500000' ? '₹' : '';
-                        counter.innerText = symbol + '0';
-                        countUp(counter, target, symbol);
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            counters.forEach(counter => {
-                observer.observe(counter.parentElement);
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const counter = entry.target.querySelector(".count");
+                const target = +entry.target.getAttribute("data-target");
+                const symbol =
+                  entry.target.getAttribute("data-target") === "500000"
+                    ? "₹"
+                    : "";
+                counter.innerText = symbol + "0";
+                countUp(counter, target, symbol);
+                observer.unobserve(entry.target);
+              }
             });
-        });
+          },
+          { threshold: 0.1 }
+        );
 
-        const navIcon=document.getElementById("navIcon");
-        const navbar=document.querySelector(".navbar");
-        var display=0;
-        navIcon.addEventListener("click",()=>{
-            if (display==0){
-                navbar.style.display='grid';
-                display++;
-            }
-            else{
-                navbar.style.display='none';
-                display--;
-            }
-        })
-
-        const dropdown = document.querySelector('.dropdown');
-        dropdown.addEventListener('click', () => {
-            dropdown.classList.toggle('active');
+        counters.forEach((counter) => {
+          observer.observe(counter.parentElement);
         });
+      });
+
+      const navIcon = document.getElementById("navIcon");
+      const navbar = document.querySelector(".navbar");
+      var display = 0;
+      navIcon.addEventListener("click", () => {
+        if (display == 0) {
+          navbar.style.display = "grid";
+          display++;
+        } else {
+          navbar.style.display = "none";
+          display--;
+        }
+      });
+
+      const dropdown = document.querySelector(".dropdown");
+      dropdown.addEventListener("click", () => {
+        dropdown.classList.toggle("active");
+      });
     </script>
-</body>
-
+  </body>
 </html>
