@@ -454,13 +454,13 @@ nav{
 }
 
 .image-fit1{
-    max-height: 20vh;
-    width: 15vw;
+    max-height: 30vh;
+    width: 25vw;
 }
 
 .image-fit2{
-    max-height: 25vh;
-    width: 13vw;
+    max-height: 28vh;
+    width: 12vw;
 }
 
 .image-fit3{
@@ -1048,6 +1048,12 @@ footer {
     .card .sp-image img.xyz{
         width: 40vw;
     }
+    .image-fit2{
+        min-height: 35vh;
+    }
+    .image-fit1{
+        min-width: 50vw;
+    }
 }
 
 @media(max-width:375px){
@@ -1096,5 +1102,12 @@ footer {
     }
     .feature-box1{
         width: 80vw;
+    }
+    
+    .image-fit2{
+        min-width: 45vw;
+    }
+    .image-fit1{
+        min-width: 55vw;
     }
 }
