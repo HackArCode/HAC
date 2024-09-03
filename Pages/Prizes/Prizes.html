@@ -1,332 +1,343 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L1MWCGB3ZJ"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-L1MWCGB3ZJ"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        gtag('config', 'G-L1MWCGB3ZJ');
+      gtag("config", "G-L1MWCGB3ZJ");
     </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prizes</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../navbar_page.css">
-    <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../navbar_page.css" />
+    <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+    />
     <style>
-        .bg-dark {
-            background: #000;
-        }
+      .bg-dark {
+        background: #000;
+      }
 
-        /* Flip Card Styles */
-        .flip-card {
-            background-color: transparent;
-            perspective: 1000px;
-            height: 250px;
-        }
+      /* Flip Card Styles */
+      .flip-card {
+        background-color: transparent;
+        perspective: 1000px;
+        height: 250px;
+      }
 
-        .flip-card-inner {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            transition: transform 0.8s;
-            transform-style: preserve-3d;
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
 
-        }
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
 
-        .flip-card:hover .flip-card-inner {
-            transform: rotateY(180deg);
-        }
+      .flip-card-front,
+      .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
-        .flip-card-front,
-        .flip-card-back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+      }
 
-            border-top-right-radius: 20px;
-            border-bottom-left-radius: 20px;
-        }
+      .flip-card-front {
+        background-color: #000000;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+      }
 
-        .flip-card-front {
-            background-color: #000000;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border-top-right-radius: 20px;
-            border-bottom-left-radius: 20px;
-        }
+      .flip-card-back {
+        background-color: #cecbcb;
+        color: rgb(0, 0, 0);
+        transform: rotateY(180deg);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-        .flip-card-back {
-            background-color: #cecbcb;
-            color: rgb(0, 0, 0);
-            transform: rotateY(180deg);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+      }
 
-            border-top-right-radius: 20px;
-            border-bottom-left-radius: 20px;
-        }
+      /* nav */
+      /* nav */
+      *:root {
+        --ppl: #9747ff;
+        --cyan: #aedee0;
+        --dsalmaon: #4e3330;
+        --black: #fff;
+        --white: #000;
+        --salmon: #ef9d71;
+        --dcyan: #24403d;
+      }
 
-        /* nav */
-        /* nav */
-        *:root {
-            --ppl: #9747FF;
-            --cyan: #aedee0;
-            --dsalmaon: #4e3330;
-            --black: #fff;
-            --white: #000;
-            --salmon: #EF9D71;
-            --dcyan: #24403d;
-        }
+      *::selection {
+        background-color: var(--ppl);
+      }
 
-        *::selection {
-            background-color: var(--ppl);
-        }
+      body[theme="black"] {
+        background-color: var(--white);
+      }
 
-        body[theme="black"] {
-            background-color: var(--white);
-        }
+      body[theme="black"] .section {
+        color: var(--black);
+      }
 
-        body[theme="black"] .section {
-            color: var(--black);
-        }
+      body[theme="cyan"] {
+        background-color: var(--cyan);
+      }
 
-        body[theme="cyan"] {
-            background-color: var(--cyan);
-        }
+      body[theme="cyan"] .section {
+        color: var(--dcyan);
+      }
 
-        body[theme="cyan"] .section {
-            color: var(--dcyan);
-        }
+      body[theme="salmon"] {
+        background-color: var(--salmon);
+      }
 
-        body[theme="salmon"] {
-            background-color: var(--salmon);
-        }
+      body[theme="salmon"] .section {
+        color: var(--dsalmaon);
+      }
 
-        body[theme="salmon"] .section {
-            color: var(--dsalmaon);
-        }
+      body[theme="white"] {
+        background-color: var(--black);
+      }
 
-        body[theme="white"] {
-            background-color: var(--black);
-        }
+      body[theme="white"] .section {
+        color: var(--white);
+      }
 
-        body[theme="white"] .section {
-            color: var(--white);
-        }
+      /*     */
 
+      .upper-cont-position {
+        width: 100%;
+        min-height: 300px;
+        display: grid;
+        column-gap: 20px;
+        justify-content: center;
+        align-items: center;
+        margin-top: -50px;
+      }
 
+      .second-pos {
+        width: 90%;
+        min-height: 400px;
+        position: relative;
+      }
 
-        /*     */
+      .first-pos {
+        width: 100%;
+        min-height: 400px;
+        position: relative;
+      }
 
-        .upper-cont-position {
+      .third-pos {
+        width: 88%;
+        min-height: 400px;
+        position: relative;
+      }
 
-            width: 100%;
-            min-height: 300px;
-            display: grid;
-            column-gap: 20px;
-            justify-content: center;
-            align-items: center;
-            margin-top: -50px;
-        }
+      .remove {
+        display: none;
+      }
 
-        .second-pos {
-            width: 90%;
-            min-height: 400px;
-            position: relative;
+      .first-pos img,
+      .second-pos img,
+      .third-pos img {
+        width: 100%;
+        padding: 20px;
+      }
 
-        }
+      .custom-card {
+        transition: transform 0.5s, background-color 0.5s;
+      }
 
-        .first-pos {
-            width: 100%;
-            min-height: 400px;
-            position: relative;
+      .cards {
+        height: 100vh;
+      }
 
-        }
+      .custom-card:hover {
+        transform: scale(1.05);
+        background-color: #1f2937;
+        /* Darker shade on hover */
+      }
 
-        .third-pos {
-            width: 88%;
-            min-height: 400px;
-            position: relative;
-        }
+      .gradient-border {
+        background: linear-gradient(90deg, #9747ff 0%, #fdf555 100%);
+        padding: 3px;
+        /* Border width */
+        border-top-right-radius: 24px;
+        border-bottom-left-radius: 24px;
+      }
 
-        .remove {
-            display: none;
-        }
+      .gradient-border > .content {
+        background-color: #1f2937;
+        /* Inner card background */
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+      }
 
-        .first-pos img,
-        .second-pos img,
-        .third-pos img {
-            width: 100%;
-            padding: 20px;
-        }
+      /* NAvbar section start */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        list-style: none;
+      }
 
-        .custom-card {
-            transition: transform 0.5s, background-color 0.5s;
-        }
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
 
-        .cards{
-            height: 100vh;
-        }
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
 
-        .custom-card:hover {
-            transform: scale(1.05);
-            background-color: #1f2937;
-            /* Darker shade on hover */
-        }
+      ::-webkit-scrollbar:hover {
+        width: 10px;
+      }
 
-        .gradient-border {
-            background: linear-gradient(90deg, #9747ff 0%, #fdf555 100%);
-            padding: 3px;
-            /* Border width */
-            border-top-right-radius: 24px;
-            border-bottom-left-radius: 24px;
-        }
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: rgb(238, 238, 238);
 
-        .gradient-border>.content {
-            background-color: #1f2937;
-            /* Inner card background */
-            border-top-right-radius: 20px;
-            border-bottom-left-radius: 20px;
-        }
+        border-radius: 80px;
+      }
 
-        /* NAvbar section start */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            list-style: none;
-        }
+      nav {
+        right: 0px;
+        position: absolute;
+        display: flex;
+        /* background: rgb(46, 47, 68); */
+        /* border: 2px solid saddlebrown; */
+        background: transparent;
+        width: 100%;
+      }
 
-        ::-webkit-scrollbar {
-            width: 10px;
+      .navbar li a {
+        color: rgb(255, 255, 255);
+        font-weight: 400;
+        font-size: 1.5rem;
+      }
 
-        }
+      .navbar li a:hover {
+        color: rgb(190, 190, 190);
+      }
 
-        /* Track */
-        ::-webkit-scrollbar-track {
-            background: transparent;
+      .logo {
+        /* background: rgb(46, 47, 68); */
+        background: transparent;
+      }
 
-        }
+      .logo img {
+        width: 12vw;
+        height: 10vh;
+        margin-top: 5%;
+        margin-right: -5vw;
+        /* background: black; */
+        /* background: rgb(46, 47, 68); */
+        margin-left: 5vw;
+        /* transform: rotate(-5deg); */
+        /* border: 2px solid salmon; */
+      }
 
-        ::-webkit-scrollbar:hover {
-            width: 10px;
-        }
+      @font-face {
+        font-family: myfont;
+        src: url(../../fonts/Nohemi-Font/Nohemi-ExtraLight-BF6438cc581502c.woff);
+      }
 
-        /* Handle */
-        ::-webkit-scrollbar-thumb {
-            background: rgb(238, 238, 238);
+      .Nohemi {
+        font-family: myfont;
+      }
 
-            border-radius: 80px;
-        }
+      .more-info {
+        opacity: 0;
+        display: none;
+        transition: all 1s ease-in-out;
+      }
 
-        nav {
-            right: 0px;
-            position: absolute;
-            display: flex;
-            /* background: rgb(46, 47, 68); */
-            /* border: 2px solid saddlebrown; */
-            background: transparent;
-            width: 100%;
-        }
+      .expand {
+        opacity: 1;
+        display: block;
+      }
 
-        .navbar li a {
-            color: rgb(255, 255, 255);
-            font-weight: 400;
-            font-size: 1.5rem;
-        }
+      img.list-ico {
+        height: 3vh;
+        width: 1.5vw;
+        display: inline;
+      }
 
-        .navbar li a:hover {
-            color: rgb(190, 190, 190);
-        }
+      .navbar {
+        display: flex;
+        margin-top: 1vh;
+        width: 75vw;
+        height: 10vh;
+        font-size: 20px;
+        align-items: center;
+        /* border: 2px solid salmon; */
+        margin-right: -10vw;
+        margin-left: 10vw;
+        justify-content: space-evenly;
+      }
 
-        .logo {
-            /* background: rgb(46, 47, 68); */
-            background: transparent;
+      @media (max-width: 1000px) {
+        .navbar {
+          display: none;
         }
 
         .logo img {
-            width: 12vw;
-            height: 10vh;
-            margin-top: 5%;
-            margin-right: -5vw;
-            /* background: black; */
-            /* background: rgb(46, 47, 68); */
-            margin-left: 5vw;
-            /* transform: rotate(-5deg); */
-            /* border: 2px solid salmon; */
+          width: 25vw;
+          height: 10vh;
         }
+      }
 
-        @font-face {
-            font-family: myfont;
-            src: url(../../fonts/Nohemi-Font/Nohemi-ExtraLight-BF6438cc581502c.woff);
-        }
+      /* Navbar section end  */
 
-        .Nohemi{
-            font-family: myfont;
-        }
-
-        .more-info{
-            opacity: 0;
-            display: none;
-            transition: all 1s ease-in-out;
-        }
-
-        .expand{
-            opacity: 1;
-            display: block;
-        }
-
-        img.list-ico{
-            height: 3vh;
-            width: 1.5vw;
-            display: inline;
-        }
-
-        .navbar {
-            display: flex;
-            margin-top: 1vh;
-            width: 75vw;
-            height: 10vh;
-            font-size: 20px;
-            align-items: center;
-            /* border: 2px solid salmon; */
-            margin-right: -10vw;
-            margin-left: 10vw;
-            justify-content: space-evenly;
-        }
-
-        @media(max-width:1000px) {
-            .navbar {
-                display: none;
-            }
-
-            .logo img {
-                width: 25vw;
-                height: 10vh;
-            }
-        }
-
-        /* Navbar section end  */
-
-        /* Footer Section */
+      /* Footer Section */
 
       footer {
         display: grid;
@@ -552,286 +563,445 @@
         }
       }
     </style>
-</head>
+  </head>
 
-<body class="bg-dark text-white font-sans" style="position: relative;">
-    <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: -1; opacity: 12%; transform: rotate(-20deg); background-repeat: no-repeat; background-image: url('../../assets/Controller.svg'); background-size: 40%; background-position: center; background-attachment: fixed;"></div>
+  <body class="bg-dark text-white font-sans" style="position: relative">
+    <div
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+        opacity: 12%;
+        transform: rotate(-20deg);
+        background-repeat: no-repeat;
+        background-image: url('../../assets/Controller.svg');
+        background-size: 40%;
+        background-position: center;
+        background-attachment: fixed;
+      "
+    ></div>
     <nav class="z-50">
-        <div class="logo">
-            <img src="../../assets/logo-removebg-preview.png" alt="">
-        </div>
-        <ul class="navbar section">
-            <li class="name"><a href="../../index.html" data-value="Home" class="active-text">Home</a></li>
-            <li class="name"><a href="../about/about.html" data-value="About">About</a></li>
-            <li class="name"><a href="../tracks/track.html" data-value="Tracks">Tracks</a></li>
-            <li class="name"><a href="../partner/partner.html" data-value="Partners">Partners</a></li>
-            <li class="name"><a href="../schedule/schedule.html" data-value="Schedule">Schedule</a></li>
-            <li class="name"><a href="../Prizes/Prizes.html" data-value="Prizes">Prizes</a></li>
-            <li class="name"><a href="../Human/human.html" data-value="Humans">Humans</a></li>
-            <li class="name"><a href="../faq/faq.html" data-value="FAQs">FAQs</a></li>
-        </ul>
-        <i class="fa-solid fa-bars" hidden id="navIcon"></i>
+      <div class="logo">
+        <img src="../../assets/logo-removebg-preview.png" alt="" />
+      </div>
+      <ul class="navbar section">
+        <li class="name">
+          <a href="../../index.html" data-value="Home" class="active-text"
+            >Home</a
+          >
+        </li>
+        <li class="name">
+          <a href="../about/about.html" data-value="About">About</a>
+        </li>
+        <li class="name">
+          <a href="../tracks/track.html" data-value="Tracks">Tracks</a>
+        </li>
+        <li class="name">
+          <a href="../partner/partner.html" data-value="Partners">Partners</a>
+        </li>
+        <li class="name">
+          <a href="../schedule/schedule.html" data-value="Schedule">Schedule</a>
+        </li>
+        <li class="name">
+          <a href="../Prizes/Prizes.html" data-value="Prizes">Prizes</a>
+        </li>
+        <li class="name">
+          <a href="../Human/human.html" data-value="Humans">Humans</a>
+        </li>
+        <li class="name">
+          <a href="../faq/faq.html" data-value="FAQs">FAQs</a>
+        </li>
+      </ul>
+      <i class="fa-solid fa-bars" hidden id="navIcon"></i>
     </nav>
 
     <div class="box z-50">
-        <div class="dropdown"><i class="fa-solid fa-bars"></i>
-            <!-- <span class="left-icon"></span> -->
-            <!-- <span class="right-icon"></span> -->
-            <div class="items">
-                <a href="../../index.html" style="--i:8;"><span></span>Home</a>
-                <a href="../about/about.html" style="--i:7;"><span></span>About</a>
-                <a href="../tracks/track.html" style="--i:6;"><span></span>Tracks</a>
-                <a href="../partner/partner.html" style="--i:5;"><span></span>Partners</a>
-                <a href="../schedule/schedule.html" style="--i:4;"><span></span>Schedule</a>
-                <a href="../Prizes/Prizes.html" style="--i:3;"><span></span>Prizes</a>
-                <a href="../Human/human.html" style="--i:2;"><span></span>Humans</a>
-                <a href="../faq/faq.html" style="--i:1;"><span></span>FAQs</a>
-            </div>
+      <div class="dropdown">
+        <i class="fa-solid fa-bars"></i>
+        <!-- <span class="left-icon"></span> -->
+        <!-- <span class="right-icon"></span> -->
+        <div class="items">
+          <a href="../../index.html" style="--i: 8"><span></span>Home</a>
+          <a href="../about/about.html" style="--i: 7"><span></span>About</a>
+          <a href="../tracks/track.html" style="--i: 6"><span></span>Tracks</a>
+          <a href="../partner/partner.html" style="--i: 5"
+            ><span></span>Partners</a
+          >
+          <a href="../schedule/schedule.html" style="--i: 4"
+            ><span></span>Schedule</a
+          >
+          <a href="../Prizes/Prizes.html" style="--i: 3"><span></span>Prizes</a>
+          <a href="../Human/human.html" style="--i: 2"><span></span>Humans</a>
+          <a href="../faq/faq.html" style="--i: 1"><span></span>FAQs</a>
         </div>
+      </div>
     </div>
 
+    <div class="container p-4 flex flex-col justify-center items-center">
+      <h1
+        class="text-5xl font-bold text-center text-white mt-20"
+        style="font-family: 'Goldman', sans-serif"
+      >
+        Prizes
+      </h1>
 
-    <div class="container p-4 flex flex-col justify-center items-center  ">
-        <h1 class="text-5xl font-bold text-center text-white mt-20" style="font-family: 'Goldman',sans-serif;">Prizes</h1>
+      <div class="rounded-xl mt-4" style="width: 100%">
+        <div
+          class="upper-cont-position grid-cols-1 xl:grid-cols-3 lg:grid-cols-2 gap-8 mt-8 mb-16"
+        >
+          <div class="second-pos m-2">
+            <img src="../../assets/2-removebg-preview.png" alt="" />
+          </div>
+          <div class="first-pos m-2">
+            <img src="../../assets/1-removebg-preview.png" alt="" />
+          </div>
 
-        <div class="rounded-xl mt-4 " style="width: 100%;">
-            <div class="upper-cont-position grid-cols-1 xl:grid-cols-3 lg:grid-cols-2 gap-8 mt-8 mb-16 ">
-                <div class="second-pos m-2 ">
-                    <img src="../../assets/2-removebg-preview.png" alt="">
-                </div>
-                <div class="first-pos m-2">
-                    <img src="../../assets/1-removebg-preview.png" alt="">
-                </div>
-
-                <div class="third-pos m-2 ">
-                    <img src="../../assets/3-removebg-preview.png"  alt="">
-                </div>
-            </div>
-            <div class=" mx-auto grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-2  gap-8" style="max-width: 90%">
-                <div class="flip-card gradient-border">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front p-8 shadow-lg">
-                            <h3 class="text-3xl mb-3 Nohemi">All Girls Team</h3>
-                        </div>
-                        <div class="flip-card-back p-8 shadow-lg">
-                            <p class="text-lg mb-4" style="font-family: 'Poppins',sans-serif;">Hack-Ar-Code presents its All Girls Team prize based on the total
-                                judging outcome
-                                of the all-girls team.</p>
-                            <p class="text-4xl my-5 font-bold">₹5,000</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="flip-card gradient-border">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front p-8 shadow-lg">
-                            <h3 class="text-3xl mb-3 Nohemi">Best Beginner Team</h3>
-                        </div>
-                        <div class="flip-card-back p-8 shadow-lg">
-                            <p class="text-lg mb-4" style="font-family: 'Poppins',sans-serif;">Hack-Ar-Code presents its Best Beginner Team prize based on the
-                                total judging
-                                outcome of all beginner teams.</p>
-                            <p class="text-4xl my-5 font-bold">₹5,000</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="flip-card gradient-border">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front p-8 shadow-lg">
-                            <h3 class="text-3xl mb-3 Nohemi">Game Development</h3>
-                        </div>
-                        <div class="flip-card-back p-8 shadow-lg">
-                            <p class="text-lg mb-4" style="font-family: 'Poppins',sans-serif;">Hack-Ar-Code presents a special track for game development based on
-                                the total
-                                judging outcome from all the games developed.</p>
-                            <p class="text-4xl my-5 font-bold">₹5,000</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          <div class="third-pos m-2">
+            <img src="../../assets/3-removebg-preview.png" alt="" />
+          </div>
         </div>
+        <div
+          class="mx-auto grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-2 gap-8"
+          style="max-width: 90%"
+        >
+          <div class="flip-card gradient-border">
+            <div class="flip-card-inner">
+              <div class="flip-card-front p-8 shadow-lg">
+                <h3 class="text-3xl mb-3 Nohemi">All Girls Team</h3>
+              </div>
+              <div class="flip-card-back p-8 shadow-lg">
+                <p
+                  class="text-lg mb-4"
+                  style="font-family: 'Poppins', sans-serif"
+                >
+                  Hack-Ar-Code presents its All Girls Team prize based on the
+                  total judging outcome of the all-girls team.
+                </p>
+                <p class="text-4xl my-5 font-bold">₹5,000</p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card gradient-border">
+            <div class="flip-card-inner">
+              <div class="flip-card-front p-8 shadow-lg">
+                <h3 class="text-3xl mb-3 Nohemi">Best Beginner Team</h3>
+              </div>
+              <div class="flip-card-back p-8 shadow-lg">
+                <p
+                  class="text-lg mb-4"
+                  style="font-family: 'Poppins', sans-serif"
+                >
+                  Hack-Ar-Code presents its Best Beginner Team prize based on
+                  the total judging outcome of all beginner teams.
+                </p>
+                <p class="text-4xl my-5 font-bold">₹5,000</p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card gradient-border">
+            <div class="flip-card-inner">
+              <div class="flip-card-front p-8 shadow-lg">
+                <h3 class="text-3xl mb-3 Nohemi">Game Development</h3>
+              </div>
+              <div class="flip-card-back p-8 shadow-lg">
+                <p
+                  class="text-lg mb-4"
+                  style="font-family: 'Poppins', sans-serif"
+                >
+                  Hack-Ar-Code presents a special track for game development
+                  based on the total judging outcome from all the games
+                  developed.
+                </p>
+                <p class="text-4xl my-5 font-bold">₹5,000</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <h2 class="text-5xl font-bold text-center my-8 mt-24" style="font-family: 'Goldman',sans-serif">Partner Prizes</h2>
-    <div class="cards mx-20 " style="height: min-content;">
-        <div class="grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 gap-12 mt-12">
-            <div class="gradient-border custom-card scale-up">
-                <div class="content p-6 text-center bg-gray-800 shadow-lg">
-                    <div class="img-con p-4 bg-black rounded-lg mx-auto mb-6" style="width: 80%; height: 120px;">
-                        <img src="../../assets/White Text Horizontal.png.png" alt="GitHub Prize" style="width: 100%; height: 100%;">
-                    </div>
-                    <div class="text-3xl my-4 Nohemi">Tezos Track Prize Money:</div>
-                    <p class="text-center  my-4 " style="font-family: 'Poppins',sans-serif;">
-                        <span>$500 USD</span> <br>($300 USD-Main, $200 USD-Pool Prize)<br>
-                        Payment would be paid to the Winners within 30 days after the Hackathon Winners Announcement.
-                    </p>
-                    <p class="more-info" style="font-family: 'Poppins',sans-serif;">
-                       <img src="../../assets/flower-list-removebg-preview.png" alt="" class="list-ico"> The payment of Prize money will be sent to the winners after deducting 30% TDS.<br><img src="../../assets/flower-list-removebg-preview.png" alt="" class="list-ico"> Prize will be sent only to valid and relevant project submission after confirmation by the
-                       Tezos team on the basis of idea, implementation and development.<br><img src="../../assets/flower-list-removebg-preview.png" class="list-ico" alt=""> Prize pool money : max prize one team will be allotted from the pool will be $40 for valid
-                       projects who can't make it to top 3 tezos projects.
-                    </p>
-                    <span style="text-decoration: none; color: white;">
-                        <button class="btn-info bg-gradient-to-r from-purple-500 to-indigo-600 hover:bg-gradient-to-l text-white py-2 px-8 mt-8 rounded-full">More Info</button>
-                    </span>
-                </div>
+    <h2
+      class="text-5xl font-bold text-center my-8 mt-24"
+      style="font-family: 'Goldman', sans-serif"
+    >
+      Partner Prizes
+    </h2>
+    <div class="cards mx-20" style="height: min-content">
+      <div
+        class="grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 gap-12 mt-12"
+      >
+        <div class="gradient-border custom-card scale-up">
+          <div
+            class="content h-1/1 p-6 text-center bg-gray-800 shadow-lg"
+            style="height: 100%;"
+          >
+            <div
+              class="img-con p-4 bg-black rounded-lg mx-auto mb-6"
+              style="width: 80%; height: 120px"
+            >
+              <img
+                src="../../assets/White Text Horizontal.png.png"
+                alt="GitHub Prize"
+                style="width: 100%; height: 100%"
+              />
             </div>
-            <!-- <div class="gradient-border custom-card scale-up">
-                <div class="content p-6 text-center bg-gray-800 shadow-lg">
-                    <div class="img-con p-4 bg-white rounded-lg mx-auto mb-6" style="width: 80%; height: 120px;">
-                        <img src="../../assets/github.png" alt="GitHub Prize" style="width: 100%; height: 100%;">
-                    </div>
-                    <div class="text-3xl font-bold my-4">Best use of GitHub</div>
-                    <p class="text-center  my-4">Stand a chance to win GitHub Mona figurine or plushy in two simple
-                        steps. First
-                        by signing up for GitHub Global Campus and second by using a GitHub repository to host your
-                        hackathon
-                        project’s code!</p>
-                    <a href="#" style="text-decoration: none; color: white;">
-                        <button
-                            class="bg-gradient-to-r from-purple-500 to-indigo-600 hover:bg-gradient-to-l text-white py-2 px-8 mt-8 rounded-full">
-                            More Info
-                        </button>
-                    </a>
-                </div>
-            </div> -->
+            <div class="text-3xl my-4 Nohemi">Tezos Track Prize Money:</div>
+            <p
+              class="text-center my-4"
+              style="font-family: 'Poppins', sans-serif"
+            >
+              <span>$500 USD</span> <br />($300 USD-Main, $200 USD-Pool
+              Prize)<br />
+              Payment would be paid to the Winners within 30 days after the
+              Hackathon Winners Announcement.
+            </p>
+            <p class="more-info" style="font-family: 'Poppins', sans-serif">
+              <img
+                src="../../assets/flower-list-removebg-preview.png"
+                alt=""
+                class="list-ico"
+              />
+              The payment of Prize money will be sent to the winners after
+              deducting 30% TDS.<br />
+              <img
+                src="../../assets/flower-list-removebg-preview.png"
+                alt=""
+                class="list-ico"
+              />
+              Prize will be sent only to valid and relevant project submission
+              after confirmation by the Tezos team on the basis of idea,
+              implementation and development.<br />
+              <img
+                src="../../assets/flower-list-removebg-preview.png"
+                class="list-ico"
+                alt=""
+              />
+              Prize pool money : max prize one team will be allotted from the
+              pool will be $40 for valid projects who can't make it to top 3
+              tezos projects.
+            </p>
+            <span style="text-decoration: none; color: white">
+              <button
+                class="btn-info bg-gradient-to-r from-purple-500 to-indigo-600 hover:bg-gradient-to-l text-white py-2 px-8 mt-8 rounded-full"
+              >
+                More Info
+              </button>
+            </span>
+          </div>
         </div>
+        <div class="gradient-border custom-card scale-up">
+          <div
+            class="content h-1/1 p-6 text-center bg-gray-800 shadow-lg"
+            style="height: 100%;"
+          >
+            <div
+              class="img-con p-4 bg-black rounded-lg mx-auto mb-6"
+              style="width: 80%; height: 120px"
+            >
+              <img
+                src="../../assets//gaianet.png"
+                alt="GitHub Prize"
+                style="width: 100%; height: 100%"
+              />
+            </div>
+            <div class="text-3xl my-4 Nohemi">Best Agent Build on GaiaNet</div>
+            <p
+              class="text-center my-4"
+              style="font-family: 'Poppins', sans-serif"
+            >
+              <span>$200 USD</span> <br />
+              GaiaNet is a decentralized computing infrastructure that empowers individuals and businesses to create, deploy, scale, and monetize their own AI services using proprietary data.
+            </p>
+            <p class="more-info" style="font-family: 'Poppins', sans-serif">
+              Our mission is to unlock living knowledge systems, ensuring these AI services reflect the unique styles, values, knowledge, and expertise of their creators.
+Decentralized AI needs active developer engagement to thrive. By decentralizing the infrastructure, GaiaNet reduces reliance on centralized entities, fostering innovation and ensuring data privacy. Developers are crucial in building and maintaining nodes, creating integrations, and driving the evolution of the protocol. Engaging with GaiaNet allows developers to be at the forefront of this revolution, contributing to a more open, secure, and innovative AI ecosystem.
+            </p>
+            <span style="text-decoration: none; color: white">
+              <button
+                class="btn-info bg-gradient-to-r from-purple-500 to-indigo-600 hover:bg-gradient-to-l text-white py-2 px-8 mt-8 rounded-full"
+              >
+                More Info
+              </button>
+            </span>
+          </div>
+        </div>
+        <div class="gradient-border custom-card scale-up">
+          <div
+            class="content h-1/1 p-6 text-center bg-gray-800 shadow-lg"
+            style="height: 100%;"
+          >
+            <div
+              class="img-con p-4 bg-black rounded-lg mx-auto mb-6"
+              style="width: 80%; height: 120px"
+            >
+              <img
+                src="../../assets//"
+                alt=" Prize"
+                style="width: 100%; height: 100%"
+              />
+            </div>
+            <div class="text-3xl my-4 Nohemi">Best Agent Build on Linea</div>
+            <p
+              class="text-center my-4"
+              style="font-family: 'Poppins', sans-serif"
+            >
+              <span>$100 USD</span> <br />
+              Design a consumer-facing Web3 decentralized application that fosters community, engagement, and utility through gamification, social interaction, or novel tokenomics. Innovation at the infrastructure and UX level of Web3 paved the way for significant strides in consumer crypto.
+            </p>
+            <p class="more-info" style="font-family: 'Poppins', sans-serif">
+              Innovation at the infrastructure and UX level of Web3 paved the way for significant strides in consumer crypto. This track explores how Web3 technologies and principles can be applied to create engaging and user-friendly consumer products. We're looking for solutions such as (1) SocialFi projects that combine social media features with blockchain technology to reward user engagement, content creation, or community participation, (2) GameFi projects that leverage blockchain technology to create a more immersive and rewarding user experience, (3) Tokenized ticketing and membership dapps that leverage NFTs or attestations.
+            </p>
+            <span style="text-decoration: none; color: white">
+              <button
+                class="btn-info bg-gradient-to-r from-purple-500 to-indigo-600 hover:bg-gradient-to-l text-white py-2 px-8 mt-8 rounded-full"
+              >
+                More Info
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
     <footer class="relative text-white text-center mt-20 font-semibold">
-        <div class="main-footer">
-          <div class="hackarcode-logo">
-            <img src="/assets/logo-removebg-preview.png" alt="" />
-          </div>
-          <div class="Links-coll">
-            <ul class="quick-links">
-              <h2>Quick Links</h2>
-              <li><a href="https://hackarcode.live/">Home</a></li>
-              <li><a href="./Pages/about/about.html">About</a></li>
-              <li><a href="./Pages/tracks/track.html">Tracks</a></li>
-              <li><a href="./Pages/partner/partner.html">Partners</a></li>
-              <li><a href="./Pages/schedule/schedule.html">Schedule</a></li>
-              <li><a href="./Pages/Prizes/Prizes.html">Prizes</a></li>
-              <li><a href="./Pages/Human/human.html">Humans</a></li>
-              <li><a href="./Pages/faq/faq.html">FAQs</a></li>
-            </ul>
-            <div class="lines"></div>
-            <ul class="social-account">
-              <h2>Social Links</h2>
-              <li>
-                <a href="https://www.instagram.com/hackarcode/"
-                  ><i class="fa-brands fa-instagram"></i
-                ></a>
-              </li>
-              <li>
-                <a href="https://bit.ly/hackarcode"
-                  ><i class="fa-brands fa-discord"></i
-                ></a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/company/hackarcode/"
-                  ><i class="fa-brands fa-linkedin"></i
-                ></a>
-              </li>
-              <li>
-                <a href="https://x.com/hackarcode"
-                  ><i class="fa-brands fa-x-twitter"></i
-                ></a>
-              </li>
-              <li>
-                <a href="https://chat.whatsapp.com/GzSGCr6MsSaLXCfX690vi7"
-                  ><i class="fa-brands fa-whatsapp"></i
-                ></a>
-              </li>
-            </ul>
-            <div class="lines"></div>
-            <ul class="Imp-links">
-              <h2>Important Links</h2>
-              <li><a href="" target="_blank">How to reach venue?</a></li>
-              <li>
-                <a
-                  href="https://glaze-softball-bb1.notion.site/Hackarcode-Hackathon-Guidelines-a7046e9e88594a199dcfa530ee7dfe34?pvs=74"
-                  target="_blank"
-                  >Code of Conduct</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.hackquest.io/en/hackathon/explore/HackArCode"
-                  target="_blank"
-                  >Hackathon Registration</a
-                >
-              </li>
-              <li>
-                <a href="https://reskilll.com/event/hackarcode" target="_blank"
-                  >Pre-Hackathon Meetup</a
-                >
-              </li>
-            </ul>
-            <div class="lines"></div>
-            <ul class="Sponsor-links">
-              <h2>Connect with Us</h2>
-              <li>
-                <a
-                  target="_blank"
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSd4mR3hQFTCiFuKvhB-1UmbvLRc5mfZrL-hvnrPnutx_ys0Bg/viewform"
-                  >Call for Mentors</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  href="https://docs.google.com/forms/d/e/1FAIpQLScrzW8NzOmx7HGXzzgCcajmUSSD_Vg548-crHnp9WMEMsu5aQ/viewform"
-                  >Call for Sponsors</a
-                >
-              </li>
-            </ul>
-          </div>
+      <div class="main-footer">
+        <div class="hackarcode-logo">
+          <img src="/assets/logo-removebg-preview.png" alt="" />
         </div>
-        <div class="line-2"></div>
-        <div class="terms-and-policy">
-          <h2>Terms</h2>
-          <div class="line-3"></div>
-          <h2>Policy</h2>
-          <div class="line-3"></div>
-          <div class="made">Made with <i class="fa-solid fa-heart"></i></div>
+        <div class="Links-coll">
+          <ul class="quick-links">
+            <h2>Quick Links</h2>
+            <li><a href="https://hackarcode.live/">Home</a></li>
+            <li><a href="./Pages/about/about.html">About</a></li>
+            <li><a href="./Pages/tracks/track.html">Tracks</a></li>
+            <li><a href="./Pages/partner/partner.html">Partners</a></li>
+            <li><a href="./Pages/schedule/schedule.html">Schedule</a></li>
+            <li><a href="./Pages/Prizes/Prizes.html">Prizes</a></li>
+            <li><a href="./Pages/Human/human.html">Humans</a></li>
+            <li><a href="./Pages/faq/faq.html">FAQs</a></li>
+          </ul>
+          <div class="lines"></div>
+          <ul class="social-account">
+            <h2>Social Links</h2>
+            <li>
+              <a href="https://www.instagram.com/hackarcode/"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://bit.ly/hackarcode"
+                ><i class="fa-brands fa-discord"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/company/hackarcode/"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://x.com/hackarcode"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://chat.whatsapp.com/GzSGCr6MsSaLXCfX690vi7"
+                ><i class="fa-brands fa-whatsapp"></i
+              ></a>
+            </li>
+          </ul>
+          <div class="lines"></div>
+          <ul class="Imp-links">
+            <h2>Important Links</h2>
+            <li><a href="" target="_blank">How to reach venue?</a></li>
+            <li>
+              <a
+                href="https://glaze-softball-bb1.notion.site/Hackarcode-Hackathon-Guidelines-a7046e9e88594a199dcfa530ee7dfe34?pvs=74"
+                target="_blank"
+                >Code of Conduct</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.hackquest.io/en/hackathon/explore/HackArCode"
+                target="_blank"
+                >Hackathon Registration</a
+              >
+            </li>
+            <li>
+              <a href="https://reskilll.com/event/hackarcode" target="_blank"
+                >Pre-Hackathon Meetup</a
+              >
+            </li>
+          </ul>
+          <div class="lines"></div>
+          <ul class="Sponsor-links">
+            <h2>Connect with Us</h2>
+            <li>
+              <a
+                target="_blank"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSd4mR3hQFTCiFuKvhB-1UmbvLRc5mfZrL-hvnrPnutx_ys0Bg/viewform"
+                >Call for Mentors</a
+              >
+            </li>
+            <li>
+              <a
+                target="_blank"
+                href="https://docs.google.com/forms/d/e/1FAIpQLScrzW8NzOmx7HGXzzgCcajmUSSD_Vg548-crHnp9WMEMsu5aQ/viewform"
+                >Call for Sponsors</a
+              >
+            </li>
+          </ul>
         </div>
+      </div>
+      <div class="line-2"></div>
+      <div class="terms-and-policy">
+        <h2>Terms</h2>
+        <div class="line-3"></div>
+        <h2>Policy</h2>
+        <div class="line-3"></div>
+        <div class="made">Made with <i class="fa-solid fa-heart"></i></div>
+      </div>
 
-        <div class="copyright">
-          <h3>HackArCode 2024 &copy; All rights reserved.</h3>
-        </div>
-        <div class="line-2"></div>
-      </footer>
+      <div class="copyright">
+        <h3>HackArCode 2024 &copy; All rights reserved.</h3>
+      </div>
+      <div class="line-2"></div>
+    </footer>
     <script>
-         const navIcon=document.getElementById("navIcon");
-        const navbar=document.querySelector(".navbar");
-        var display=0;
-        navIcon.addEventListener("click",()=>{
-            if (display==0){
-                navbar.style.display='grid';
-                display++;
-            }
-            else{
-                navbar.style.display='none';
-                display--;
-            }
-        })
+      const navIcon = document.getElementById("navIcon");
+      const navbar = document.querySelector(".navbar");
+      var display = 0;
+      navIcon.addEventListener("click", () => {
+        if (display == 0) {
+          navbar.style.display = "grid";
+          display++;
+        } else {
+          navbar.style.display = "none";
+          display--;
+        }
+      });
 
-        const dropdown = document.querySelector('.dropdown');
-        dropdown.addEventListener('click', () => {
-            dropdown.classList.toggle('active');
+      const dropdown = document.querySelector(".dropdown");
+      dropdown.addEventListener("click", () => {
+        dropdown.classList.toggle("active");
+      });
+    </script>
+    <script>
+      document.querySelectorAll(".btn-info").forEach((button) => {
+        button.addEventListener("click", function () {
+          const card = this.closest(".content");
+          const moreInfo = card.querySelector(".more-info");
+
+          if (this.innerHTML === "Less Info") {
+            moreInfo.classList.remove("expand");
+            this.innerHTML = "More Info";
+          } else {
+            moreInfo.classList.add("expand");
+            this.innerHTML = "Less Info";
+          }
         });
+      });
     </script>
-    <script>
-        const btninfo =document.querySelector(".btn-info");
-        const moreInfo=document.querySelector(".more-info");
-        btninfo.addEventListener("click",()=>{
-            if(btninfo.innerHTML=="Less Info"){
-                    moreInfo.classList.remove("expand");
-                    btninfo.innerHTML="More Info";
-            }
-            else{
-                moreInfo.classList.add("expand");
-                btninfo.innerHTML="Less Info";
-            }
-        })
-    </script>
-</body>
-
+  </body>
 </html>
